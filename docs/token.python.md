@@ -1,0 +1,1637 @@
+# `token` Submodule <a name="`token` Submodule" id="rhizo-co-terraform-provider-databricks.token"></a>
+
+## Constructs <a name="Constructs" id="Constructs"></a>
+
+### Token <a name="Token" id="rhizo-co-terraform-provider-databricks.token.Token"></a>
+
+Represents a {@link https://registry.terraform.io/providers/databricks/databricks/1.130.0/docs/resources/token databricks_token}.
+
+#### Initializers <a name="Initializers" id="rhizo-co-terraform-provider-databricks.token.Token.Initializer"></a>
+
+```python
+from rhizo_co_cdktf_provider_databricks import token
+
+token.Token(
+  scope: Construct,
+  id: str,
+  connection: SSHProvisionerConnection | WinrmProvisionerConnection = None,
+  count: typing.Union[int, float] | TerraformCount = None,
+  depends_on: typing.List[ITerraformDependable] = None,
+  for_each: ITerraformIterator = None,
+  lifecycle: TerraformResourceLifecycle = None,
+  provider: TerraformProvider = None,
+  provisioners: typing.List[FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner] = None,
+  comment: str = None,
+  creation_time: typing.Union[int, float] = None,
+  expiry_time: typing.Union[int, float] = None,
+  id: str = None,
+  lifetime_seconds: typing.Union[int, float] = None,
+  provider_config: TokenProviderConfig = None,
+  token_id: str = None
+)
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#rhizo-co-terraform-provider-databricks.token.Token.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | The scope in which to define this construct. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.token.Token.Initializer.parameter.id">id</a></code> | <code>str</code> | The scoped construct ID. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.token.Token.Initializer.parameter.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.token.Token.Initializer.parameter.count">count</a></code> | <code>typing.Union[int, float] \| cdktf.TerraformCount</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.token.Token.Initializer.parameter.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.token.Token.Initializer.parameter.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.token.Token.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.token.Token.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.token.Token.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner]</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.token.Token.Initializer.parameter.comment">comment</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.130.0/docs/resources/token#comment Token#comment}. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.token.Token.Initializer.parameter.creationTime">creation_time</a></code> | <code>typing.Union[int, float]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.130.0/docs/resources/token#creation_time Token#creation_time}. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.token.Token.Initializer.parameter.expiryTime">expiry_time</a></code> | <code>typing.Union[int, float]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.130.0/docs/resources/token#expiry_time Token#expiry_time}. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.token.Token.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.130.0/docs/resources/token#id Token#id}. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.token.Token.Initializer.parameter.lifetimeSeconds">lifetime_seconds</a></code> | <code>typing.Union[int, float]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.130.0/docs/resources/token#lifetime_seconds Token#lifetime_seconds}. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.token.Token.Initializer.parameter.providerConfig">provider_config</a></code> | <code><a href="#rhizo-co-terraform-provider-databricks.token.TokenProviderConfig">TokenProviderConfig</a></code> | provider_config block. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.token.Token.Initializer.parameter.tokenId">token_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.130.0/docs/resources/token#token_id Token#token_id}. |
+
+---
+
+##### `scope`<sup>Required</sup> <a name="scope" id="rhizo-co-terraform-provider-databricks.token.Token.Initializer.parameter.scope"></a>
+
+- *Type:* constructs.Construct
+
+The scope in which to define this construct.
+
+---
+
+##### `id`<sup>Required</sup> <a name="id" id="rhizo-co-terraform-provider-databricks.token.Token.Initializer.parameter.id"></a>
+
+- *Type:* str
+
+The scoped construct ID.
+
+Must be unique amongst siblings in the same scope
+
+---
+
+##### `connection`<sup>Optional</sup> <a name="connection" id="rhizo-co-terraform-provider-databricks.token.Token.Initializer.parameter.connection"></a>
+
+- *Type:* cdktf.SSHProvisionerConnection | cdktf.WinrmProvisionerConnection
+
+---
+
+##### `count`<sup>Optional</sup> <a name="count" id="rhizo-co-terraform-provider-databricks.token.Token.Initializer.parameter.count"></a>
+
+- *Type:* typing.Union[int, float] | cdktf.TerraformCount
+
+---
+
+##### `depends_on`<sup>Optional</sup> <a name="depends_on" id="rhizo-co-terraform-provider-databricks.token.Token.Initializer.parameter.dependsOn"></a>
+
+- *Type:* typing.List[cdktf.ITerraformDependable]
+
+---
+
+##### `for_each`<sup>Optional</sup> <a name="for_each" id="rhizo-co-terraform-provider-databricks.token.Token.Initializer.parameter.forEach"></a>
+
+- *Type:* cdktf.ITerraformIterator
+
+---
+
+##### `lifecycle`<sup>Optional</sup> <a name="lifecycle" id="rhizo-co-terraform-provider-databricks.token.Token.Initializer.parameter.lifecycle"></a>
+
+- *Type:* cdktf.TerraformResourceLifecycle
+
+---
+
+##### `provider`<sup>Optional</sup> <a name="provider" id="rhizo-co-terraform-provider-databricks.token.Token.Initializer.parameter.provider"></a>
+
+- *Type:* cdktf.TerraformProvider
+
+---
+
+##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="rhizo-co-terraform-provider-databricks.token.Token.Initializer.parameter.provisioners"></a>
+
+- *Type:* typing.List[cdktf.FileProvisioner | cdktf.LocalExecProvisioner | cdktf.RemoteExecProvisioner]
+
+---
+
+##### `comment`<sup>Optional</sup> <a name="comment" id="rhizo-co-terraform-provider-databricks.token.Token.Initializer.parameter.comment"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.130.0/docs/resources/token#comment Token#comment}.
+
+---
+
+##### `creation_time`<sup>Optional</sup> <a name="creation_time" id="rhizo-co-terraform-provider-databricks.token.Token.Initializer.parameter.creationTime"></a>
+
+- *Type:* typing.Union[int, float]
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.130.0/docs/resources/token#creation_time Token#creation_time}.
+
+---
+
+##### `expiry_time`<sup>Optional</sup> <a name="expiry_time" id="rhizo-co-terraform-provider-databricks.token.Token.Initializer.parameter.expiryTime"></a>
+
+- *Type:* typing.Union[int, float]
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.130.0/docs/resources/token#expiry_time Token#expiry_time}.
+
+---
+
+##### `id`<sup>Optional</sup> <a name="id" id="rhizo-co-terraform-provider-databricks.token.Token.Initializer.parameter.id"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.130.0/docs/resources/token#id Token#id}.
+
+Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+
+---
+
+##### `lifetime_seconds`<sup>Optional</sup> <a name="lifetime_seconds" id="rhizo-co-terraform-provider-databricks.token.Token.Initializer.parameter.lifetimeSeconds"></a>
+
+- *Type:* typing.Union[int, float]
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.130.0/docs/resources/token#lifetime_seconds Token#lifetime_seconds}.
+
+---
+
+##### `provider_config`<sup>Optional</sup> <a name="provider_config" id="rhizo-co-terraform-provider-databricks.token.Token.Initializer.parameter.providerConfig"></a>
+
+- *Type:* <a href="#rhizo-co-terraform-provider-databricks.token.TokenProviderConfig">TokenProviderConfig</a>
+
+provider_config block.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.130.0/docs/resources/token#provider_config Token#provider_config}
+
+---
+
+##### `token_id`<sup>Optional</sup> <a name="token_id" id="rhizo-co-terraform-provider-databricks.token.Token.Initializer.parameter.tokenId"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.130.0/docs/resources/token#token_id Token#token_id}.
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#rhizo-co-terraform-provider-databricks.token.Token.toString">to_string</a></code> | Returns a string representation of this construct. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.token.Token.with">with</a></code> | Applies one or more mixins to this construct. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.token.Token.addOverride">add_override</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.token.Token.overrideLogicalId">override_logical_id</a></code> | Overrides the auto-generated logical ID with a specific ID. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.token.Token.resetOverrideLogicalId">reset_override_logical_id</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.token.Token.toHclTerraform">to_hcl_terraform</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.token.Token.toMetadata">to_metadata</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.token.Token.toTerraform">to_terraform</a></code> | Adds this resource to the terraform JSON output. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.token.Token.addMoveTarget">add_move_target</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.token.Token.getAnyMapAttribute">get_any_map_attribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.token.Token.getBooleanAttribute">get_boolean_attribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.token.Token.getBooleanMapAttribute">get_boolean_map_attribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.token.Token.getListAttribute">get_list_attribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.token.Token.getNumberAttribute">get_number_attribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.token.Token.getNumberListAttribute">get_number_list_attribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.token.Token.getNumberMapAttribute">get_number_map_attribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.token.Token.getStringAttribute">get_string_attribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.token.Token.getStringMapAttribute">get_string_map_attribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.token.Token.hasResourceMove">has_resource_move</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.token.Token.importFrom">import_from</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.token.Token.interpolationForAttribute">interpolation_for_attribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.token.Token.moveFromId">move_from_id</a></code> | Move the resource corresponding to "id" to this resource. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.token.Token.moveTo">move_to</a></code> | Moves this resource to the target resource given by moveTarget. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.token.Token.moveToId">move_to_id</a></code> | Moves this resource to the resource corresponding to "id". |
+| <code><a href="#rhizo-co-terraform-provider-databricks.token.Token.putProviderConfig">put_provider_config</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.token.Token.resetComment">reset_comment</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.token.Token.resetCreationTime">reset_creation_time</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.token.Token.resetExpiryTime">reset_expiry_time</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.token.Token.resetId">reset_id</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.token.Token.resetLifetimeSeconds">reset_lifetime_seconds</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.token.Token.resetProviderConfig">reset_provider_config</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.token.Token.resetTokenId">reset_token_id</a></code> | *No description.* |
+
+---
+
+##### `to_string` <a name="to_string" id="rhizo-co-terraform-provider-databricks.token.Token.toString"></a>
+
+```python
+def to_string() -> str
+```
+
+Returns a string representation of this construct.
+
+##### `with` <a name="with" id="rhizo-co-terraform-provider-databricks.token.Token.with"></a>
+
+```python
+def with(
+  mixins: *IMixin
+) -> IConstruct
+```
+
+Applies one or more mixins to this construct.
+
+Mixins are applied in order. The list of constructs is captured at the
+start of the call, so constructs added by a mixin will not be visited.
+Use multiple `with()` calls if subsequent mixins should apply to added
+constructs.
+
+###### `mixins`<sup>Required</sup> <a name="mixins" id="rhizo-co-terraform-provider-databricks.token.Token.with.parameter.mixins"></a>
+
+- *Type:* *constructs.IMixin
+
+The mixins to apply.
+
+---
+
+##### `add_override` <a name="add_override" id="rhizo-co-terraform-provider-databricks.token.Token.addOverride"></a>
+
+```python
+def add_override(
+  path: str,
+  value: typing.Any
+) -> None
+```
+
+###### `path`<sup>Required</sup> <a name="path" id="rhizo-co-terraform-provider-databricks.token.Token.addOverride.parameter.path"></a>
+
+- *Type:* str
+
+---
+
+###### `value`<sup>Required</sup> <a name="value" id="rhizo-co-terraform-provider-databricks.token.Token.addOverride.parameter.value"></a>
+
+- *Type:* typing.Any
+
+---
+
+##### `override_logical_id` <a name="override_logical_id" id="rhizo-co-terraform-provider-databricks.token.Token.overrideLogicalId"></a>
+
+```python
+def override_logical_id(
+  new_logical_id: str
+) -> None
+```
+
+Overrides the auto-generated logical ID with a specific ID.
+
+###### `new_logical_id`<sup>Required</sup> <a name="new_logical_id" id="rhizo-co-terraform-provider-databricks.token.Token.overrideLogicalId.parameter.newLogicalId"></a>
+
+- *Type:* str
+
+The new logical ID to use for this stack element.
+
+---
+
+##### `reset_override_logical_id` <a name="reset_override_logical_id" id="rhizo-co-terraform-provider-databricks.token.Token.resetOverrideLogicalId"></a>
+
+```python
+def reset_override_logical_id() -> None
+```
+
+Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `to_hcl_terraform` <a name="to_hcl_terraform" id="rhizo-co-terraform-provider-databricks.token.Token.toHclTerraform"></a>
+
+```python
+def to_hcl_terraform() -> typing.Any
+```
+
+##### `to_metadata` <a name="to_metadata" id="rhizo-co-terraform-provider-databricks.token.Token.toMetadata"></a>
+
+```python
+def to_metadata() -> typing.Any
+```
+
+##### `to_terraform` <a name="to_terraform" id="rhizo-co-terraform-provider-databricks.token.Token.toTerraform"></a>
+
+```python
+def to_terraform() -> typing.Any
+```
+
+Adds this resource to the terraform JSON output.
+
+##### `add_move_target` <a name="add_move_target" id="rhizo-co-terraform-provider-databricks.token.Token.addMoveTarget"></a>
+
+```python
+def add_move_target(
+  move_target: str
+) -> None
+```
+
+Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move.
+
+###### `move_target`<sup>Required</sup> <a name="move_target" id="rhizo-co-terraform-provider-databricks.token.Token.addMoveTarget.parameter.moveTarget"></a>
+
+- *Type:* str
+
+The string move target that will correspond to this resource.
+
+---
+
+##### `get_any_map_attribute` <a name="get_any_map_attribute" id="rhizo-co-terraform-provider-databricks.token.Token.getAnyMapAttribute"></a>
+
+```python
+def get_any_map_attribute(
+  terraform_attribute: str
+) -> typing.Mapping[typing.Any]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="rhizo-co-terraform-provider-databricks.token.Token.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_boolean_attribute` <a name="get_boolean_attribute" id="rhizo-co-terraform-provider-databricks.token.Token.getBooleanAttribute"></a>
+
+```python
+def get_boolean_attribute(
+  terraform_attribute: str
+) -> IResolvable
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="rhizo-co-terraform-provider-databricks.token.Token.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_boolean_map_attribute` <a name="get_boolean_map_attribute" id="rhizo-co-terraform-provider-databricks.token.Token.getBooleanMapAttribute"></a>
+
+```python
+def get_boolean_map_attribute(
+  terraform_attribute: str
+) -> typing.Mapping[bool]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="rhizo-co-terraform-provider-databricks.token.Token.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_list_attribute` <a name="get_list_attribute" id="rhizo-co-terraform-provider-databricks.token.Token.getListAttribute"></a>
+
+```python
+def get_list_attribute(
+  terraform_attribute: str
+) -> typing.List[str]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="rhizo-co-terraform-provider-databricks.token.Token.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_number_attribute` <a name="get_number_attribute" id="rhizo-co-terraform-provider-databricks.token.Token.getNumberAttribute"></a>
+
+```python
+def get_number_attribute(
+  terraform_attribute: str
+) -> typing.Union[int, float]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="rhizo-co-terraform-provider-databricks.token.Token.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_number_list_attribute` <a name="get_number_list_attribute" id="rhizo-co-terraform-provider-databricks.token.Token.getNumberListAttribute"></a>
+
+```python
+def get_number_list_attribute(
+  terraform_attribute: str
+) -> typing.List[typing.Union[int, float]]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="rhizo-co-terraform-provider-databricks.token.Token.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_number_map_attribute` <a name="get_number_map_attribute" id="rhizo-co-terraform-provider-databricks.token.Token.getNumberMapAttribute"></a>
+
+```python
+def get_number_map_attribute(
+  terraform_attribute: str
+) -> typing.Mapping[typing.Union[int, float]]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="rhizo-co-terraform-provider-databricks.token.Token.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_string_attribute` <a name="get_string_attribute" id="rhizo-co-terraform-provider-databricks.token.Token.getStringAttribute"></a>
+
+```python
+def get_string_attribute(
+  terraform_attribute: str
+) -> str
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="rhizo-co-terraform-provider-databricks.token.Token.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_string_map_attribute` <a name="get_string_map_attribute" id="rhizo-co-terraform-provider-databricks.token.Token.getStringMapAttribute"></a>
+
+```python
+def get_string_map_attribute(
+  terraform_attribute: str
+) -> typing.Mapping[str]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="rhizo-co-terraform-provider-databricks.token.Token.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `has_resource_move` <a name="has_resource_move" id="rhizo-co-terraform-provider-databricks.token.Token.hasResourceMove"></a>
+
+```python
+def has_resource_move() -> TerraformResourceMoveByTarget | TerraformResourceMoveById
+```
+
+##### `import_from` <a name="import_from" id="rhizo-co-terraform-provider-databricks.token.Token.importFrom"></a>
+
+```python
+def import_from(
+  id: str,
+  provider: TerraformProvider = None
+) -> None
+```
+
+###### `id`<sup>Required</sup> <a name="id" id="rhizo-co-terraform-provider-databricks.token.Token.importFrom.parameter.id"></a>
+
+- *Type:* str
+
+---
+
+###### `provider`<sup>Optional</sup> <a name="provider" id="rhizo-co-terraform-provider-databricks.token.Token.importFrom.parameter.provider"></a>
+
+- *Type:* cdktf.TerraformProvider
+
+---
+
+##### `interpolation_for_attribute` <a name="interpolation_for_attribute" id="rhizo-co-terraform-provider-databricks.token.Token.interpolationForAttribute"></a>
+
+```python
+def interpolation_for_attribute(
+  terraform_attribute: str
+) -> IResolvable
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="rhizo-co-terraform-provider-databricks.token.Token.interpolationForAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `move_from_id` <a name="move_from_id" id="rhizo-co-terraform-provider-databricks.token.Token.moveFromId"></a>
+
+```python
+def move_from_id(
+  id: str
+) -> None
+```
+
+Move the resource corresponding to "id" to this resource.
+
+Note that the resource being moved from must be marked as moved using it's instance function.
+
+###### `id`<sup>Required</sup> <a name="id" id="rhizo-co-terraform-provider-databricks.token.Token.moveFromId.parameter.id"></a>
+
+- *Type:* str
+
+Full id of resource being moved from, e.g. "aws_s3_bucket.example".
+
+---
+
+##### `move_to` <a name="move_to" id="rhizo-co-terraform-provider-databricks.token.Token.moveTo"></a>
+
+```python
+def move_to(
+  move_target: str,
+  index: str | typing.Union[int, float] = None
+) -> None
+```
+
+Moves this resource to the target resource given by moveTarget.
+
+###### `move_target`<sup>Required</sup> <a name="move_target" id="rhizo-co-terraform-provider-databricks.token.Token.moveTo.parameter.moveTarget"></a>
+
+- *Type:* str
+
+The previously set user defined string set by .addMoveTarget() corresponding to the resource to move to.
+
+---
+
+###### `index`<sup>Optional</sup> <a name="index" id="rhizo-co-terraform-provider-databricks.token.Token.moveTo.parameter.index"></a>
+
+- *Type:* str | typing.Union[int, float]
+
+Optional The index corresponding to the key the resource is to appear in the foreach of a resource to move to.
+
+---
+
+##### `move_to_id` <a name="move_to_id" id="rhizo-co-terraform-provider-databricks.token.Token.moveToId"></a>
+
+```python
+def move_to_id(
+  id: str
+) -> None
+```
+
+Moves this resource to the resource corresponding to "id".
+
+###### `id`<sup>Required</sup> <a name="id" id="rhizo-co-terraform-provider-databricks.token.Token.moveToId.parameter.id"></a>
+
+- *Type:* str
+
+Full id of resource to move to, e.g. "aws_s3_bucket.example".
+
+---
+
+##### `put_provider_config` <a name="put_provider_config" id="rhizo-co-terraform-provider-databricks.token.Token.putProviderConfig"></a>
+
+```python
+def put_provider_config(
+  workspace_id: str = None
+) -> None
+```
+
+###### `workspace_id`<sup>Optional</sup> <a name="workspace_id" id="rhizo-co-terraform-provider-databricks.token.Token.putProviderConfig.parameter.workspaceId"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.130.0/docs/resources/token#workspace_id Token#workspace_id}.
+
+---
+
+##### `reset_comment` <a name="reset_comment" id="rhizo-co-terraform-provider-databricks.token.Token.resetComment"></a>
+
+```python
+def reset_comment() -> None
+```
+
+##### `reset_creation_time` <a name="reset_creation_time" id="rhizo-co-terraform-provider-databricks.token.Token.resetCreationTime"></a>
+
+```python
+def reset_creation_time() -> None
+```
+
+##### `reset_expiry_time` <a name="reset_expiry_time" id="rhizo-co-terraform-provider-databricks.token.Token.resetExpiryTime"></a>
+
+```python
+def reset_expiry_time() -> None
+```
+
+##### `reset_id` <a name="reset_id" id="rhizo-co-terraform-provider-databricks.token.Token.resetId"></a>
+
+```python
+def reset_id() -> None
+```
+
+##### `reset_lifetime_seconds` <a name="reset_lifetime_seconds" id="rhizo-co-terraform-provider-databricks.token.Token.resetLifetimeSeconds"></a>
+
+```python
+def reset_lifetime_seconds() -> None
+```
+
+##### `reset_provider_config` <a name="reset_provider_config" id="rhizo-co-terraform-provider-databricks.token.Token.resetProviderConfig"></a>
+
+```python
+def reset_provider_config() -> None
+```
+
+##### `reset_token_id` <a name="reset_token_id" id="rhizo-co-terraform-provider-databricks.token.Token.resetTokenId"></a>
+
+```python
+def reset_token_id() -> None
+```
+
+#### Static Functions <a name="Static Functions" id="Static Functions"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#rhizo-co-terraform-provider-databricks.token.Token.isConstruct">is_construct</a></code> | Checks if `x` is a construct. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.token.Token.isTerraformElement">is_terraform_element</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.token.Token.isTerraformResource">is_terraform_resource</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.token.Token.generateConfigForImport">generate_config_for_import</a></code> | Generates CDKTF code for importing a Token resource upon running "cdktf plan <stack-name>". |
+
+---
+
+##### `is_construct` <a name="is_construct" id="rhizo-co-terraform-provider-databricks.token.Token.isConstruct"></a>
+
+```python
+from rhizo_co_cdktf_provider_databricks import token
+
+token.Token.is_construct(
+  x: typing.Any
+)
+```
+
+Checks if `x` is a construct.
+
+Use this method instead of `instanceof` to properly detect `Construct`
+instances, even when the construct library is symlinked.
+
+Explanation: in JavaScript, multiple copies of the `constructs` library on
+disk are seen as independent, completely different libraries. As a
+consequence, the class `Construct` in each copy of the `constructs` library
+is seen as a different class, and an instance of one class will not test as
+`instanceof` the other class. `npm install` will not create installations
+like this, but users may manually symlink construct libraries together or
+use a monorepo tool: in those cases, multiple copies of the `constructs`
+library can be accidentally installed, and `instanceof` will behave
+unpredictably. It is safest to avoid using `instanceof`, and using
+this type-testing method instead.
+
+###### `x`<sup>Required</sup> <a name="x" id="rhizo-co-terraform-provider-databricks.token.Token.isConstruct.parameter.x"></a>
+
+- *Type:* typing.Any
+
+Any object.
+
+---
+
+##### `is_terraform_element` <a name="is_terraform_element" id="rhizo-co-terraform-provider-databricks.token.Token.isTerraformElement"></a>
+
+```python
+from rhizo_co_cdktf_provider_databricks import token
+
+token.Token.is_terraform_element(
+  x: typing.Any
+)
+```
+
+###### `x`<sup>Required</sup> <a name="x" id="rhizo-co-terraform-provider-databricks.token.Token.isTerraformElement.parameter.x"></a>
+
+- *Type:* typing.Any
+
+---
+
+##### `is_terraform_resource` <a name="is_terraform_resource" id="rhizo-co-terraform-provider-databricks.token.Token.isTerraformResource"></a>
+
+```python
+from rhizo_co_cdktf_provider_databricks import token
+
+token.Token.is_terraform_resource(
+  x: typing.Any
+)
+```
+
+###### `x`<sup>Required</sup> <a name="x" id="rhizo-co-terraform-provider-databricks.token.Token.isTerraformResource.parameter.x"></a>
+
+- *Type:* typing.Any
+
+---
+
+##### `generate_config_for_import` <a name="generate_config_for_import" id="rhizo-co-terraform-provider-databricks.token.Token.generateConfigForImport"></a>
+
+```python
+from rhizo_co_cdktf_provider_databricks import token
+
+token.Token.generate_config_for_import(
+  scope: Construct,
+  import_to_id: str,
+  import_from_id: str,
+  provider: TerraformProvider = None
+)
+```
+
+Generates CDKTF code for importing a Token resource upon running "cdktf plan <stack-name>".
+
+###### `scope`<sup>Required</sup> <a name="scope" id="rhizo-co-terraform-provider-databricks.token.Token.generateConfigForImport.parameter.scope"></a>
+
+- *Type:* constructs.Construct
+
+The scope in which to define this construct.
+
+---
+
+###### `import_to_id`<sup>Required</sup> <a name="import_to_id" id="rhizo-co-terraform-provider-databricks.token.Token.generateConfigForImport.parameter.importToId"></a>
+
+- *Type:* str
+
+The construct id used in the generated config for the Token to import.
+
+---
+
+###### `import_from_id`<sup>Required</sup> <a name="import_from_id" id="rhizo-co-terraform-provider-databricks.token.Token.generateConfigForImport.parameter.importFromId"></a>
+
+- *Type:* str
+
+The id of the existing Token that should be imported.
+
+Refer to the {@link https://registry.terraform.io/providers/databricks/databricks/1.130.0/docs/resources/token#import import section} in the documentation of this resource for the id to use
+
+---
+
+###### `provider`<sup>Optional</sup> <a name="provider" id="rhizo-co-terraform-provider-databricks.token.Token.generateConfigForImport.parameter.provider"></a>
+
+- *Type:* cdktf.TerraformProvider
+
+? Optional instance of the provider where the Token to import is found.
+
+---
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#rhizo-co-terraform-provider-databricks.token.Token.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.token.Token.property.cdktfStack">cdktf_stack</a></code> | <code>cdktf.TerraformStack</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.token.Token.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.token.Token.property.friendlyUniqueId">friendly_unique_id</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.token.Token.property.terraformMetaArguments">terraform_meta_arguments</a></code> | <code>typing.Mapping[typing.Any]</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.token.Token.property.terraformResourceType">terraform_resource_type</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.token.Token.property.terraformGeneratorMetadata">terraform_generator_metadata</a></code> | <code>cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.token.Token.property.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.token.Token.property.count">count</a></code> | <code>typing.Union[int, float] \| cdktf.TerraformCount</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.token.Token.property.dependsOn">depends_on</a></code> | <code>typing.List[str]</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.token.Token.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.token.Token.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.token.Token.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.token.Token.property.provisioners">provisioners</a></code> | <code>typing.List[cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner]</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.token.Token.property.providerConfig">provider_config</a></code> | <code><a href="#rhizo-co-terraform-provider-databricks.token.TokenProviderConfigOutputReference">TokenProviderConfigOutputReference</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.token.Token.property.tokenValue">token_value</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.token.Token.property.commentInput">comment_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.token.Token.property.creationTimeInput">creation_time_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.token.Token.property.expiryTimeInput">expiry_time_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.token.Token.property.idInput">id_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.token.Token.property.lifetimeSecondsInput">lifetime_seconds_input</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.token.Token.property.providerConfigInput">provider_config_input</a></code> | <code><a href="#rhizo-co-terraform-provider-databricks.token.TokenProviderConfig">TokenProviderConfig</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.token.Token.property.tokenIdInput">token_id_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.token.Token.property.comment">comment</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.token.Token.property.creationTime">creation_time</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.token.Token.property.expiryTime">expiry_time</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.token.Token.property.id">id</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.token.Token.property.lifetimeSeconds">lifetime_seconds</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.token.Token.property.tokenId">token_id</a></code> | <code>str</code> | *No description.* |
+
+---
+
+##### `node`<sup>Required</sup> <a name="node" id="rhizo-co-terraform-provider-databricks.token.Token.property.node"></a>
+
+```python
+node: Node
+```
+
+- *Type:* constructs.Node
+
+The tree node.
+
+---
+
+##### `cdktf_stack`<sup>Required</sup> <a name="cdktf_stack" id="rhizo-co-terraform-provider-databricks.token.Token.property.cdktfStack"></a>
+
+```python
+cdktf_stack: TerraformStack
+```
+
+- *Type:* cdktf.TerraformStack
+
+---
+
+##### `fqn`<sup>Required</sup> <a name="fqn" id="rhizo-co-terraform-provider-databricks.token.Token.property.fqn"></a>
+
+```python
+fqn: str
+```
+
+- *Type:* str
+
+---
+
+##### `friendly_unique_id`<sup>Required</sup> <a name="friendly_unique_id" id="rhizo-co-terraform-provider-databricks.token.Token.property.friendlyUniqueId"></a>
+
+```python
+friendly_unique_id: str
+```
+
+- *Type:* str
+
+---
+
+##### `terraform_meta_arguments`<sup>Required</sup> <a name="terraform_meta_arguments" id="rhizo-co-terraform-provider-databricks.token.Token.property.terraformMetaArguments"></a>
+
+```python
+terraform_meta_arguments: typing.Mapping[typing.Any]
+```
+
+- *Type:* typing.Mapping[typing.Any]
+
+---
+
+##### `terraform_resource_type`<sup>Required</sup> <a name="terraform_resource_type" id="rhizo-co-terraform-provider-databricks.token.Token.property.terraformResourceType"></a>
+
+```python
+terraform_resource_type: str
+```
+
+- *Type:* str
+
+---
+
+##### `terraform_generator_metadata`<sup>Optional</sup> <a name="terraform_generator_metadata" id="rhizo-co-terraform-provider-databricks.token.Token.property.terraformGeneratorMetadata"></a>
+
+```python
+terraform_generator_metadata: TerraformProviderGeneratorMetadata
+```
+
+- *Type:* cdktf.TerraformProviderGeneratorMetadata
+
+---
+
+##### `connection`<sup>Optional</sup> <a name="connection" id="rhizo-co-terraform-provider-databricks.token.Token.property.connection"></a>
+
+```python
+connection: SSHProvisionerConnection | WinrmProvisionerConnection
+```
+
+- *Type:* cdktf.SSHProvisionerConnection | cdktf.WinrmProvisionerConnection
+
+---
+
+##### `count`<sup>Optional</sup> <a name="count" id="rhizo-co-terraform-provider-databricks.token.Token.property.count"></a>
+
+```python
+count: typing.Union[int, float] | TerraformCount
+```
+
+- *Type:* typing.Union[int, float] | cdktf.TerraformCount
+
+---
+
+##### `depends_on`<sup>Optional</sup> <a name="depends_on" id="rhizo-co-terraform-provider-databricks.token.Token.property.dependsOn"></a>
+
+```python
+depends_on: typing.List[str]
+```
+
+- *Type:* typing.List[str]
+
+---
+
+##### `for_each`<sup>Optional</sup> <a name="for_each" id="rhizo-co-terraform-provider-databricks.token.Token.property.forEach"></a>
+
+```python
+for_each: ITerraformIterator
+```
+
+- *Type:* cdktf.ITerraformIterator
+
+---
+
+##### `lifecycle`<sup>Optional</sup> <a name="lifecycle" id="rhizo-co-terraform-provider-databricks.token.Token.property.lifecycle"></a>
+
+```python
+lifecycle: TerraformResourceLifecycle
+```
+
+- *Type:* cdktf.TerraformResourceLifecycle
+
+---
+
+##### `provider`<sup>Optional</sup> <a name="provider" id="rhizo-co-terraform-provider-databricks.token.Token.property.provider"></a>
+
+```python
+provider: TerraformProvider
+```
+
+- *Type:* cdktf.TerraformProvider
+
+---
+
+##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="rhizo-co-terraform-provider-databricks.token.Token.property.provisioners"></a>
+
+```python
+provisioners: typing.List[FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner]
+```
+
+- *Type:* typing.List[cdktf.FileProvisioner | cdktf.LocalExecProvisioner | cdktf.RemoteExecProvisioner]
+
+---
+
+##### `provider_config`<sup>Required</sup> <a name="provider_config" id="rhizo-co-terraform-provider-databricks.token.Token.property.providerConfig"></a>
+
+```python
+provider_config: TokenProviderConfigOutputReference
+```
+
+- *Type:* <a href="#rhizo-co-terraform-provider-databricks.token.TokenProviderConfigOutputReference">TokenProviderConfigOutputReference</a>
+
+---
+
+##### `token_value`<sup>Required</sup> <a name="token_value" id="rhizo-co-terraform-provider-databricks.token.Token.property.tokenValue"></a>
+
+```python
+token_value: str
+```
+
+- *Type:* str
+
+---
+
+##### `comment_input`<sup>Optional</sup> <a name="comment_input" id="rhizo-co-terraform-provider-databricks.token.Token.property.commentInput"></a>
+
+```python
+comment_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `creation_time_input`<sup>Optional</sup> <a name="creation_time_input" id="rhizo-co-terraform-provider-databricks.token.Token.property.creationTimeInput"></a>
+
+```python
+creation_time_input: typing.Union[int, float]
+```
+
+- *Type:* typing.Union[int, float]
+
+---
+
+##### `expiry_time_input`<sup>Optional</sup> <a name="expiry_time_input" id="rhizo-co-terraform-provider-databricks.token.Token.property.expiryTimeInput"></a>
+
+```python
+expiry_time_input: typing.Union[int, float]
+```
+
+- *Type:* typing.Union[int, float]
+
+---
+
+##### `id_input`<sup>Optional</sup> <a name="id_input" id="rhizo-co-terraform-provider-databricks.token.Token.property.idInput"></a>
+
+```python
+id_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `lifetime_seconds_input`<sup>Optional</sup> <a name="lifetime_seconds_input" id="rhizo-co-terraform-provider-databricks.token.Token.property.lifetimeSecondsInput"></a>
+
+```python
+lifetime_seconds_input: typing.Union[int, float]
+```
+
+- *Type:* typing.Union[int, float]
+
+---
+
+##### `provider_config_input`<sup>Optional</sup> <a name="provider_config_input" id="rhizo-co-terraform-provider-databricks.token.Token.property.providerConfigInput"></a>
+
+```python
+provider_config_input: TokenProviderConfig
+```
+
+- *Type:* <a href="#rhizo-co-terraform-provider-databricks.token.TokenProviderConfig">TokenProviderConfig</a>
+
+---
+
+##### `token_id_input`<sup>Optional</sup> <a name="token_id_input" id="rhizo-co-terraform-provider-databricks.token.Token.property.tokenIdInput"></a>
+
+```python
+token_id_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `comment`<sup>Required</sup> <a name="comment" id="rhizo-co-terraform-provider-databricks.token.Token.property.comment"></a>
+
+```python
+comment: str
+```
+
+- *Type:* str
+
+---
+
+##### `creation_time`<sup>Required</sup> <a name="creation_time" id="rhizo-co-terraform-provider-databricks.token.Token.property.creationTime"></a>
+
+```python
+creation_time: typing.Union[int, float]
+```
+
+- *Type:* typing.Union[int, float]
+
+---
+
+##### `expiry_time`<sup>Required</sup> <a name="expiry_time" id="rhizo-co-terraform-provider-databricks.token.Token.property.expiryTime"></a>
+
+```python
+expiry_time: typing.Union[int, float]
+```
+
+- *Type:* typing.Union[int, float]
+
+---
+
+##### `id`<sup>Required</sup> <a name="id" id="rhizo-co-terraform-provider-databricks.token.Token.property.id"></a>
+
+```python
+id: str
+```
+
+- *Type:* str
+
+---
+
+##### `lifetime_seconds`<sup>Required</sup> <a name="lifetime_seconds" id="rhizo-co-terraform-provider-databricks.token.Token.property.lifetimeSeconds"></a>
+
+```python
+lifetime_seconds: typing.Union[int, float]
+```
+
+- *Type:* typing.Union[int, float]
+
+---
+
+##### `token_id`<sup>Required</sup> <a name="token_id" id="rhizo-co-terraform-provider-databricks.token.Token.property.tokenId"></a>
+
+```python
+token_id: str
+```
+
+- *Type:* str
+
+---
+
+#### Constants <a name="Constants" id="Constants"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#rhizo-co-terraform-provider-databricks.token.Token.property.tfResourceType">tfResourceType</a></code> | <code>str</code> | *No description.* |
+
+---
+
+##### `tfResourceType`<sup>Required</sup> <a name="tfResourceType" id="rhizo-co-terraform-provider-databricks.token.Token.property.tfResourceType"></a>
+
+```python
+tfResourceType: str
+```
+
+- *Type:* str
+
+---
+
+## Structs <a name="Structs" id="Structs"></a>
+
+### TokenConfig <a name="TokenConfig" id="rhizo-co-terraform-provider-databricks.token.TokenConfig"></a>
+
+#### Initializer <a name="Initializer" id="rhizo-co-terraform-provider-databricks.token.TokenConfig.Initializer"></a>
+
+```python
+from rhizo_co_cdktf_provider_databricks import token
+
+token.TokenConfig(
+  connection: SSHProvisionerConnection | WinrmProvisionerConnection = None,
+  count: typing.Union[int, float] | TerraformCount = None,
+  depends_on: typing.List[ITerraformDependable] = None,
+  for_each: ITerraformIterator = None,
+  lifecycle: TerraformResourceLifecycle = None,
+  provider: TerraformProvider = None,
+  provisioners: typing.List[FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner] = None,
+  comment: str = None,
+  creation_time: typing.Union[int, float] = None,
+  expiry_time: typing.Union[int, float] = None,
+  id: str = None,
+  lifetime_seconds: typing.Union[int, float] = None,
+  provider_config: TokenProviderConfig = None,
+  token_id: str = None
+)
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#rhizo-co-terraform-provider-databricks.token.TokenConfig.property.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.token.TokenConfig.property.count">count</a></code> | <code>typing.Union[int, float] \| cdktf.TerraformCount</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.token.TokenConfig.property.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.token.TokenConfig.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.token.TokenConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.token.TokenConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.token.TokenConfig.property.provisioners">provisioners</a></code> | <code>typing.List[cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner]</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.token.TokenConfig.property.comment">comment</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.130.0/docs/resources/token#comment Token#comment}. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.token.TokenConfig.property.creationTime">creation_time</a></code> | <code>typing.Union[int, float]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.130.0/docs/resources/token#creation_time Token#creation_time}. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.token.TokenConfig.property.expiryTime">expiry_time</a></code> | <code>typing.Union[int, float]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.130.0/docs/resources/token#expiry_time Token#expiry_time}. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.token.TokenConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.130.0/docs/resources/token#id Token#id}. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.token.TokenConfig.property.lifetimeSeconds">lifetime_seconds</a></code> | <code>typing.Union[int, float]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.130.0/docs/resources/token#lifetime_seconds Token#lifetime_seconds}. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.token.TokenConfig.property.providerConfig">provider_config</a></code> | <code><a href="#rhizo-co-terraform-provider-databricks.token.TokenProviderConfig">TokenProviderConfig</a></code> | provider_config block. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.token.TokenConfig.property.tokenId">token_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.130.0/docs/resources/token#token_id Token#token_id}. |
+
+---
+
+##### `connection`<sup>Optional</sup> <a name="connection" id="rhizo-co-terraform-provider-databricks.token.TokenConfig.property.connection"></a>
+
+```python
+connection: SSHProvisionerConnection | WinrmProvisionerConnection
+```
+
+- *Type:* cdktf.SSHProvisionerConnection | cdktf.WinrmProvisionerConnection
+
+---
+
+##### `count`<sup>Optional</sup> <a name="count" id="rhizo-co-terraform-provider-databricks.token.TokenConfig.property.count"></a>
+
+```python
+count: typing.Union[int, float] | TerraformCount
+```
+
+- *Type:* typing.Union[int, float] | cdktf.TerraformCount
+
+---
+
+##### `depends_on`<sup>Optional</sup> <a name="depends_on" id="rhizo-co-terraform-provider-databricks.token.TokenConfig.property.dependsOn"></a>
+
+```python
+depends_on: typing.List[ITerraformDependable]
+```
+
+- *Type:* typing.List[cdktf.ITerraformDependable]
+
+---
+
+##### `for_each`<sup>Optional</sup> <a name="for_each" id="rhizo-co-terraform-provider-databricks.token.TokenConfig.property.forEach"></a>
+
+```python
+for_each: ITerraformIterator
+```
+
+- *Type:* cdktf.ITerraformIterator
+
+---
+
+##### `lifecycle`<sup>Optional</sup> <a name="lifecycle" id="rhizo-co-terraform-provider-databricks.token.TokenConfig.property.lifecycle"></a>
+
+```python
+lifecycle: TerraformResourceLifecycle
+```
+
+- *Type:* cdktf.TerraformResourceLifecycle
+
+---
+
+##### `provider`<sup>Optional</sup> <a name="provider" id="rhizo-co-terraform-provider-databricks.token.TokenConfig.property.provider"></a>
+
+```python
+provider: TerraformProvider
+```
+
+- *Type:* cdktf.TerraformProvider
+
+---
+
+##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="rhizo-co-terraform-provider-databricks.token.TokenConfig.property.provisioners"></a>
+
+```python
+provisioners: typing.List[FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner]
+```
+
+- *Type:* typing.List[cdktf.FileProvisioner | cdktf.LocalExecProvisioner | cdktf.RemoteExecProvisioner]
+
+---
+
+##### `comment`<sup>Optional</sup> <a name="comment" id="rhizo-co-terraform-provider-databricks.token.TokenConfig.property.comment"></a>
+
+```python
+comment: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.130.0/docs/resources/token#comment Token#comment}.
+
+---
+
+##### `creation_time`<sup>Optional</sup> <a name="creation_time" id="rhizo-co-terraform-provider-databricks.token.TokenConfig.property.creationTime"></a>
+
+```python
+creation_time: typing.Union[int, float]
+```
+
+- *Type:* typing.Union[int, float]
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.130.0/docs/resources/token#creation_time Token#creation_time}.
+
+---
+
+##### `expiry_time`<sup>Optional</sup> <a name="expiry_time" id="rhizo-co-terraform-provider-databricks.token.TokenConfig.property.expiryTime"></a>
+
+```python
+expiry_time: typing.Union[int, float]
+```
+
+- *Type:* typing.Union[int, float]
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.130.0/docs/resources/token#expiry_time Token#expiry_time}.
+
+---
+
+##### `id`<sup>Optional</sup> <a name="id" id="rhizo-co-terraform-provider-databricks.token.TokenConfig.property.id"></a>
+
+```python
+id: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.130.0/docs/resources/token#id Token#id}.
+
+Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+
+---
+
+##### `lifetime_seconds`<sup>Optional</sup> <a name="lifetime_seconds" id="rhizo-co-terraform-provider-databricks.token.TokenConfig.property.lifetimeSeconds"></a>
+
+```python
+lifetime_seconds: typing.Union[int, float]
+```
+
+- *Type:* typing.Union[int, float]
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.130.0/docs/resources/token#lifetime_seconds Token#lifetime_seconds}.
+
+---
+
+##### `provider_config`<sup>Optional</sup> <a name="provider_config" id="rhizo-co-terraform-provider-databricks.token.TokenConfig.property.providerConfig"></a>
+
+```python
+provider_config: TokenProviderConfig
+```
+
+- *Type:* <a href="#rhizo-co-terraform-provider-databricks.token.TokenProviderConfig">TokenProviderConfig</a>
+
+provider_config block.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.130.0/docs/resources/token#provider_config Token#provider_config}
+
+---
+
+##### `token_id`<sup>Optional</sup> <a name="token_id" id="rhizo-co-terraform-provider-databricks.token.TokenConfig.property.tokenId"></a>
+
+```python
+token_id: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.130.0/docs/resources/token#token_id Token#token_id}.
+
+---
+
+### TokenProviderConfig <a name="TokenProviderConfig" id="rhizo-co-terraform-provider-databricks.token.TokenProviderConfig"></a>
+
+#### Initializer <a name="Initializer" id="rhizo-co-terraform-provider-databricks.token.TokenProviderConfig.Initializer"></a>
+
+```python
+from rhizo_co_cdktf_provider_databricks import token
+
+token.TokenProviderConfig(
+  workspace_id: str = None
+)
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#rhizo-co-terraform-provider-databricks.token.TokenProviderConfig.property.workspaceId">workspace_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.130.0/docs/resources/token#workspace_id Token#workspace_id}. |
+
+---
+
+##### `workspace_id`<sup>Optional</sup> <a name="workspace_id" id="rhizo-co-terraform-provider-databricks.token.TokenProviderConfig.property.workspaceId"></a>
+
+```python
+workspace_id: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.130.0/docs/resources/token#workspace_id Token#workspace_id}.
+
+---
+
+## Classes <a name="Classes" id="Classes"></a>
+
+### TokenProviderConfigOutputReference <a name="TokenProviderConfigOutputReference" id="rhizo-co-terraform-provider-databricks.token.TokenProviderConfigOutputReference"></a>
+
+#### Initializers <a name="Initializers" id="rhizo-co-terraform-provider-databricks.token.TokenProviderConfigOutputReference.Initializer"></a>
+
+```python
+from rhizo_co_cdktf_provider_databricks import token
+
+token.TokenProviderConfigOutputReference(
+  terraform_resource: IInterpolatingParent,
+  terraform_attribute: str
+)
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#rhizo-co-terraform-provider-databricks.token.TokenProviderConfigOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.token.TokenProviderConfigOutputReference.Initializer.parameter.terraformAttribute">terraform_attribute</a></code> | <code>str</code> | The attribute on the parent resource this class is referencing. |
+
+---
+
+##### `terraform_resource`<sup>Required</sup> <a name="terraform_resource" id="rhizo-co-terraform-provider-databricks.token.TokenProviderConfigOutputReference.Initializer.parameter.terraformResource"></a>
+
+- *Type:* cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="rhizo-co-terraform-provider-databricks.token.TokenProviderConfigOutputReference.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#rhizo-co-terraform-provider-databricks.token.TokenProviderConfigOutputReference.computeFqn">compute_fqn</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.token.TokenProviderConfigOutputReference.getAnyMapAttribute">get_any_map_attribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.token.TokenProviderConfigOutputReference.getBooleanAttribute">get_boolean_attribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.token.TokenProviderConfigOutputReference.getBooleanMapAttribute">get_boolean_map_attribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.token.TokenProviderConfigOutputReference.getListAttribute">get_list_attribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.token.TokenProviderConfigOutputReference.getNumberAttribute">get_number_attribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.token.TokenProviderConfigOutputReference.getNumberListAttribute">get_number_list_attribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.token.TokenProviderConfigOutputReference.getNumberMapAttribute">get_number_map_attribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.token.TokenProviderConfigOutputReference.getStringAttribute">get_string_attribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.token.TokenProviderConfigOutputReference.getStringMapAttribute">get_string_map_attribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.token.TokenProviderConfigOutputReference.interpolationForAttribute">interpolation_for_attribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.token.TokenProviderConfigOutputReference.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.token.TokenProviderConfigOutputReference.toString">to_string</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.token.TokenProviderConfigOutputReference.resetWorkspaceId">reset_workspace_id</a></code> | *No description.* |
+
+---
+
+##### `compute_fqn` <a name="compute_fqn" id="rhizo-co-terraform-provider-databricks.token.TokenProviderConfigOutputReference.computeFqn"></a>
+
+```python
+def compute_fqn() -> str
+```
+
+##### `get_any_map_attribute` <a name="get_any_map_attribute" id="rhizo-co-terraform-provider-databricks.token.TokenProviderConfigOutputReference.getAnyMapAttribute"></a>
+
+```python
+def get_any_map_attribute(
+  terraform_attribute: str
+) -> typing.Mapping[typing.Any]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="rhizo-co-terraform-provider-databricks.token.TokenProviderConfigOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_boolean_attribute` <a name="get_boolean_attribute" id="rhizo-co-terraform-provider-databricks.token.TokenProviderConfigOutputReference.getBooleanAttribute"></a>
+
+```python
+def get_boolean_attribute(
+  terraform_attribute: str
+) -> IResolvable
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="rhizo-co-terraform-provider-databricks.token.TokenProviderConfigOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_boolean_map_attribute` <a name="get_boolean_map_attribute" id="rhizo-co-terraform-provider-databricks.token.TokenProviderConfigOutputReference.getBooleanMapAttribute"></a>
+
+```python
+def get_boolean_map_attribute(
+  terraform_attribute: str
+) -> typing.Mapping[bool]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="rhizo-co-terraform-provider-databricks.token.TokenProviderConfigOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_list_attribute` <a name="get_list_attribute" id="rhizo-co-terraform-provider-databricks.token.TokenProviderConfigOutputReference.getListAttribute"></a>
+
+```python
+def get_list_attribute(
+  terraform_attribute: str
+) -> typing.List[str]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="rhizo-co-terraform-provider-databricks.token.TokenProviderConfigOutputReference.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_number_attribute` <a name="get_number_attribute" id="rhizo-co-terraform-provider-databricks.token.TokenProviderConfigOutputReference.getNumberAttribute"></a>
+
+```python
+def get_number_attribute(
+  terraform_attribute: str
+) -> typing.Union[int, float]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="rhizo-co-terraform-provider-databricks.token.TokenProviderConfigOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_number_list_attribute` <a name="get_number_list_attribute" id="rhizo-co-terraform-provider-databricks.token.TokenProviderConfigOutputReference.getNumberListAttribute"></a>
+
+```python
+def get_number_list_attribute(
+  terraform_attribute: str
+) -> typing.List[typing.Union[int, float]]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="rhizo-co-terraform-provider-databricks.token.TokenProviderConfigOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_number_map_attribute` <a name="get_number_map_attribute" id="rhizo-co-terraform-provider-databricks.token.TokenProviderConfigOutputReference.getNumberMapAttribute"></a>
+
+```python
+def get_number_map_attribute(
+  terraform_attribute: str
+) -> typing.Mapping[typing.Union[int, float]]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="rhizo-co-terraform-provider-databricks.token.TokenProviderConfigOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_string_attribute` <a name="get_string_attribute" id="rhizo-co-terraform-provider-databricks.token.TokenProviderConfigOutputReference.getStringAttribute"></a>
+
+```python
+def get_string_attribute(
+  terraform_attribute: str
+) -> str
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="rhizo-co-terraform-provider-databricks.token.TokenProviderConfigOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_string_map_attribute` <a name="get_string_map_attribute" id="rhizo-co-terraform-provider-databricks.token.TokenProviderConfigOutputReference.getStringMapAttribute"></a>
+
+```python
+def get_string_map_attribute(
+  terraform_attribute: str
+) -> typing.Mapping[str]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="rhizo-co-terraform-provider-databricks.token.TokenProviderConfigOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `interpolation_for_attribute` <a name="interpolation_for_attribute" id="rhizo-co-terraform-provider-databricks.token.TokenProviderConfigOutputReference.interpolationForAttribute"></a>
+
+```python
+def interpolation_for_attribute(
+  property: str
+) -> IResolvable
+```
+
+###### `property`<sup>Required</sup> <a name="property" id="rhizo-co-terraform-provider-databricks.token.TokenProviderConfigOutputReference.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* str
+
+---
+
+##### `resolve` <a name="resolve" id="rhizo-co-terraform-provider-databricks.token.TokenProviderConfigOutputReference.resolve"></a>
+
+```python
+def resolve(
+  _context: IResolveContext
+) -> typing.Any
+```
+
+Produce the Token's value at resolution time.
+
+###### `_context`<sup>Required</sup> <a name="_context" id="rhizo-co-terraform-provider-databricks.token.TokenProviderConfigOutputReference.resolve.parameter._context"></a>
+
+- *Type:* cdktf.IResolveContext
+
+---
+
+##### `to_string` <a name="to_string" id="rhizo-co-terraform-provider-databricks.token.TokenProviderConfigOutputReference.toString"></a>
+
+```python
+def to_string() -> str
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+##### `reset_workspace_id` <a name="reset_workspace_id" id="rhizo-co-terraform-provider-databricks.token.TokenProviderConfigOutputReference.resetWorkspaceId"></a>
+
+```python
+def reset_workspace_id() -> None
+```
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#rhizo-co-terraform-provider-databricks.token.TokenProviderConfigOutputReference.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.token.TokenProviderConfigOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.token.TokenProviderConfigOutputReference.property.workspaceIdInput">workspace_id_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.token.TokenProviderConfigOutputReference.property.workspaceId">workspace_id</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.token.TokenProviderConfigOutputReference.property.internalValue">internal_value</a></code> | <code><a href="#rhizo-co-terraform-provider-databricks.token.TokenProviderConfig">TokenProviderConfig</a></code> | *No description.* |
+
+---
+
+##### `creation_stack`<sup>Required</sup> <a name="creation_stack" id="rhizo-co-terraform-provider-databricks.token.TokenProviderConfigOutputReference.property.creationStack"></a>
+
+```python
+creation_stack: typing.List[str]
+```
+
+- *Type:* typing.List[str]
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `fqn`<sup>Required</sup> <a name="fqn" id="rhizo-co-terraform-provider-databricks.token.TokenProviderConfigOutputReference.property.fqn"></a>
+
+```python
+fqn: str
+```
+
+- *Type:* str
+
+---
+
+##### `workspace_id_input`<sup>Optional</sup> <a name="workspace_id_input" id="rhizo-co-terraform-provider-databricks.token.TokenProviderConfigOutputReference.property.workspaceIdInput"></a>
+
+```python
+workspace_id_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `workspace_id`<sup>Required</sup> <a name="workspace_id" id="rhizo-co-terraform-provider-databricks.token.TokenProviderConfigOutputReference.property.workspaceId"></a>
+
+```python
+workspace_id: str
+```
+
+- *Type:* str
+
+---
+
+##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="rhizo-co-terraform-provider-databricks.token.TokenProviderConfigOutputReference.property.internalValue"></a>
+
+```python
+internal_value: TokenProviderConfig
+```
+
+- *Type:* <a href="#rhizo-co-terraform-provider-databricks.token.TokenProviderConfig">TokenProviderConfig</a>
+
+---
+
+
+

@@ -1,0 +1,1407 @@
+# `permissionAssignment` Submodule <a name="`permissionAssignment` Submodule" id="rhizo-co-terraform-provider-databricks.permissionAssignment"></a>
+
+## Constructs <a name="Constructs" id="Constructs"></a>
+
+### PermissionAssignment <a name="PermissionAssignment" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment"></a>
+
+Represents a {@link https://registry.terraform.io/providers/databricks/databricks/1.130.0/docs/resources/permission_assignment databricks_permission_assignment}.
+
+#### Initializers <a name="Initializers" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.Initializer"></a>
+
+```typescript
+import { permissionAssignment } from 'rhizo-co-terraform-provider-databricks'
+
+new permissionAssignment.PermissionAssignment(scope: Construct, id: string, config: PermissionAssignmentConfig)
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | The scope in which to define this construct. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.Initializer.parameter.id">id</a></code> | <code>string</code> | The scoped construct ID. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.Initializer.parameter.config">config</a></code> | <code><a href="#rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignmentConfig">PermissionAssignmentConfig</a></code> | *No description.* |
+
+---
+
+##### `scope`<sup>Required</sup> <a name="scope" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.Initializer.parameter.scope"></a>
+
+- *Type:* constructs.Construct
+
+The scope in which to define this construct.
+
+---
+
+##### `id`<sup>Required</sup> <a name="id" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.Initializer.parameter.id"></a>
+
+- *Type:* string
+
+The scoped construct ID.
+
+Must be unique amongst siblings in the same scope
+
+---
+
+##### `config`<sup>Required</sup> <a name="config" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.Initializer.parameter.config"></a>
+
+- *Type:* <a href="#rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignmentConfig">PermissionAssignmentConfig</a>
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.toString">toString</a></code> | Returns a string representation of this construct. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.with">with</a></code> | Applies one or more mixins to this construct. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.addOverride">addOverride</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.overrideLogicalId">overrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.resetOverrideLogicalId">resetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.toHclTerraform">toHclTerraform</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.toMetadata">toMetadata</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.toTerraform">toTerraform</a></code> | Adds this resource to the terraform JSON output. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.addMoveTarget">addMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.getAnyMapAttribute">getAnyMapAttribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.getBooleanAttribute">getBooleanAttribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.getBooleanMapAttribute">getBooleanMapAttribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.getListAttribute">getListAttribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.getNumberAttribute">getNumberAttribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.getNumberListAttribute">getNumberListAttribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.getNumberMapAttribute">getNumberMapAttribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.getStringAttribute">getStringAttribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.getStringMapAttribute">getStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.hasResourceMove">hasResourceMove</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.importFrom">importFrom</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.interpolationForAttribute">interpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.moveFromId">moveFromId</a></code> | Move the resource corresponding to "id" to this resource. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.moveTo">moveTo</a></code> | Moves this resource to the target resource given by moveTarget. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.moveToId">moveToId</a></code> | Moves this resource to the resource corresponding to "id". |
+| <code><a href="#rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.putProviderConfig">putProviderConfig</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.resetGroupName">resetGroupName</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.resetId">resetId</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.resetPrincipalId">resetPrincipalId</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.resetProviderConfig">resetProviderConfig</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.resetServicePrincipalName">resetServicePrincipalName</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.resetUserName">resetUserName</a></code> | *No description.* |
+
+---
+
+##### `toString` <a name="toString" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.toString"></a>
+
+```typescript
+public toString(): string
+```
+
+Returns a string representation of this construct.
+
+##### `with` <a name="with" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.with"></a>
+
+```typescript
+public with(mixins: ...IMixin[]): IConstruct
+```
+
+Applies one or more mixins to this construct.
+
+Mixins are applied in order. The list of constructs is captured at the
+start of the call, so constructs added by a mixin will not be visited.
+Use multiple `with()` calls if subsequent mixins should apply to added
+constructs.
+
+###### `mixins`<sup>Required</sup> <a name="mixins" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.with.parameter.mixins"></a>
+
+- *Type:* ...constructs.IMixin[]
+
+The mixins to apply.
+
+---
+
+##### `addOverride` <a name="addOverride" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.addOverride"></a>
+
+```typescript
+public addOverride(path: string, value: any): void
+```
+
+###### `path`<sup>Required</sup> <a name="path" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.addOverride.parameter.path"></a>
+
+- *Type:* string
+
+---
+
+###### `value`<sup>Required</sup> <a name="value" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.addOverride.parameter.value"></a>
+
+- *Type:* any
+
+---
+
+##### `overrideLogicalId` <a name="overrideLogicalId" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.overrideLogicalId"></a>
+
+```typescript
+public overrideLogicalId(newLogicalId: string): void
+```
+
+Overrides the auto-generated logical ID with a specific ID.
+
+###### `newLogicalId`<sup>Required</sup> <a name="newLogicalId" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.overrideLogicalId.parameter.newLogicalId"></a>
+
+- *Type:* string
+
+The new logical ID to use for this stack element.
+
+---
+
+##### `resetOverrideLogicalId` <a name="resetOverrideLogicalId" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.resetOverrideLogicalId"></a>
+
+```typescript
+public resetOverrideLogicalId(): void
+```
+
+Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `toHclTerraform` <a name="toHclTerraform" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.toHclTerraform"></a>
+
+```typescript
+public toHclTerraform(): any
+```
+
+##### `toMetadata` <a name="toMetadata" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.toMetadata"></a>
+
+```typescript
+public toMetadata(): any
+```
+
+##### `toTerraform` <a name="toTerraform" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.toTerraform"></a>
+
+```typescript
+public toTerraform(): any
+```
+
+Adds this resource to the terraform JSON output.
+
+##### `addMoveTarget` <a name="addMoveTarget" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.addMoveTarget"></a>
+
+```typescript
+public addMoveTarget(moveTarget: string): void
+```
+
+Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move.
+
+###### `moveTarget`<sup>Required</sup> <a name="moveTarget" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.addMoveTarget.parameter.moveTarget"></a>
+
+- *Type:* string
+
+The string move target that will correspond to this resource.
+
+---
+
+##### `getAnyMapAttribute` <a name="getAnyMapAttribute" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.getAnyMapAttribute"></a>
+
+```typescript
+public getAnyMapAttribute(terraformAttribute: string): {[ key: string ]: any}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getBooleanAttribute` <a name="getBooleanAttribute" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.getBooleanAttribute"></a>
+
+```typescript
+public getBooleanAttribute(terraformAttribute: string): IResolvable
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getBooleanMapAttribute` <a name="getBooleanMapAttribute" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.getBooleanMapAttribute"></a>
+
+```typescript
+public getBooleanMapAttribute(terraformAttribute: string): {[ key: string ]: boolean}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getListAttribute` <a name="getListAttribute" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.getListAttribute"></a>
+
+```typescript
+public getListAttribute(terraformAttribute: string): string[]
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getNumberAttribute` <a name="getNumberAttribute" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.getNumberAttribute"></a>
+
+```typescript
+public getNumberAttribute(terraformAttribute: string): number
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getNumberListAttribute` <a name="getNumberListAttribute" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.getNumberListAttribute"></a>
+
+```typescript
+public getNumberListAttribute(terraformAttribute: string): number[]
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getNumberMapAttribute` <a name="getNumberMapAttribute" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.getNumberMapAttribute"></a>
+
+```typescript
+public getNumberMapAttribute(terraformAttribute: string): {[ key: string ]: number}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getStringAttribute` <a name="getStringAttribute" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.getStringAttribute"></a>
+
+```typescript
+public getStringAttribute(terraformAttribute: string): string
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getStringMapAttribute` <a name="getStringMapAttribute" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.getStringMapAttribute"></a>
+
+```typescript
+public getStringMapAttribute(terraformAttribute: string): {[ key: string ]: string}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `hasResourceMove` <a name="hasResourceMove" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.hasResourceMove"></a>
+
+```typescript
+public hasResourceMove(): TerraformResourceMoveByTarget | TerraformResourceMoveById
+```
+
+##### `importFrom` <a name="importFrom" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.importFrom"></a>
+
+```typescript
+public importFrom(id: string, provider?: TerraformProvider): void
+```
+
+###### `id`<sup>Required</sup> <a name="id" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.importFrom.parameter.id"></a>
+
+- *Type:* string
+
+---
+
+###### `provider`<sup>Optional</sup> <a name="provider" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.importFrom.parameter.provider"></a>
+
+- *Type:* cdktf.TerraformProvider
+
+---
+
+##### `interpolationForAttribute` <a name="interpolationForAttribute" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.interpolationForAttribute"></a>
+
+```typescript
+public interpolationForAttribute(terraformAttribute: string): IResolvable
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.interpolationForAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `moveFromId` <a name="moveFromId" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.moveFromId"></a>
+
+```typescript
+public moveFromId(id: string): void
+```
+
+Move the resource corresponding to "id" to this resource.
+
+Note that the resource being moved from must be marked as moved using it's instance function.
+
+###### `id`<sup>Required</sup> <a name="id" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.moveFromId.parameter.id"></a>
+
+- *Type:* string
+
+Full id of resource being moved from, e.g. "aws_s3_bucket.example".
+
+---
+
+##### `moveTo` <a name="moveTo" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.moveTo"></a>
+
+```typescript
+public moveTo(moveTarget: string, index?: string | number): void
+```
+
+Moves this resource to the target resource given by moveTarget.
+
+###### `moveTarget`<sup>Required</sup> <a name="moveTarget" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.moveTo.parameter.moveTarget"></a>
+
+- *Type:* string
+
+The previously set user defined string set by .addMoveTarget() corresponding to the resource to move to.
+
+---
+
+###### `index`<sup>Optional</sup> <a name="index" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.moveTo.parameter.index"></a>
+
+- *Type:* string | number
+
+Optional The index corresponding to the key the resource is to appear in the foreach of a resource to move to.
+
+---
+
+##### `moveToId` <a name="moveToId" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.moveToId"></a>
+
+```typescript
+public moveToId(id: string): void
+```
+
+Moves this resource to the resource corresponding to "id".
+
+###### `id`<sup>Required</sup> <a name="id" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.moveToId.parameter.id"></a>
+
+- *Type:* string
+
+Full id of resource to move to, e.g. "aws_s3_bucket.example".
+
+---
+
+##### `putProviderConfig` <a name="putProviderConfig" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.putProviderConfig"></a>
+
+```typescript
+public putProviderConfig(value: PermissionAssignmentProviderConfig): void
+```
+
+###### `value`<sup>Required</sup> <a name="value" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.putProviderConfig.parameter.value"></a>
+
+- *Type:* <a href="#rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignmentProviderConfig">PermissionAssignmentProviderConfig</a>
+
+---
+
+##### `resetGroupName` <a name="resetGroupName" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.resetGroupName"></a>
+
+```typescript
+public resetGroupName(): void
+```
+
+##### `resetId` <a name="resetId" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.resetId"></a>
+
+```typescript
+public resetId(): void
+```
+
+##### `resetPrincipalId` <a name="resetPrincipalId" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.resetPrincipalId"></a>
+
+```typescript
+public resetPrincipalId(): void
+```
+
+##### `resetProviderConfig` <a name="resetProviderConfig" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.resetProviderConfig"></a>
+
+```typescript
+public resetProviderConfig(): void
+```
+
+##### `resetServicePrincipalName` <a name="resetServicePrincipalName" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.resetServicePrincipalName"></a>
+
+```typescript
+public resetServicePrincipalName(): void
+```
+
+##### `resetUserName` <a name="resetUserName" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.resetUserName"></a>
+
+```typescript
+public resetUserName(): void
+```
+
+#### Static Functions <a name="Static Functions" id="Static Functions"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.isConstruct">isConstruct</a></code> | Checks if `x` is a construct. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.isTerraformElement">isTerraformElement</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.isTerraformResource">isTerraformResource</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.generateConfigForImport">generateConfigForImport</a></code> | Generates CDKTF code for importing a PermissionAssignment resource upon running "cdktf plan <stack-name>". |
+
+---
+
+##### `isConstruct` <a name="isConstruct" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.isConstruct"></a>
+
+```typescript
+import { permissionAssignment } from 'rhizo-co-terraform-provider-databricks'
+
+permissionAssignment.PermissionAssignment.isConstruct(x: any)
+```
+
+Checks if `x` is a construct.
+
+Use this method instead of `instanceof` to properly detect `Construct`
+instances, even when the construct library is symlinked.
+
+Explanation: in JavaScript, multiple copies of the `constructs` library on
+disk are seen as independent, completely different libraries. As a
+consequence, the class `Construct` in each copy of the `constructs` library
+is seen as a different class, and an instance of one class will not test as
+`instanceof` the other class. `npm install` will not create installations
+like this, but users may manually symlink construct libraries together or
+use a monorepo tool: in those cases, multiple copies of the `constructs`
+library can be accidentally installed, and `instanceof` will behave
+unpredictably. It is safest to avoid using `instanceof`, and using
+this type-testing method instead.
+
+###### `x`<sup>Required</sup> <a name="x" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.isConstruct.parameter.x"></a>
+
+- *Type:* any
+
+Any object.
+
+---
+
+##### `isTerraformElement` <a name="isTerraformElement" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.isTerraformElement"></a>
+
+```typescript
+import { permissionAssignment } from 'rhizo-co-terraform-provider-databricks'
+
+permissionAssignment.PermissionAssignment.isTerraformElement(x: any)
+```
+
+###### `x`<sup>Required</sup> <a name="x" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.isTerraformElement.parameter.x"></a>
+
+- *Type:* any
+
+---
+
+##### `isTerraformResource` <a name="isTerraformResource" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.isTerraformResource"></a>
+
+```typescript
+import { permissionAssignment } from 'rhizo-co-terraform-provider-databricks'
+
+permissionAssignment.PermissionAssignment.isTerraformResource(x: any)
+```
+
+###### `x`<sup>Required</sup> <a name="x" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.isTerraformResource.parameter.x"></a>
+
+- *Type:* any
+
+---
+
+##### `generateConfigForImport` <a name="generateConfigForImport" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.generateConfigForImport"></a>
+
+```typescript
+import { permissionAssignment } from 'rhizo-co-terraform-provider-databricks'
+
+permissionAssignment.PermissionAssignment.generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: TerraformProvider)
+```
+
+Generates CDKTF code for importing a PermissionAssignment resource upon running "cdktf plan <stack-name>".
+
+###### `scope`<sup>Required</sup> <a name="scope" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.generateConfigForImport.parameter.scope"></a>
+
+- *Type:* constructs.Construct
+
+The scope in which to define this construct.
+
+---
+
+###### `importToId`<sup>Required</sup> <a name="importToId" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.generateConfigForImport.parameter.importToId"></a>
+
+- *Type:* string
+
+The construct id used in the generated config for the PermissionAssignment to import.
+
+---
+
+###### `importFromId`<sup>Required</sup> <a name="importFromId" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.generateConfigForImport.parameter.importFromId"></a>
+
+- *Type:* string
+
+The id of the existing PermissionAssignment that should be imported.
+
+Refer to the {@link https://registry.terraform.io/providers/databricks/databricks/1.130.0/docs/resources/permission_assignment#import import section} in the documentation of this resource for the id to use
+
+---
+
+###### `provider`<sup>Optional</sup> <a name="provider" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.generateConfigForImport.parameter.provider"></a>
+
+- *Type:* cdktf.TerraformProvider
+
+? Optional instance of the provider where the PermissionAssignment to import is found.
+
+---
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.property.cdktfStack">cdktfStack</a></code> | <code>cdktf.TerraformStack</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.property.fqn">fqn</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.property.friendlyUniqueId">friendlyUniqueId</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.property.terraformMetaArguments">terraformMetaArguments</a></code> | <code>{[ key: string ]: any}</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.property.terraformResourceType">terraformResourceType</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.property.terraformGeneratorMetadata">terraformGeneratorMetadata</a></code> | <code>cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.property.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.property.count">count</a></code> | <code>number \| cdktf.TerraformCount</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.property.dependsOn">dependsOn</a></code> | <code>string[]</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.property.forEach">forEach</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.property.displayName">displayName</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.property.providerConfig">providerConfig</a></code> | <code><a href="#rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignmentProviderConfigOutputReference">PermissionAssignmentProviderConfigOutputReference</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.property.groupNameInput">groupNameInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.property.idInput">idInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.property.permissionsInput">permissionsInput</a></code> | <code>string[]</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.property.principalIdInput">principalIdInput</a></code> | <code>number</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.property.providerConfigInput">providerConfigInput</a></code> | <code><a href="#rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignmentProviderConfig">PermissionAssignmentProviderConfig</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.property.servicePrincipalNameInput">servicePrincipalNameInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.property.userNameInput">userNameInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.property.groupName">groupName</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.property.id">id</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.property.permissions">permissions</a></code> | <code>string[]</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.property.principalId">principalId</a></code> | <code>number</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.property.servicePrincipalName">servicePrincipalName</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.property.userName">userName</a></code> | <code>string</code> | *No description.* |
+
+---
+
+##### `node`<sup>Required</sup> <a name="node" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.property.node"></a>
+
+```typescript
+public readonly node: Node;
+```
+
+- *Type:* constructs.Node
+
+The tree node.
+
+---
+
+##### `cdktfStack`<sup>Required</sup> <a name="cdktfStack" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.property.cdktfStack"></a>
+
+```typescript
+public readonly cdktfStack: TerraformStack;
+```
+
+- *Type:* cdktf.TerraformStack
+
+---
+
+##### `fqn`<sup>Required</sup> <a name="fqn" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.property.fqn"></a>
+
+```typescript
+public readonly fqn: string;
+```
+
+- *Type:* string
+
+---
+
+##### `friendlyUniqueId`<sup>Required</sup> <a name="friendlyUniqueId" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.property.friendlyUniqueId"></a>
+
+```typescript
+public readonly friendlyUniqueId: string;
+```
+
+- *Type:* string
+
+---
+
+##### `terraformMetaArguments`<sup>Required</sup> <a name="terraformMetaArguments" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.property.terraformMetaArguments"></a>
+
+```typescript
+public readonly terraformMetaArguments: {[ key: string ]: any};
+```
+
+- *Type:* {[ key: string ]: any}
+
+---
+
+##### `terraformResourceType`<sup>Required</sup> <a name="terraformResourceType" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.property.terraformResourceType"></a>
+
+```typescript
+public readonly terraformResourceType: string;
+```
+
+- *Type:* string
+
+---
+
+##### `terraformGeneratorMetadata`<sup>Optional</sup> <a name="terraformGeneratorMetadata" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.property.terraformGeneratorMetadata"></a>
+
+```typescript
+public readonly terraformGeneratorMetadata: TerraformProviderGeneratorMetadata;
+```
+
+- *Type:* cdktf.TerraformProviderGeneratorMetadata
+
+---
+
+##### `connection`<sup>Optional</sup> <a name="connection" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.property.connection"></a>
+
+```typescript
+public readonly connection: SSHProvisionerConnection | WinrmProvisionerConnection;
+```
+
+- *Type:* cdktf.SSHProvisionerConnection | cdktf.WinrmProvisionerConnection
+
+---
+
+##### `count`<sup>Optional</sup> <a name="count" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.property.count"></a>
+
+```typescript
+public readonly count: number | TerraformCount;
+```
+
+- *Type:* number | cdktf.TerraformCount
+
+---
+
+##### `dependsOn`<sup>Optional</sup> <a name="dependsOn" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.property.dependsOn"></a>
+
+```typescript
+public readonly dependsOn: string[];
+```
+
+- *Type:* string[]
+
+---
+
+##### `forEach`<sup>Optional</sup> <a name="forEach" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.property.forEach"></a>
+
+```typescript
+public readonly forEach: ITerraformIterator;
+```
+
+- *Type:* cdktf.ITerraformIterator
+
+---
+
+##### `lifecycle`<sup>Optional</sup> <a name="lifecycle" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.property.lifecycle"></a>
+
+```typescript
+public readonly lifecycle: TerraformResourceLifecycle;
+```
+
+- *Type:* cdktf.TerraformResourceLifecycle
+
+---
+
+##### `provider`<sup>Optional</sup> <a name="provider" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.property.provider"></a>
+
+```typescript
+public readonly provider: TerraformProvider;
+```
+
+- *Type:* cdktf.TerraformProvider
+
+---
+
+##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.property.provisioners"></a>
+
+```typescript
+public readonly provisioners: (FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner)[];
+```
+
+- *Type:* cdktf.FileProvisioner | cdktf.LocalExecProvisioner | cdktf.RemoteExecProvisioner[]
+
+---
+
+##### `displayName`<sup>Required</sup> <a name="displayName" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.property.displayName"></a>
+
+```typescript
+public readonly displayName: string;
+```
+
+- *Type:* string
+
+---
+
+##### `providerConfig`<sup>Required</sup> <a name="providerConfig" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.property.providerConfig"></a>
+
+```typescript
+public readonly providerConfig: PermissionAssignmentProviderConfigOutputReference;
+```
+
+- *Type:* <a href="#rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignmentProviderConfigOutputReference">PermissionAssignmentProviderConfigOutputReference</a>
+
+---
+
+##### `groupNameInput`<sup>Optional</sup> <a name="groupNameInput" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.property.groupNameInput"></a>
+
+```typescript
+public readonly groupNameInput: string;
+```
+
+- *Type:* string
+
+---
+
+##### `idInput`<sup>Optional</sup> <a name="idInput" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.property.idInput"></a>
+
+```typescript
+public readonly idInput: string;
+```
+
+- *Type:* string
+
+---
+
+##### `permissionsInput`<sup>Optional</sup> <a name="permissionsInput" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.property.permissionsInput"></a>
+
+```typescript
+public readonly permissionsInput: string[];
+```
+
+- *Type:* string[]
+
+---
+
+##### `principalIdInput`<sup>Optional</sup> <a name="principalIdInput" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.property.principalIdInput"></a>
+
+```typescript
+public readonly principalIdInput: number;
+```
+
+- *Type:* number
+
+---
+
+##### `providerConfigInput`<sup>Optional</sup> <a name="providerConfigInput" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.property.providerConfigInput"></a>
+
+```typescript
+public readonly providerConfigInput: PermissionAssignmentProviderConfig;
+```
+
+- *Type:* <a href="#rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignmentProviderConfig">PermissionAssignmentProviderConfig</a>
+
+---
+
+##### `servicePrincipalNameInput`<sup>Optional</sup> <a name="servicePrincipalNameInput" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.property.servicePrincipalNameInput"></a>
+
+```typescript
+public readonly servicePrincipalNameInput: string;
+```
+
+- *Type:* string
+
+---
+
+##### `userNameInput`<sup>Optional</sup> <a name="userNameInput" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.property.userNameInput"></a>
+
+```typescript
+public readonly userNameInput: string;
+```
+
+- *Type:* string
+
+---
+
+##### `groupName`<sup>Required</sup> <a name="groupName" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.property.groupName"></a>
+
+```typescript
+public readonly groupName: string;
+```
+
+- *Type:* string
+
+---
+
+##### `id`<sup>Required</sup> <a name="id" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.property.id"></a>
+
+```typescript
+public readonly id: string;
+```
+
+- *Type:* string
+
+---
+
+##### `permissions`<sup>Required</sup> <a name="permissions" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.property.permissions"></a>
+
+```typescript
+public readonly permissions: string[];
+```
+
+- *Type:* string[]
+
+---
+
+##### `principalId`<sup>Required</sup> <a name="principalId" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.property.principalId"></a>
+
+```typescript
+public readonly principalId: number;
+```
+
+- *Type:* number
+
+---
+
+##### `servicePrincipalName`<sup>Required</sup> <a name="servicePrincipalName" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.property.servicePrincipalName"></a>
+
+```typescript
+public readonly servicePrincipalName: string;
+```
+
+- *Type:* string
+
+---
+
+##### `userName`<sup>Required</sup> <a name="userName" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.property.userName"></a>
+
+```typescript
+public readonly userName: string;
+```
+
+- *Type:* string
+
+---
+
+#### Constants <a name="Constants" id="Constants"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.property.tfResourceType">tfResourceType</a></code> | <code>string</code> | *No description.* |
+
+---
+
+##### `tfResourceType`<sup>Required</sup> <a name="tfResourceType" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignment.property.tfResourceType"></a>
+
+```typescript
+public readonly tfResourceType: string;
+```
+
+- *Type:* string
+
+---
+
+## Structs <a name="Structs" id="Structs"></a>
+
+### PermissionAssignmentConfig <a name="PermissionAssignmentConfig" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignmentConfig"></a>
+
+#### Initializer <a name="Initializer" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignmentConfig.Initializer"></a>
+
+```typescript
+import { permissionAssignment } from 'rhizo-co-terraform-provider-databricks'
+
+const permissionAssignmentConfig: permissionAssignment.PermissionAssignmentConfig = { ... }
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignmentConfig.property.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignmentConfig.property.count">count</a></code> | <code>number \| cdktf.TerraformCount</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignmentConfig.property.dependsOn">dependsOn</a></code> | <code>cdktf.ITerraformDependable[]</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignmentConfig.property.forEach">forEach</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignmentConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignmentConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignmentConfig.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignmentConfig.property.permissions">permissions</a></code> | <code>string[]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.130.0/docs/resources/permission_assignment#permissions PermissionAssignment#permissions}. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignmentConfig.property.groupName">groupName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.130.0/docs/resources/permission_assignment#group_name PermissionAssignment#group_name}. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignmentConfig.property.id">id</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.130.0/docs/resources/permission_assignment#id PermissionAssignment#id}. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignmentConfig.property.principalId">principalId</a></code> | <code>number</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.130.0/docs/resources/permission_assignment#principal_id PermissionAssignment#principal_id}. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignmentConfig.property.providerConfig">providerConfig</a></code> | <code><a href="#rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignmentProviderConfig">PermissionAssignmentProviderConfig</a></code> | provider_config block. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignmentConfig.property.servicePrincipalName">servicePrincipalName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.130.0/docs/resources/permission_assignment#service_principal_name PermissionAssignment#service_principal_name}. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignmentConfig.property.userName">userName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.130.0/docs/resources/permission_assignment#user_name PermissionAssignment#user_name}. |
+
+---
+
+##### `connection`<sup>Optional</sup> <a name="connection" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignmentConfig.property.connection"></a>
+
+```typescript
+public readonly connection: SSHProvisionerConnection | WinrmProvisionerConnection;
+```
+
+- *Type:* cdktf.SSHProvisionerConnection | cdktf.WinrmProvisionerConnection
+
+---
+
+##### `count`<sup>Optional</sup> <a name="count" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignmentConfig.property.count"></a>
+
+```typescript
+public readonly count: number | TerraformCount;
+```
+
+- *Type:* number | cdktf.TerraformCount
+
+---
+
+##### `dependsOn`<sup>Optional</sup> <a name="dependsOn" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignmentConfig.property.dependsOn"></a>
+
+```typescript
+public readonly dependsOn: ITerraformDependable[];
+```
+
+- *Type:* cdktf.ITerraformDependable[]
+
+---
+
+##### `forEach`<sup>Optional</sup> <a name="forEach" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignmentConfig.property.forEach"></a>
+
+```typescript
+public readonly forEach: ITerraformIterator;
+```
+
+- *Type:* cdktf.ITerraformIterator
+
+---
+
+##### `lifecycle`<sup>Optional</sup> <a name="lifecycle" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignmentConfig.property.lifecycle"></a>
+
+```typescript
+public readonly lifecycle: TerraformResourceLifecycle;
+```
+
+- *Type:* cdktf.TerraformResourceLifecycle
+
+---
+
+##### `provider`<sup>Optional</sup> <a name="provider" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignmentConfig.property.provider"></a>
+
+```typescript
+public readonly provider: TerraformProvider;
+```
+
+- *Type:* cdktf.TerraformProvider
+
+---
+
+##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignmentConfig.property.provisioners"></a>
+
+```typescript
+public readonly provisioners: (FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner)[];
+```
+
+- *Type:* cdktf.FileProvisioner | cdktf.LocalExecProvisioner | cdktf.RemoteExecProvisioner[]
+
+---
+
+##### `permissions`<sup>Required</sup> <a name="permissions" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignmentConfig.property.permissions"></a>
+
+```typescript
+public readonly permissions: string[];
+```
+
+- *Type:* string[]
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.130.0/docs/resources/permission_assignment#permissions PermissionAssignment#permissions}.
+
+---
+
+##### `groupName`<sup>Optional</sup> <a name="groupName" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignmentConfig.property.groupName"></a>
+
+```typescript
+public readonly groupName: string;
+```
+
+- *Type:* string
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.130.0/docs/resources/permission_assignment#group_name PermissionAssignment#group_name}.
+
+---
+
+##### `id`<sup>Optional</sup> <a name="id" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignmentConfig.property.id"></a>
+
+```typescript
+public readonly id: string;
+```
+
+- *Type:* string
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.130.0/docs/resources/permission_assignment#id PermissionAssignment#id}.
+
+Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+
+---
+
+##### `principalId`<sup>Optional</sup> <a name="principalId" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignmentConfig.property.principalId"></a>
+
+```typescript
+public readonly principalId: number;
+```
+
+- *Type:* number
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.130.0/docs/resources/permission_assignment#principal_id PermissionAssignment#principal_id}.
+
+---
+
+##### `providerConfig`<sup>Optional</sup> <a name="providerConfig" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignmentConfig.property.providerConfig"></a>
+
+```typescript
+public readonly providerConfig: PermissionAssignmentProviderConfig;
+```
+
+- *Type:* <a href="#rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignmentProviderConfig">PermissionAssignmentProviderConfig</a>
+
+provider_config block.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.130.0/docs/resources/permission_assignment#provider_config PermissionAssignment#provider_config}
+
+---
+
+##### `servicePrincipalName`<sup>Optional</sup> <a name="servicePrincipalName" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignmentConfig.property.servicePrincipalName"></a>
+
+```typescript
+public readonly servicePrincipalName: string;
+```
+
+- *Type:* string
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.130.0/docs/resources/permission_assignment#service_principal_name PermissionAssignment#service_principal_name}.
+
+---
+
+##### `userName`<sup>Optional</sup> <a name="userName" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignmentConfig.property.userName"></a>
+
+```typescript
+public readonly userName: string;
+```
+
+- *Type:* string
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.130.0/docs/resources/permission_assignment#user_name PermissionAssignment#user_name}.
+
+---
+
+### PermissionAssignmentProviderConfig <a name="PermissionAssignmentProviderConfig" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignmentProviderConfig"></a>
+
+#### Initializer <a name="Initializer" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignmentProviderConfig.Initializer"></a>
+
+```typescript
+import { permissionAssignment } from 'rhizo-co-terraform-provider-databricks'
+
+const permissionAssignmentProviderConfig: permissionAssignment.PermissionAssignmentProviderConfig = { ... }
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignmentProviderConfig.property.workspaceId">workspaceId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.130.0/docs/resources/permission_assignment#workspace_id PermissionAssignment#workspace_id}. |
+
+---
+
+##### `workspaceId`<sup>Optional</sup> <a name="workspaceId" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignmentProviderConfig.property.workspaceId"></a>
+
+```typescript
+public readonly workspaceId: string;
+```
+
+- *Type:* string
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.130.0/docs/resources/permission_assignment#workspace_id PermissionAssignment#workspace_id}.
+
+---
+
+## Classes <a name="Classes" id="Classes"></a>
+
+### PermissionAssignmentProviderConfigOutputReference <a name="PermissionAssignmentProviderConfigOutputReference" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignmentProviderConfigOutputReference"></a>
+
+#### Initializers <a name="Initializers" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignmentProviderConfigOutputReference.Initializer"></a>
+
+```typescript
+import { permissionAssignment } from 'rhizo-co-terraform-provider-databricks'
+
+new permissionAssignment.PermissionAssignmentProviderConfigOutputReference(terraformResource: IInterpolatingParent, terraformAttribute: string)
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignmentProviderConfigOutputReference.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignmentProviderConfigOutputReference.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>string</code> | The attribute on the parent resource this class is referencing. |
+
+---
+
+##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignmentProviderConfigOutputReference.Initializer.parameter.terraformResource"></a>
+
+- *Type:* cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignmentProviderConfigOutputReference.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignmentProviderConfigOutputReference.computeFqn">computeFqn</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignmentProviderConfigOutputReference.getAnyMapAttribute">getAnyMapAttribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignmentProviderConfigOutputReference.getBooleanAttribute">getBooleanAttribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignmentProviderConfigOutputReference.getBooleanMapAttribute">getBooleanMapAttribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignmentProviderConfigOutputReference.getListAttribute">getListAttribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignmentProviderConfigOutputReference.getNumberAttribute">getNumberAttribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignmentProviderConfigOutputReference.getNumberListAttribute">getNumberListAttribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignmentProviderConfigOutputReference.getNumberMapAttribute">getNumberMapAttribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignmentProviderConfigOutputReference.getStringAttribute">getStringAttribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignmentProviderConfigOutputReference.getStringMapAttribute">getStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignmentProviderConfigOutputReference.interpolationForAttribute">interpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignmentProviderConfigOutputReference.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignmentProviderConfigOutputReference.toString">toString</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignmentProviderConfigOutputReference.resetWorkspaceId">resetWorkspaceId</a></code> | *No description.* |
+
+---
+
+##### `computeFqn` <a name="computeFqn" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignmentProviderConfigOutputReference.computeFqn"></a>
+
+```typescript
+public computeFqn(): string
+```
+
+##### `getAnyMapAttribute` <a name="getAnyMapAttribute" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignmentProviderConfigOutputReference.getAnyMapAttribute"></a>
+
+```typescript
+public getAnyMapAttribute(terraformAttribute: string): {[ key: string ]: any}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignmentProviderConfigOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getBooleanAttribute` <a name="getBooleanAttribute" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignmentProviderConfigOutputReference.getBooleanAttribute"></a>
+
+```typescript
+public getBooleanAttribute(terraformAttribute: string): IResolvable
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignmentProviderConfigOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getBooleanMapAttribute` <a name="getBooleanMapAttribute" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignmentProviderConfigOutputReference.getBooleanMapAttribute"></a>
+
+```typescript
+public getBooleanMapAttribute(terraformAttribute: string): {[ key: string ]: boolean}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignmentProviderConfigOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getListAttribute` <a name="getListAttribute" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignmentProviderConfigOutputReference.getListAttribute"></a>
+
+```typescript
+public getListAttribute(terraformAttribute: string): string[]
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignmentProviderConfigOutputReference.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getNumberAttribute` <a name="getNumberAttribute" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignmentProviderConfigOutputReference.getNumberAttribute"></a>
+
+```typescript
+public getNumberAttribute(terraformAttribute: string): number
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignmentProviderConfigOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getNumberListAttribute` <a name="getNumberListAttribute" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignmentProviderConfigOutputReference.getNumberListAttribute"></a>
+
+```typescript
+public getNumberListAttribute(terraformAttribute: string): number[]
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignmentProviderConfigOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getNumberMapAttribute` <a name="getNumberMapAttribute" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignmentProviderConfigOutputReference.getNumberMapAttribute"></a>
+
+```typescript
+public getNumberMapAttribute(terraformAttribute: string): {[ key: string ]: number}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignmentProviderConfigOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getStringAttribute` <a name="getStringAttribute" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignmentProviderConfigOutputReference.getStringAttribute"></a>
+
+```typescript
+public getStringAttribute(terraformAttribute: string): string
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignmentProviderConfigOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getStringMapAttribute` <a name="getStringMapAttribute" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignmentProviderConfigOutputReference.getStringMapAttribute"></a>
+
+```typescript
+public getStringMapAttribute(terraformAttribute: string): {[ key: string ]: string}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignmentProviderConfigOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `interpolationForAttribute` <a name="interpolationForAttribute" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignmentProviderConfigOutputReference.interpolationForAttribute"></a>
+
+```typescript
+public interpolationForAttribute(property: string): IResolvable
+```
+
+###### `property`<sup>Required</sup> <a name="property" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignmentProviderConfigOutputReference.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* string
+
+---
+
+##### `resolve` <a name="resolve" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignmentProviderConfigOutputReference.resolve"></a>
+
+```typescript
+public resolve(_context: IResolveContext): any
+```
+
+Produce the Token's value at resolution time.
+
+###### `_context`<sup>Required</sup> <a name="_context" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignmentProviderConfigOutputReference.resolve.parameter._context"></a>
+
+- *Type:* cdktf.IResolveContext
+
+---
+
+##### `toString` <a name="toString" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignmentProviderConfigOutputReference.toString"></a>
+
+```typescript
+public toString(): string
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+##### `resetWorkspaceId` <a name="resetWorkspaceId" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignmentProviderConfigOutputReference.resetWorkspaceId"></a>
+
+```typescript
+public resetWorkspaceId(): void
+```
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignmentProviderConfigOutputReference.property.creationStack">creationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignmentProviderConfigOutputReference.property.fqn">fqn</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignmentProviderConfigOutputReference.property.workspaceIdInput">workspaceIdInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignmentProviderConfigOutputReference.property.workspaceId">workspaceId</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignmentProviderConfigOutputReference.property.internalValue">internalValue</a></code> | <code><a href="#rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignmentProviderConfig">PermissionAssignmentProviderConfig</a></code> | *No description.* |
+
+---
+
+##### `creationStack`<sup>Required</sup> <a name="creationStack" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignmentProviderConfigOutputReference.property.creationStack"></a>
+
+```typescript
+public readonly creationStack: string[];
+```
+
+- *Type:* string[]
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `fqn`<sup>Required</sup> <a name="fqn" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignmentProviderConfigOutputReference.property.fqn"></a>
+
+```typescript
+public readonly fqn: string;
+```
+
+- *Type:* string
+
+---
+
+##### `workspaceIdInput`<sup>Optional</sup> <a name="workspaceIdInput" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignmentProviderConfigOutputReference.property.workspaceIdInput"></a>
+
+```typescript
+public readonly workspaceIdInput: string;
+```
+
+- *Type:* string
+
+---
+
+##### `workspaceId`<sup>Required</sup> <a name="workspaceId" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignmentProviderConfigOutputReference.property.workspaceId"></a>
+
+```typescript
+public readonly workspaceId: string;
+```
+
+- *Type:* string
+
+---
+
+##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignmentProviderConfigOutputReference.property.internalValue"></a>
+
+```typescript
+public readonly internalValue: PermissionAssignmentProviderConfig;
+```
+
+- *Type:* <a href="#rhizo-co-terraform-provider-databricks.permissionAssignment.PermissionAssignmentProviderConfig">PermissionAssignmentProviderConfig</a>
+
+---
+
+
+

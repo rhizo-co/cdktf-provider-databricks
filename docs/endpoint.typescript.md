@@ -1,0 +1,2193 @@
+# `endpoint` Submodule <a name="`endpoint` Submodule" id="rhizo-co-terraform-provider-databricks.endpoint"></a>
+
+## Constructs <a name="Constructs" id="Constructs"></a>
+
+### Endpoint <a name="Endpoint" id="rhizo-co-terraform-provider-databricks.endpoint.Endpoint"></a>
+
+Represents a {@link https://registry.terraform.io/providers/databricks/databricks/1.130.0/docs/resources/endpoint databricks_endpoint}.
+
+#### Initializers <a name="Initializers" id="rhizo-co-terraform-provider-databricks.endpoint.Endpoint.Initializer"></a>
+
+```typescript
+import { endpoint } from 'rhizo-co-terraform-provider-databricks'
+
+new endpoint.Endpoint(scope: Construct, id: string, config: EndpointConfig)
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.Endpoint.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | The scope in which to define this construct. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.Endpoint.Initializer.parameter.id">id</a></code> | <code>string</code> | The scoped construct ID. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.Endpoint.Initializer.parameter.config">config</a></code> | <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.EndpointConfig">EndpointConfig</a></code> | *No description.* |
+
+---
+
+##### `scope`<sup>Required</sup> <a name="scope" id="rhizo-co-terraform-provider-databricks.endpoint.Endpoint.Initializer.parameter.scope"></a>
+
+- *Type:* constructs.Construct
+
+The scope in which to define this construct.
+
+---
+
+##### `id`<sup>Required</sup> <a name="id" id="rhizo-co-terraform-provider-databricks.endpoint.Endpoint.Initializer.parameter.id"></a>
+
+- *Type:* string
+
+The scoped construct ID.
+
+Must be unique amongst siblings in the same scope
+
+---
+
+##### `config`<sup>Required</sup> <a name="config" id="rhizo-co-terraform-provider-databricks.endpoint.Endpoint.Initializer.parameter.config"></a>
+
+- *Type:* <a href="#rhizo-co-terraform-provider-databricks.endpoint.EndpointConfig">EndpointConfig</a>
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.Endpoint.toString">toString</a></code> | Returns a string representation of this construct. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.Endpoint.with">with</a></code> | Applies one or more mixins to this construct. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.Endpoint.addOverride">addOverride</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.Endpoint.overrideLogicalId">overrideLogicalId</a></code> | Overrides the auto-generated logical ID with a specific ID. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.Endpoint.resetOverrideLogicalId">resetOverrideLogicalId</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.Endpoint.toHclTerraform">toHclTerraform</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.Endpoint.toMetadata">toMetadata</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.Endpoint.toTerraform">toTerraform</a></code> | Adds this resource to the terraform JSON output. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.Endpoint.addMoveTarget">addMoveTarget</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.Endpoint.getAnyMapAttribute">getAnyMapAttribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.Endpoint.getBooleanAttribute">getBooleanAttribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.Endpoint.getBooleanMapAttribute">getBooleanMapAttribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.Endpoint.getListAttribute">getListAttribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.Endpoint.getNumberAttribute">getNumberAttribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.Endpoint.getNumberListAttribute">getNumberListAttribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.Endpoint.getNumberMapAttribute">getNumberMapAttribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.Endpoint.getStringAttribute">getStringAttribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.Endpoint.getStringMapAttribute">getStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.Endpoint.hasResourceMove">hasResourceMove</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.Endpoint.importFrom">importFrom</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.Endpoint.interpolationForAttribute">interpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.Endpoint.moveFromId">moveFromId</a></code> | Move the resource corresponding to "id" to this resource. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.Endpoint.moveTo">moveTo</a></code> | Moves this resource to the target resource given by moveTarget. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.Endpoint.moveToId">moveToId</a></code> | Moves this resource to the resource corresponding to "id". |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.Endpoint.putAwsVpcEndpointInfo">putAwsVpcEndpointInfo</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.Endpoint.putAzurePrivateEndpointInfo">putAzurePrivateEndpointInfo</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.Endpoint.putGcpPscEndpointInfo">putGcpPscEndpointInfo</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.Endpoint.resetAwsVpcEndpointInfo">resetAwsVpcEndpointInfo</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.Endpoint.resetAzurePrivateEndpointInfo">resetAzurePrivateEndpointInfo</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.Endpoint.resetGcpPscEndpointInfo">resetGcpPscEndpointInfo</a></code> | *No description.* |
+
+---
+
+##### `toString` <a name="toString" id="rhizo-co-terraform-provider-databricks.endpoint.Endpoint.toString"></a>
+
+```typescript
+public toString(): string
+```
+
+Returns a string representation of this construct.
+
+##### `with` <a name="with" id="rhizo-co-terraform-provider-databricks.endpoint.Endpoint.with"></a>
+
+```typescript
+public with(mixins: ...IMixin[]): IConstruct
+```
+
+Applies one or more mixins to this construct.
+
+Mixins are applied in order. The list of constructs is captured at the
+start of the call, so constructs added by a mixin will not be visited.
+Use multiple `with()` calls if subsequent mixins should apply to added
+constructs.
+
+###### `mixins`<sup>Required</sup> <a name="mixins" id="rhizo-co-terraform-provider-databricks.endpoint.Endpoint.with.parameter.mixins"></a>
+
+- *Type:* ...constructs.IMixin[]
+
+The mixins to apply.
+
+---
+
+##### `addOverride` <a name="addOverride" id="rhizo-co-terraform-provider-databricks.endpoint.Endpoint.addOverride"></a>
+
+```typescript
+public addOverride(path: string, value: any): void
+```
+
+###### `path`<sup>Required</sup> <a name="path" id="rhizo-co-terraform-provider-databricks.endpoint.Endpoint.addOverride.parameter.path"></a>
+
+- *Type:* string
+
+---
+
+###### `value`<sup>Required</sup> <a name="value" id="rhizo-co-terraform-provider-databricks.endpoint.Endpoint.addOverride.parameter.value"></a>
+
+- *Type:* any
+
+---
+
+##### `overrideLogicalId` <a name="overrideLogicalId" id="rhizo-co-terraform-provider-databricks.endpoint.Endpoint.overrideLogicalId"></a>
+
+```typescript
+public overrideLogicalId(newLogicalId: string): void
+```
+
+Overrides the auto-generated logical ID with a specific ID.
+
+###### `newLogicalId`<sup>Required</sup> <a name="newLogicalId" id="rhizo-co-terraform-provider-databricks.endpoint.Endpoint.overrideLogicalId.parameter.newLogicalId"></a>
+
+- *Type:* string
+
+The new logical ID to use for this stack element.
+
+---
+
+##### `resetOverrideLogicalId` <a name="resetOverrideLogicalId" id="rhizo-co-terraform-provider-databricks.endpoint.Endpoint.resetOverrideLogicalId"></a>
+
+```typescript
+public resetOverrideLogicalId(): void
+```
+
+Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `toHclTerraform` <a name="toHclTerraform" id="rhizo-co-terraform-provider-databricks.endpoint.Endpoint.toHclTerraform"></a>
+
+```typescript
+public toHclTerraform(): any
+```
+
+##### `toMetadata` <a name="toMetadata" id="rhizo-co-terraform-provider-databricks.endpoint.Endpoint.toMetadata"></a>
+
+```typescript
+public toMetadata(): any
+```
+
+##### `toTerraform` <a name="toTerraform" id="rhizo-co-terraform-provider-databricks.endpoint.Endpoint.toTerraform"></a>
+
+```typescript
+public toTerraform(): any
+```
+
+Adds this resource to the terraform JSON output.
+
+##### `addMoveTarget` <a name="addMoveTarget" id="rhizo-co-terraform-provider-databricks.endpoint.Endpoint.addMoveTarget"></a>
+
+```typescript
+public addMoveTarget(moveTarget: string): void
+```
+
+Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move.
+
+###### `moveTarget`<sup>Required</sup> <a name="moveTarget" id="rhizo-co-terraform-provider-databricks.endpoint.Endpoint.addMoveTarget.parameter.moveTarget"></a>
+
+- *Type:* string
+
+The string move target that will correspond to this resource.
+
+---
+
+##### `getAnyMapAttribute` <a name="getAnyMapAttribute" id="rhizo-co-terraform-provider-databricks.endpoint.Endpoint.getAnyMapAttribute"></a>
+
+```typescript
+public getAnyMapAttribute(terraformAttribute: string): {[ key: string ]: any}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="rhizo-co-terraform-provider-databricks.endpoint.Endpoint.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getBooleanAttribute` <a name="getBooleanAttribute" id="rhizo-co-terraform-provider-databricks.endpoint.Endpoint.getBooleanAttribute"></a>
+
+```typescript
+public getBooleanAttribute(terraformAttribute: string): IResolvable
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="rhizo-co-terraform-provider-databricks.endpoint.Endpoint.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getBooleanMapAttribute` <a name="getBooleanMapAttribute" id="rhizo-co-terraform-provider-databricks.endpoint.Endpoint.getBooleanMapAttribute"></a>
+
+```typescript
+public getBooleanMapAttribute(terraformAttribute: string): {[ key: string ]: boolean}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="rhizo-co-terraform-provider-databricks.endpoint.Endpoint.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getListAttribute` <a name="getListAttribute" id="rhizo-co-terraform-provider-databricks.endpoint.Endpoint.getListAttribute"></a>
+
+```typescript
+public getListAttribute(terraformAttribute: string): string[]
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="rhizo-co-terraform-provider-databricks.endpoint.Endpoint.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getNumberAttribute` <a name="getNumberAttribute" id="rhizo-co-terraform-provider-databricks.endpoint.Endpoint.getNumberAttribute"></a>
+
+```typescript
+public getNumberAttribute(terraformAttribute: string): number
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="rhizo-co-terraform-provider-databricks.endpoint.Endpoint.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getNumberListAttribute` <a name="getNumberListAttribute" id="rhizo-co-terraform-provider-databricks.endpoint.Endpoint.getNumberListAttribute"></a>
+
+```typescript
+public getNumberListAttribute(terraformAttribute: string): number[]
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="rhizo-co-terraform-provider-databricks.endpoint.Endpoint.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getNumberMapAttribute` <a name="getNumberMapAttribute" id="rhizo-co-terraform-provider-databricks.endpoint.Endpoint.getNumberMapAttribute"></a>
+
+```typescript
+public getNumberMapAttribute(terraformAttribute: string): {[ key: string ]: number}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="rhizo-co-terraform-provider-databricks.endpoint.Endpoint.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getStringAttribute` <a name="getStringAttribute" id="rhizo-co-terraform-provider-databricks.endpoint.Endpoint.getStringAttribute"></a>
+
+```typescript
+public getStringAttribute(terraformAttribute: string): string
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="rhizo-co-terraform-provider-databricks.endpoint.Endpoint.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getStringMapAttribute` <a name="getStringMapAttribute" id="rhizo-co-terraform-provider-databricks.endpoint.Endpoint.getStringMapAttribute"></a>
+
+```typescript
+public getStringMapAttribute(terraformAttribute: string): {[ key: string ]: string}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="rhizo-co-terraform-provider-databricks.endpoint.Endpoint.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `hasResourceMove` <a name="hasResourceMove" id="rhizo-co-terraform-provider-databricks.endpoint.Endpoint.hasResourceMove"></a>
+
+```typescript
+public hasResourceMove(): TerraformResourceMoveByTarget | TerraformResourceMoveById
+```
+
+##### `importFrom` <a name="importFrom" id="rhizo-co-terraform-provider-databricks.endpoint.Endpoint.importFrom"></a>
+
+```typescript
+public importFrom(id: string, provider?: TerraformProvider): void
+```
+
+###### `id`<sup>Required</sup> <a name="id" id="rhizo-co-terraform-provider-databricks.endpoint.Endpoint.importFrom.parameter.id"></a>
+
+- *Type:* string
+
+---
+
+###### `provider`<sup>Optional</sup> <a name="provider" id="rhizo-co-terraform-provider-databricks.endpoint.Endpoint.importFrom.parameter.provider"></a>
+
+- *Type:* cdktf.TerraformProvider
+
+---
+
+##### `interpolationForAttribute` <a name="interpolationForAttribute" id="rhizo-co-terraform-provider-databricks.endpoint.Endpoint.interpolationForAttribute"></a>
+
+```typescript
+public interpolationForAttribute(terraformAttribute: string): IResolvable
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="rhizo-co-terraform-provider-databricks.endpoint.Endpoint.interpolationForAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `moveFromId` <a name="moveFromId" id="rhizo-co-terraform-provider-databricks.endpoint.Endpoint.moveFromId"></a>
+
+```typescript
+public moveFromId(id: string): void
+```
+
+Move the resource corresponding to "id" to this resource.
+
+Note that the resource being moved from must be marked as moved using it's instance function.
+
+###### `id`<sup>Required</sup> <a name="id" id="rhizo-co-terraform-provider-databricks.endpoint.Endpoint.moveFromId.parameter.id"></a>
+
+- *Type:* string
+
+Full id of resource being moved from, e.g. "aws_s3_bucket.example".
+
+---
+
+##### `moveTo` <a name="moveTo" id="rhizo-co-terraform-provider-databricks.endpoint.Endpoint.moveTo"></a>
+
+```typescript
+public moveTo(moveTarget: string, index?: string | number): void
+```
+
+Moves this resource to the target resource given by moveTarget.
+
+###### `moveTarget`<sup>Required</sup> <a name="moveTarget" id="rhizo-co-terraform-provider-databricks.endpoint.Endpoint.moveTo.parameter.moveTarget"></a>
+
+- *Type:* string
+
+The previously set user defined string set by .addMoveTarget() corresponding to the resource to move to.
+
+---
+
+###### `index`<sup>Optional</sup> <a name="index" id="rhizo-co-terraform-provider-databricks.endpoint.Endpoint.moveTo.parameter.index"></a>
+
+- *Type:* string | number
+
+Optional The index corresponding to the key the resource is to appear in the foreach of a resource to move to.
+
+---
+
+##### `moveToId` <a name="moveToId" id="rhizo-co-terraform-provider-databricks.endpoint.Endpoint.moveToId"></a>
+
+```typescript
+public moveToId(id: string): void
+```
+
+Moves this resource to the resource corresponding to "id".
+
+###### `id`<sup>Required</sup> <a name="id" id="rhizo-co-terraform-provider-databricks.endpoint.Endpoint.moveToId.parameter.id"></a>
+
+- *Type:* string
+
+Full id of resource to move to, e.g. "aws_s3_bucket.example".
+
+---
+
+##### `putAwsVpcEndpointInfo` <a name="putAwsVpcEndpointInfo" id="rhizo-co-terraform-provider-databricks.endpoint.Endpoint.putAwsVpcEndpointInfo"></a>
+
+```typescript
+public putAwsVpcEndpointInfo(value: EndpointAwsVpcEndpointInfo): void
+```
+
+###### `value`<sup>Required</sup> <a name="value" id="rhizo-co-terraform-provider-databricks.endpoint.Endpoint.putAwsVpcEndpointInfo.parameter.value"></a>
+
+- *Type:* <a href="#rhizo-co-terraform-provider-databricks.endpoint.EndpointAwsVpcEndpointInfo">EndpointAwsVpcEndpointInfo</a>
+
+---
+
+##### `putAzurePrivateEndpointInfo` <a name="putAzurePrivateEndpointInfo" id="rhizo-co-terraform-provider-databricks.endpoint.Endpoint.putAzurePrivateEndpointInfo"></a>
+
+```typescript
+public putAzurePrivateEndpointInfo(value: EndpointAzurePrivateEndpointInfo): void
+```
+
+###### `value`<sup>Required</sup> <a name="value" id="rhizo-co-terraform-provider-databricks.endpoint.Endpoint.putAzurePrivateEndpointInfo.parameter.value"></a>
+
+- *Type:* <a href="#rhizo-co-terraform-provider-databricks.endpoint.EndpointAzurePrivateEndpointInfo">EndpointAzurePrivateEndpointInfo</a>
+
+---
+
+##### `putGcpPscEndpointInfo` <a name="putGcpPscEndpointInfo" id="rhizo-co-terraform-provider-databricks.endpoint.Endpoint.putGcpPscEndpointInfo"></a>
+
+```typescript
+public putGcpPscEndpointInfo(value: EndpointGcpPscEndpointInfo): void
+```
+
+###### `value`<sup>Required</sup> <a name="value" id="rhizo-co-terraform-provider-databricks.endpoint.Endpoint.putGcpPscEndpointInfo.parameter.value"></a>
+
+- *Type:* <a href="#rhizo-co-terraform-provider-databricks.endpoint.EndpointGcpPscEndpointInfo">EndpointGcpPscEndpointInfo</a>
+
+---
+
+##### `resetAwsVpcEndpointInfo` <a name="resetAwsVpcEndpointInfo" id="rhizo-co-terraform-provider-databricks.endpoint.Endpoint.resetAwsVpcEndpointInfo"></a>
+
+```typescript
+public resetAwsVpcEndpointInfo(): void
+```
+
+##### `resetAzurePrivateEndpointInfo` <a name="resetAzurePrivateEndpointInfo" id="rhizo-co-terraform-provider-databricks.endpoint.Endpoint.resetAzurePrivateEndpointInfo"></a>
+
+```typescript
+public resetAzurePrivateEndpointInfo(): void
+```
+
+##### `resetGcpPscEndpointInfo` <a name="resetGcpPscEndpointInfo" id="rhizo-co-terraform-provider-databricks.endpoint.Endpoint.resetGcpPscEndpointInfo"></a>
+
+```typescript
+public resetGcpPscEndpointInfo(): void
+```
+
+#### Static Functions <a name="Static Functions" id="Static Functions"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.Endpoint.isConstruct">isConstruct</a></code> | Checks if `x` is a construct. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.Endpoint.isTerraformElement">isTerraformElement</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.Endpoint.isTerraformResource">isTerraformResource</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.Endpoint.generateConfigForImport">generateConfigForImport</a></code> | Generates CDKTF code for importing a Endpoint resource upon running "cdktf plan <stack-name>". |
+
+---
+
+##### `isConstruct` <a name="isConstruct" id="rhizo-co-terraform-provider-databricks.endpoint.Endpoint.isConstruct"></a>
+
+```typescript
+import { endpoint } from 'rhizo-co-terraform-provider-databricks'
+
+endpoint.Endpoint.isConstruct(x: any)
+```
+
+Checks if `x` is a construct.
+
+Use this method instead of `instanceof` to properly detect `Construct`
+instances, even when the construct library is symlinked.
+
+Explanation: in JavaScript, multiple copies of the `constructs` library on
+disk are seen as independent, completely different libraries. As a
+consequence, the class `Construct` in each copy of the `constructs` library
+is seen as a different class, and an instance of one class will not test as
+`instanceof` the other class. `npm install` will not create installations
+like this, but users may manually symlink construct libraries together or
+use a monorepo tool: in those cases, multiple copies of the `constructs`
+library can be accidentally installed, and `instanceof` will behave
+unpredictably. It is safest to avoid using `instanceof`, and using
+this type-testing method instead.
+
+###### `x`<sup>Required</sup> <a name="x" id="rhizo-co-terraform-provider-databricks.endpoint.Endpoint.isConstruct.parameter.x"></a>
+
+- *Type:* any
+
+Any object.
+
+---
+
+##### `isTerraformElement` <a name="isTerraformElement" id="rhizo-co-terraform-provider-databricks.endpoint.Endpoint.isTerraformElement"></a>
+
+```typescript
+import { endpoint } from 'rhizo-co-terraform-provider-databricks'
+
+endpoint.Endpoint.isTerraformElement(x: any)
+```
+
+###### `x`<sup>Required</sup> <a name="x" id="rhizo-co-terraform-provider-databricks.endpoint.Endpoint.isTerraformElement.parameter.x"></a>
+
+- *Type:* any
+
+---
+
+##### `isTerraformResource` <a name="isTerraformResource" id="rhizo-co-terraform-provider-databricks.endpoint.Endpoint.isTerraformResource"></a>
+
+```typescript
+import { endpoint } from 'rhizo-co-terraform-provider-databricks'
+
+endpoint.Endpoint.isTerraformResource(x: any)
+```
+
+###### `x`<sup>Required</sup> <a name="x" id="rhizo-co-terraform-provider-databricks.endpoint.Endpoint.isTerraformResource.parameter.x"></a>
+
+- *Type:* any
+
+---
+
+##### `generateConfigForImport` <a name="generateConfigForImport" id="rhizo-co-terraform-provider-databricks.endpoint.Endpoint.generateConfigForImport"></a>
+
+```typescript
+import { endpoint } from 'rhizo-co-terraform-provider-databricks'
+
+endpoint.Endpoint.generateConfigForImport(scope: Construct, importToId: string, importFromId: string, provider?: TerraformProvider)
+```
+
+Generates CDKTF code for importing a Endpoint resource upon running "cdktf plan <stack-name>".
+
+###### `scope`<sup>Required</sup> <a name="scope" id="rhizo-co-terraform-provider-databricks.endpoint.Endpoint.generateConfigForImport.parameter.scope"></a>
+
+- *Type:* constructs.Construct
+
+The scope in which to define this construct.
+
+---
+
+###### `importToId`<sup>Required</sup> <a name="importToId" id="rhizo-co-terraform-provider-databricks.endpoint.Endpoint.generateConfigForImport.parameter.importToId"></a>
+
+- *Type:* string
+
+The construct id used in the generated config for the Endpoint to import.
+
+---
+
+###### `importFromId`<sup>Required</sup> <a name="importFromId" id="rhizo-co-terraform-provider-databricks.endpoint.Endpoint.generateConfigForImport.parameter.importFromId"></a>
+
+- *Type:* string
+
+The id of the existing Endpoint that should be imported.
+
+Refer to the {@link https://registry.terraform.io/providers/databricks/databricks/1.130.0/docs/resources/endpoint#import import section} in the documentation of this resource for the id to use
+
+---
+
+###### `provider`<sup>Optional</sup> <a name="provider" id="rhizo-co-terraform-provider-databricks.endpoint.Endpoint.generateConfigForImport.parameter.provider"></a>
+
+- *Type:* cdktf.TerraformProvider
+
+? Optional instance of the provider where the Endpoint to import is found.
+
+---
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.Endpoint.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.Endpoint.property.cdktfStack">cdktfStack</a></code> | <code>cdktf.TerraformStack</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.Endpoint.property.fqn">fqn</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.Endpoint.property.friendlyUniqueId">friendlyUniqueId</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.Endpoint.property.terraformMetaArguments">terraformMetaArguments</a></code> | <code>{[ key: string ]: any}</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.Endpoint.property.terraformResourceType">terraformResourceType</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.Endpoint.property.terraformGeneratorMetadata">terraformGeneratorMetadata</a></code> | <code>cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.Endpoint.property.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.Endpoint.property.count">count</a></code> | <code>number \| cdktf.TerraformCount</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.Endpoint.property.dependsOn">dependsOn</a></code> | <code>string[]</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.Endpoint.property.forEach">forEach</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.Endpoint.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.Endpoint.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.Endpoint.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.Endpoint.property.accountId">accountId</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.Endpoint.property.awsVpcEndpointInfo">awsVpcEndpointInfo</a></code> | <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.EndpointAwsVpcEndpointInfoOutputReference">EndpointAwsVpcEndpointInfoOutputReference</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.Endpoint.property.azurePrivateEndpointInfo">azurePrivateEndpointInfo</a></code> | <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.EndpointAzurePrivateEndpointInfoOutputReference">EndpointAzurePrivateEndpointInfoOutputReference</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.Endpoint.property.createTime">createTime</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.Endpoint.property.endpointId">endpointId</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.Endpoint.property.gcpPscEndpointInfo">gcpPscEndpointInfo</a></code> | <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.EndpointGcpPscEndpointInfoOutputReference">EndpointGcpPscEndpointInfoOutputReference</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.Endpoint.property.name">name</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.Endpoint.property.state">state</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.Endpoint.property.useCase">useCase</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.Endpoint.property.awsVpcEndpointInfoInput">awsVpcEndpointInfoInput</a></code> | <code>cdktf.IResolvable \| <a href="#rhizo-co-terraform-provider-databricks.endpoint.EndpointAwsVpcEndpointInfo">EndpointAwsVpcEndpointInfo</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.Endpoint.property.azurePrivateEndpointInfoInput">azurePrivateEndpointInfoInput</a></code> | <code>cdktf.IResolvable \| <a href="#rhizo-co-terraform-provider-databricks.endpoint.EndpointAzurePrivateEndpointInfo">EndpointAzurePrivateEndpointInfo</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.Endpoint.property.displayNameInput">displayNameInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.Endpoint.property.gcpPscEndpointInfoInput">gcpPscEndpointInfoInput</a></code> | <code>cdktf.IResolvable \| <a href="#rhizo-co-terraform-provider-databricks.endpoint.EndpointGcpPscEndpointInfo">EndpointGcpPscEndpointInfo</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.Endpoint.property.parentInput">parentInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.Endpoint.property.regionInput">regionInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.Endpoint.property.displayName">displayName</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.Endpoint.property.parent">parent</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.Endpoint.property.region">region</a></code> | <code>string</code> | *No description.* |
+
+---
+
+##### `node`<sup>Required</sup> <a name="node" id="rhizo-co-terraform-provider-databricks.endpoint.Endpoint.property.node"></a>
+
+```typescript
+public readonly node: Node;
+```
+
+- *Type:* constructs.Node
+
+The tree node.
+
+---
+
+##### `cdktfStack`<sup>Required</sup> <a name="cdktfStack" id="rhizo-co-terraform-provider-databricks.endpoint.Endpoint.property.cdktfStack"></a>
+
+```typescript
+public readonly cdktfStack: TerraformStack;
+```
+
+- *Type:* cdktf.TerraformStack
+
+---
+
+##### `fqn`<sup>Required</sup> <a name="fqn" id="rhizo-co-terraform-provider-databricks.endpoint.Endpoint.property.fqn"></a>
+
+```typescript
+public readonly fqn: string;
+```
+
+- *Type:* string
+
+---
+
+##### `friendlyUniqueId`<sup>Required</sup> <a name="friendlyUniqueId" id="rhizo-co-terraform-provider-databricks.endpoint.Endpoint.property.friendlyUniqueId"></a>
+
+```typescript
+public readonly friendlyUniqueId: string;
+```
+
+- *Type:* string
+
+---
+
+##### `terraformMetaArguments`<sup>Required</sup> <a name="terraformMetaArguments" id="rhizo-co-terraform-provider-databricks.endpoint.Endpoint.property.terraformMetaArguments"></a>
+
+```typescript
+public readonly terraformMetaArguments: {[ key: string ]: any};
+```
+
+- *Type:* {[ key: string ]: any}
+
+---
+
+##### `terraformResourceType`<sup>Required</sup> <a name="terraformResourceType" id="rhizo-co-terraform-provider-databricks.endpoint.Endpoint.property.terraformResourceType"></a>
+
+```typescript
+public readonly terraformResourceType: string;
+```
+
+- *Type:* string
+
+---
+
+##### `terraformGeneratorMetadata`<sup>Optional</sup> <a name="terraformGeneratorMetadata" id="rhizo-co-terraform-provider-databricks.endpoint.Endpoint.property.terraformGeneratorMetadata"></a>
+
+```typescript
+public readonly terraformGeneratorMetadata: TerraformProviderGeneratorMetadata;
+```
+
+- *Type:* cdktf.TerraformProviderGeneratorMetadata
+
+---
+
+##### `connection`<sup>Optional</sup> <a name="connection" id="rhizo-co-terraform-provider-databricks.endpoint.Endpoint.property.connection"></a>
+
+```typescript
+public readonly connection: SSHProvisionerConnection | WinrmProvisionerConnection;
+```
+
+- *Type:* cdktf.SSHProvisionerConnection | cdktf.WinrmProvisionerConnection
+
+---
+
+##### `count`<sup>Optional</sup> <a name="count" id="rhizo-co-terraform-provider-databricks.endpoint.Endpoint.property.count"></a>
+
+```typescript
+public readonly count: number | TerraformCount;
+```
+
+- *Type:* number | cdktf.TerraformCount
+
+---
+
+##### `dependsOn`<sup>Optional</sup> <a name="dependsOn" id="rhizo-co-terraform-provider-databricks.endpoint.Endpoint.property.dependsOn"></a>
+
+```typescript
+public readonly dependsOn: string[];
+```
+
+- *Type:* string[]
+
+---
+
+##### `forEach`<sup>Optional</sup> <a name="forEach" id="rhizo-co-terraform-provider-databricks.endpoint.Endpoint.property.forEach"></a>
+
+```typescript
+public readonly forEach: ITerraformIterator;
+```
+
+- *Type:* cdktf.ITerraformIterator
+
+---
+
+##### `lifecycle`<sup>Optional</sup> <a name="lifecycle" id="rhizo-co-terraform-provider-databricks.endpoint.Endpoint.property.lifecycle"></a>
+
+```typescript
+public readonly lifecycle: TerraformResourceLifecycle;
+```
+
+- *Type:* cdktf.TerraformResourceLifecycle
+
+---
+
+##### `provider`<sup>Optional</sup> <a name="provider" id="rhizo-co-terraform-provider-databricks.endpoint.Endpoint.property.provider"></a>
+
+```typescript
+public readonly provider: TerraformProvider;
+```
+
+- *Type:* cdktf.TerraformProvider
+
+---
+
+##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="rhizo-co-terraform-provider-databricks.endpoint.Endpoint.property.provisioners"></a>
+
+```typescript
+public readonly provisioners: (FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner)[];
+```
+
+- *Type:* cdktf.FileProvisioner | cdktf.LocalExecProvisioner | cdktf.RemoteExecProvisioner[]
+
+---
+
+##### `accountId`<sup>Required</sup> <a name="accountId" id="rhizo-co-terraform-provider-databricks.endpoint.Endpoint.property.accountId"></a>
+
+```typescript
+public readonly accountId: string;
+```
+
+- *Type:* string
+
+---
+
+##### `awsVpcEndpointInfo`<sup>Required</sup> <a name="awsVpcEndpointInfo" id="rhizo-co-terraform-provider-databricks.endpoint.Endpoint.property.awsVpcEndpointInfo"></a>
+
+```typescript
+public readonly awsVpcEndpointInfo: EndpointAwsVpcEndpointInfoOutputReference;
+```
+
+- *Type:* <a href="#rhizo-co-terraform-provider-databricks.endpoint.EndpointAwsVpcEndpointInfoOutputReference">EndpointAwsVpcEndpointInfoOutputReference</a>
+
+---
+
+##### `azurePrivateEndpointInfo`<sup>Required</sup> <a name="azurePrivateEndpointInfo" id="rhizo-co-terraform-provider-databricks.endpoint.Endpoint.property.azurePrivateEndpointInfo"></a>
+
+```typescript
+public readonly azurePrivateEndpointInfo: EndpointAzurePrivateEndpointInfoOutputReference;
+```
+
+- *Type:* <a href="#rhizo-co-terraform-provider-databricks.endpoint.EndpointAzurePrivateEndpointInfoOutputReference">EndpointAzurePrivateEndpointInfoOutputReference</a>
+
+---
+
+##### `createTime`<sup>Required</sup> <a name="createTime" id="rhizo-co-terraform-provider-databricks.endpoint.Endpoint.property.createTime"></a>
+
+```typescript
+public readonly createTime: string;
+```
+
+- *Type:* string
+
+---
+
+##### `endpointId`<sup>Required</sup> <a name="endpointId" id="rhizo-co-terraform-provider-databricks.endpoint.Endpoint.property.endpointId"></a>
+
+```typescript
+public readonly endpointId: string;
+```
+
+- *Type:* string
+
+---
+
+##### `gcpPscEndpointInfo`<sup>Required</sup> <a name="gcpPscEndpointInfo" id="rhizo-co-terraform-provider-databricks.endpoint.Endpoint.property.gcpPscEndpointInfo"></a>
+
+```typescript
+public readonly gcpPscEndpointInfo: EndpointGcpPscEndpointInfoOutputReference;
+```
+
+- *Type:* <a href="#rhizo-co-terraform-provider-databricks.endpoint.EndpointGcpPscEndpointInfoOutputReference">EndpointGcpPscEndpointInfoOutputReference</a>
+
+---
+
+##### `name`<sup>Required</sup> <a name="name" id="rhizo-co-terraform-provider-databricks.endpoint.Endpoint.property.name"></a>
+
+```typescript
+public readonly name: string;
+```
+
+- *Type:* string
+
+---
+
+##### `state`<sup>Required</sup> <a name="state" id="rhizo-co-terraform-provider-databricks.endpoint.Endpoint.property.state"></a>
+
+```typescript
+public readonly state: string;
+```
+
+- *Type:* string
+
+---
+
+##### `useCase`<sup>Required</sup> <a name="useCase" id="rhizo-co-terraform-provider-databricks.endpoint.Endpoint.property.useCase"></a>
+
+```typescript
+public readonly useCase: string;
+```
+
+- *Type:* string
+
+---
+
+##### `awsVpcEndpointInfoInput`<sup>Optional</sup> <a name="awsVpcEndpointInfoInput" id="rhizo-co-terraform-provider-databricks.endpoint.Endpoint.property.awsVpcEndpointInfoInput"></a>
+
+```typescript
+public readonly awsVpcEndpointInfoInput: IResolvable | EndpointAwsVpcEndpointInfo;
+```
+
+- *Type:* cdktf.IResolvable | <a href="#rhizo-co-terraform-provider-databricks.endpoint.EndpointAwsVpcEndpointInfo">EndpointAwsVpcEndpointInfo</a>
+
+---
+
+##### `azurePrivateEndpointInfoInput`<sup>Optional</sup> <a name="azurePrivateEndpointInfoInput" id="rhizo-co-terraform-provider-databricks.endpoint.Endpoint.property.azurePrivateEndpointInfoInput"></a>
+
+```typescript
+public readonly azurePrivateEndpointInfoInput: IResolvable | EndpointAzurePrivateEndpointInfo;
+```
+
+- *Type:* cdktf.IResolvable | <a href="#rhizo-co-terraform-provider-databricks.endpoint.EndpointAzurePrivateEndpointInfo">EndpointAzurePrivateEndpointInfo</a>
+
+---
+
+##### `displayNameInput`<sup>Optional</sup> <a name="displayNameInput" id="rhizo-co-terraform-provider-databricks.endpoint.Endpoint.property.displayNameInput"></a>
+
+```typescript
+public readonly displayNameInput: string;
+```
+
+- *Type:* string
+
+---
+
+##### `gcpPscEndpointInfoInput`<sup>Optional</sup> <a name="gcpPscEndpointInfoInput" id="rhizo-co-terraform-provider-databricks.endpoint.Endpoint.property.gcpPscEndpointInfoInput"></a>
+
+```typescript
+public readonly gcpPscEndpointInfoInput: IResolvable | EndpointGcpPscEndpointInfo;
+```
+
+- *Type:* cdktf.IResolvable | <a href="#rhizo-co-terraform-provider-databricks.endpoint.EndpointGcpPscEndpointInfo">EndpointGcpPscEndpointInfo</a>
+
+---
+
+##### `parentInput`<sup>Optional</sup> <a name="parentInput" id="rhizo-co-terraform-provider-databricks.endpoint.Endpoint.property.parentInput"></a>
+
+```typescript
+public readonly parentInput: string;
+```
+
+- *Type:* string
+
+---
+
+##### `regionInput`<sup>Optional</sup> <a name="regionInput" id="rhizo-co-terraform-provider-databricks.endpoint.Endpoint.property.regionInput"></a>
+
+```typescript
+public readonly regionInput: string;
+```
+
+- *Type:* string
+
+---
+
+##### `displayName`<sup>Required</sup> <a name="displayName" id="rhizo-co-terraform-provider-databricks.endpoint.Endpoint.property.displayName"></a>
+
+```typescript
+public readonly displayName: string;
+```
+
+- *Type:* string
+
+---
+
+##### `parent`<sup>Required</sup> <a name="parent" id="rhizo-co-terraform-provider-databricks.endpoint.Endpoint.property.parent"></a>
+
+```typescript
+public readonly parent: string;
+```
+
+- *Type:* string
+
+---
+
+##### `region`<sup>Required</sup> <a name="region" id="rhizo-co-terraform-provider-databricks.endpoint.Endpoint.property.region"></a>
+
+```typescript
+public readonly region: string;
+```
+
+- *Type:* string
+
+---
+
+#### Constants <a name="Constants" id="Constants"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.Endpoint.property.tfResourceType">tfResourceType</a></code> | <code>string</code> | *No description.* |
+
+---
+
+##### `tfResourceType`<sup>Required</sup> <a name="tfResourceType" id="rhizo-co-terraform-provider-databricks.endpoint.Endpoint.property.tfResourceType"></a>
+
+```typescript
+public readonly tfResourceType: string;
+```
+
+- *Type:* string
+
+---
+
+## Structs <a name="Structs" id="Structs"></a>
+
+### EndpointAwsVpcEndpointInfo <a name="EndpointAwsVpcEndpointInfo" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointAwsVpcEndpointInfo"></a>
+
+#### Initializer <a name="Initializer" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointAwsVpcEndpointInfo.Initializer"></a>
+
+```typescript
+import { endpoint } from 'rhizo-co-terraform-provider-databricks'
+
+const endpointAwsVpcEndpointInfo: endpoint.EndpointAwsVpcEndpointInfo = { ... }
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.EndpointAwsVpcEndpointInfo.property.awsVpcEndpointId">awsVpcEndpointId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.130.0/docs/resources/endpoint#aws_vpc_endpoint_id Endpoint#aws_vpc_endpoint_id}. |
+
+---
+
+##### `awsVpcEndpointId`<sup>Required</sup> <a name="awsVpcEndpointId" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointAwsVpcEndpointInfo.property.awsVpcEndpointId"></a>
+
+```typescript
+public readonly awsVpcEndpointId: string;
+```
+
+- *Type:* string
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.130.0/docs/resources/endpoint#aws_vpc_endpoint_id Endpoint#aws_vpc_endpoint_id}.
+
+---
+
+### EndpointAzurePrivateEndpointInfo <a name="EndpointAzurePrivateEndpointInfo" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointAzurePrivateEndpointInfo"></a>
+
+#### Initializer <a name="Initializer" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointAzurePrivateEndpointInfo.Initializer"></a>
+
+```typescript
+import { endpoint } from 'rhizo-co-terraform-provider-databricks'
+
+const endpointAzurePrivateEndpointInfo: endpoint.EndpointAzurePrivateEndpointInfo = { ... }
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.EndpointAzurePrivateEndpointInfo.property.privateEndpointName">privateEndpointName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.130.0/docs/resources/endpoint#private_endpoint_name Endpoint#private_endpoint_name}. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.EndpointAzurePrivateEndpointInfo.property.privateEndpointResourceGuid">privateEndpointResourceGuid</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.130.0/docs/resources/endpoint#private_endpoint_resource_guid Endpoint#private_endpoint_resource_guid}. |
+
+---
+
+##### `privateEndpointName`<sup>Required</sup> <a name="privateEndpointName" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointAzurePrivateEndpointInfo.property.privateEndpointName"></a>
+
+```typescript
+public readonly privateEndpointName: string;
+```
+
+- *Type:* string
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.130.0/docs/resources/endpoint#private_endpoint_name Endpoint#private_endpoint_name}.
+
+---
+
+##### `privateEndpointResourceGuid`<sup>Required</sup> <a name="privateEndpointResourceGuid" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointAzurePrivateEndpointInfo.property.privateEndpointResourceGuid"></a>
+
+```typescript
+public readonly privateEndpointResourceGuid: string;
+```
+
+- *Type:* string
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.130.0/docs/resources/endpoint#private_endpoint_resource_guid Endpoint#private_endpoint_resource_guid}.
+
+---
+
+### EndpointConfig <a name="EndpointConfig" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointConfig"></a>
+
+#### Initializer <a name="Initializer" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointConfig.Initializer"></a>
+
+```typescript
+import { endpoint } from 'rhizo-co-terraform-provider-databricks'
+
+const endpointConfig: endpoint.EndpointConfig = { ... }
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.EndpointConfig.property.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.EndpointConfig.property.count">count</a></code> | <code>number \| cdktf.TerraformCount</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.EndpointConfig.property.dependsOn">dependsOn</a></code> | <code>cdktf.ITerraformDependable[]</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.EndpointConfig.property.forEach">forEach</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.EndpointConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.EndpointConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.EndpointConfig.property.provisioners">provisioners</a></code> | <code>cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner[]</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.EndpointConfig.property.displayName">displayName</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.130.0/docs/resources/endpoint#display_name Endpoint#display_name}. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.EndpointConfig.property.parent">parent</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.130.0/docs/resources/endpoint#parent Endpoint#parent}. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.EndpointConfig.property.region">region</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.130.0/docs/resources/endpoint#region Endpoint#region}. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.EndpointConfig.property.awsVpcEndpointInfo">awsVpcEndpointInfo</a></code> | <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.EndpointAwsVpcEndpointInfo">EndpointAwsVpcEndpointInfo</a></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.130.0/docs/resources/endpoint#aws_vpc_endpoint_info Endpoint#aws_vpc_endpoint_info}. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.EndpointConfig.property.azurePrivateEndpointInfo">azurePrivateEndpointInfo</a></code> | <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.EndpointAzurePrivateEndpointInfo">EndpointAzurePrivateEndpointInfo</a></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.130.0/docs/resources/endpoint#azure_private_endpoint_info Endpoint#azure_private_endpoint_info}. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.EndpointConfig.property.gcpPscEndpointInfo">gcpPscEndpointInfo</a></code> | <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.EndpointGcpPscEndpointInfo">EndpointGcpPscEndpointInfo</a></code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.130.0/docs/resources/endpoint#gcp_psc_endpoint_info Endpoint#gcp_psc_endpoint_info}. |
+
+---
+
+##### `connection`<sup>Optional</sup> <a name="connection" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointConfig.property.connection"></a>
+
+```typescript
+public readonly connection: SSHProvisionerConnection | WinrmProvisionerConnection;
+```
+
+- *Type:* cdktf.SSHProvisionerConnection | cdktf.WinrmProvisionerConnection
+
+---
+
+##### `count`<sup>Optional</sup> <a name="count" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointConfig.property.count"></a>
+
+```typescript
+public readonly count: number | TerraformCount;
+```
+
+- *Type:* number | cdktf.TerraformCount
+
+---
+
+##### `dependsOn`<sup>Optional</sup> <a name="dependsOn" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointConfig.property.dependsOn"></a>
+
+```typescript
+public readonly dependsOn: ITerraformDependable[];
+```
+
+- *Type:* cdktf.ITerraformDependable[]
+
+---
+
+##### `forEach`<sup>Optional</sup> <a name="forEach" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointConfig.property.forEach"></a>
+
+```typescript
+public readonly forEach: ITerraformIterator;
+```
+
+- *Type:* cdktf.ITerraformIterator
+
+---
+
+##### `lifecycle`<sup>Optional</sup> <a name="lifecycle" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointConfig.property.lifecycle"></a>
+
+```typescript
+public readonly lifecycle: TerraformResourceLifecycle;
+```
+
+- *Type:* cdktf.TerraformResourceLifecycle
+
+---
+
+##### `provider`<sup>Optional</sup> <a name="provider" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointConfig.property.provider"></a>
+
+```typescript
+public readonly provider: TerraformProvider;
+```
+
+- *Type:* cdktf.TerraformProvider
+
+---
+
+##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointConfig.property.provisioners"></a>
+
+```typescript
+public readonly provisioners: (FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner)[];
+```
+
+- *Type:* cdktf.FileProvisioner | cdktf.LocalExecProvisioner | cdktf.RemoteExecProvisioner[]
+
+---
+
+##### `displayName`<sup>Required</sup> <a name="displayName" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointConfig.property.displayName"></a>
+
+```typescript
+public readonly displayName: string;
+```
+
+- *Type:* string
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.130.0/docs/resources/endpoint#display_name Endpoint#display_name}.
+
+---
+
+##### `parent`<sup>Required</sup> <a name="parent" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointConfig.property.parent"></a>
+
+```typescript
+public readonly parent: string;
+```
+
+- *Type:* string
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.130.0/docs/resources/endpoint#parent Endpoint#parent}.
+
+---
+
+##### `region`<sup>Required</sup> <a name="region" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointConfig.property.region"></a>
+
+```typescript
+public readonly region: string;
+```
+
+- *Type:* string
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.130.0/docs/resources/endpoint#region Endpoint#region}.
+
+---
+
+##### `awsVpcEndpointInfo`<sup>Optional</sup> <a name="awsVpcEndpointInfo" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointConfig.property.awsVpcEndpointInfo"></a>
+
+```typescript
+public readonly awsVpcEndpointInfo: EndpointAwsVpcEndpointInfo;
+```
+
+- *Type:* <a href="#rhizo-co-terraform-provider-databricks.endpoint.EndpointAwsVpcEndpointInfo">EndpointAwsVpcEndpointInfo</a>
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.130.0/docs/resources/endpoint#aws_vpc_endpoint_info Endpoint#aws_vpc_endpoint_info}.
+
+---
+
+##### `azurePrivateEndpointInfo`<sup>Optional</sup> <a name="azurePrivateEndpointInfo" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointConfig.property.azurePrivateEndpointInfo"></a>
+
+```typescript
+public readonly azurePrivateEndpointInfo: EndpointAzurePrivateEndpointInfo;
+```
+
+- *Type:* <a href="#rhizo-co-terraform-provider-databricks.endpoint.EndpointAzurePrivateEndpointInfo">EndpointAzurePrivateEndpointInfo</a>
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.130.0/docs/resources/endpoint#azure_private_endpoint_info Endpoint#azure_private_endpoint_info}.
+
+---
+
+##### `gcpPscEndpointInfo`<sup>Optional</sup> <a name="gcpPscEndpointInfo" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointConfig.property.gcpPscEndpointInfo"></a>
+
+```typescript
+public readonly gcpPscEndpointInfo: EndpointGcpPscEndpointInfo;
+```
+
+- *Type:* <a href="#rhizo-co-terraform-provider-databricks.endpoint.EndpointGcpPscEndpointInfo">EndpointGcpPscEndpointInfo</a>
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.130.0/docs/resources/endpoint#gcp_psc_endpoint_info Endpoint#gcp_psc_endpoint_info}.
+
+---
+
+### EndpointGcpPscEndpointInfo <a name="EndpointGcpPscEndpointInfo" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointGcpPscEndpointInfo"></a>
+
+#### Initializer <a name="Initializer" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointGcpPscEndpointInfo.Initializer"></a>
+
+```typescript
+import { endpoint } from 'rhizo-co-terraform-provider-databricks'
+
+const endpointGcpPscEndpointInfo: endpoint.EndpointGcpPscEndpointInfo = { ... }
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.EndpointGcpPscEndpointInfo.property.endpointRegion">endpointRegion</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.130.0/docs/resources/endpoint#endpoint_region Endpoint#endpoint_region}. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.EndpointGcpPscEndpointInfo.property.projectId">projectId</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.130.0/docs/resources/endpoint#project_id Endpoint#project_id}. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.EndpointGcpPscEndpointInfo.property.pscEndpoint">pscEndpoint</a></code> | <code>string</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.130.0/docs/resources/endpoint#psc_endpoint Endpoint#psc_endpoint}. |
+
+---
+
+##### `endpointRegion`<sup>Required</sup> <a name="endpointRegion" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointGcpPscEndpointInfo.property.endpointRegion"></a>
+
+```typescript
+public readonly endpointRegion: string;
+```
+
+- *Type:* string
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.130.0/docs/resources/endpoint#endpoint_region Endpoint#endpoint_region}.
+
+---
+
+##### `projectId`<sup>Required</sup> <a name="projectId" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointGcpPscEndpointInfo.property.projectId"></a>
+
+```typescript
+public readonly projectId: string;
+```
+
+- *Type:* string
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.130.0/docs/resources/endpoint#project_id Endpoint#project_id}.
+
+---
+
+##### `pscEndpoint`<sup>Required</sup> <a name="pscEndpoint" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointGcpPscEndpointInfo.property.pscEndpoint"></a>
+
+```typescript
+public readonly pscEndpoint: string;
+```
+
+- *Type:* string
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.130.0/docs/resources/endpoint#psc_endpoint Endpoint#psc_endpoint}.
+
+---
+
+## Classes <a name="Classes" id="Classes"></a>
+
+### EndpointAwsVpcEndpointInfoOutputReference <a name="EndpointAwsVpcEndpointInfoOutputReference" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointAwsVpcEndpointInfoOutputReference"></a>
+
+#### Initializers <a name="Initializers" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointAwsVpcEndpointInfoOutputReference.Initializer"></a>
+
+```typescript
+import { endpoint } from 'rhizo-co-terraform-provider-databricks'
+
+new endpoint.EndpointAwsVpcEndpointInfoOutputReference(terraformResource: IInterpolatingParent, terraformAttribute: string)
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.EndpointAwsVpcEndpointInfoOutputReference.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.EndpointAwsVpcEndpointInfoOutputReference.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>string</code> | The attribute on the parent resource this class is referencing. |
+
+---
+
+##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointAwsVpcEndpointInfoOutputReference.Initializer.parameter.terraformResource"></a>
+
+- *Type:* cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointAwsVpcEndpointInfoOutputReference.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.EndpointAwsVpcEndpointInfoOutputReference.computeFqn">computeFqn</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.EndpointAwsVpcEndpointInfoOutputReference.getAnyMapAttribute">getAnyMapAttribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.EndpointAwsVpcEndpointInfoOutputReference.getBooleanAttribute">getBooleanAttribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.EndpointAwsVpcEndpointInfoOutputReference.getBooleanMapAttribute">getBooleanMapAttribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.EndpointAwsVpcEndpointInfoOutputReference.getListAttribute">getListAttribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.EndpointAwsVpcEndpointInfoOutputReference.getNumberAttribute">getNumberAttribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.EndpointAwsVpcEndpointInfoOutputReference.getNumberListAttribute">getNumberListAttribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.EndpointAwsVpcEndpointInfoOutputReference.getNumberMapAttribute">getNumberMapAttribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.EndpointAwsVpcEndpointInfoOutputReference.getStringAttribute">getStringAttribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.EndpointAwsVpcEndpointInfoOutputReference.getStringMapAttribute">getStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.EndpointAwsVpcEndpointInfoOutputReference.interpolationForAttribute">interpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.EndpointAwsVpcEndpointInfoOutputReference.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.EndpointAwsVpcEndpointInfoOutputReference.toString">toString</a></code> | Return a string representation of this resolvable object. |
+
+---
+
+##### `computeFqn` <a name="computeFqn" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointAwsVpcEndpointInfoOutputReference.computeFqn"></a>
+
+```typescript
+public computeFqn(): string
+```
+
+##### `getAnyMapAttribute` <a name="getAnyMapAttribute" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointAwsVpcEndpointInfoOutputReference.getAnyMapAttribute"></a>
+
+```typescript
+public getAnyMapAttribute(terraformAttribute: string): {[ key: string ]: any}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointAwsVpcEndpointInfoOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getBooleanAttribute` <a name="getBooleanAttribute" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointAwsVpcEndpointInfoOutputReference.getBooleanAttribute"></a>
+
+```typescript
+public getBooleanAttribute(terraformAttribute: string): IResolvable
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointAwsVpcEndpointInfoOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getBooleanMapAttribute` <a name="getBooleanMapAttribute" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointAwsVpcEndpointInfoOutputReference.getBooleanMapAttribute"></a>
+
+```typescript
+public getBooleanMapAttribute(terraformAttribute: string): {[ key: string ]: boolean}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointAwsVpcEndpointInfoOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getListAttribute` <a name="getListAttribute" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointAwsVpcEndpointInfoOutputReference.getListAttribute"></a>
+
+```typescript
+public getListAttribute(terraformAttribute: string): string[]
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointAwsVpcEndpointInfoOutputReference.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getNumberAttribute` <a name="getNumberAttribute" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointAwsVpcEndpointInfoOutputReference.getNumberAttribute"></a>
+
+```typescript
+public getNumberAttribute(terraformAttribute: string): number
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointAwsVpcEndpointInfoOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getNumberListAttribute` <a name="getNumberListAttribute" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointAwsVpcEndpointInfoOutputReference.getNumberListAttribute"></a>
+
+```typescript
+public getNumberListAttribute(terraformAttribute: string): number[]
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointAwsVpcEndpointInfoOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getNumberMapAttribute` <a name="getNumberMapAttribute" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointAwsVpcEndpointInfoOutputReference.getNumberMapAttribute"></a>
+
+```typescript
+public getNumberMapAttribute(terraformAttribute: string): {[ key: string ]: number}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointAwsVpcEndpointInfoOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getStringAttribute` <a name="getStringAttribute" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointAwsVpcEndpointInfoOutputReference.getStringAttribute"></a>
+
+```typescript
+public getStringAttribute(terraformAttribute: string): string
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointAwsVpcEndpointInfoOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getStringMapAttribute` <a name="getStringMapAttribute" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointAwsVpcEndpointInfoOutputReference.getStringMapAttribute"></a>
+
+```typescript
+public getStringMapAttribute(terraformAttribute: string): {[ key: string ]: string}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointAwsVpcEndpointInfoOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `interpolationForAttribute` <a name="interpolationForAttribute" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointAwsVpcEndpointInfoOutputReference.interpolationForAttribute"></a>
+
+```typescript
+public interpolationForAttribute(property: string): IResolvable
+```
+
+###### `property`<sup>Required</sup> <a name="property" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointAwsVpcEndpointInfoOutputReference.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* string
+
+---
+
+##### `resolve` <a name="resolve" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointAwsVpcEndpointInfoOutputReference.resolve"></a>
+
+```typescript
+public resolve(_context: IResolveContext): any
+```
+
+Produce the Token's value at resolution time.
+
+###### `_context`<sup>Required</sup> <a name="_context" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointAwsVpcEndpointInfoOutputReference.resolve.parameter._context"></a>
+
+- *Type:* cdktf.IResolveContext
+
+---
+
+##### `toString` <a name="toString" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointAwsVpcEndpointInfoOutputReference.toString"></a>
+
+```typescript
+public toString(): string
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.EndpointAwsVpcEndpointInfoOutputReference.property.creationStack">creationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.EndpointAwsVpcEndpointInfoOutputReference.property.fqn">fqn</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.EndpointAwsVpcEndpointInfoOutputReference.property.awsAccountId">awsAccountId</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.EndpointAwsVpcEndpointInfoOutputReference.property.awsEndpointServiceId">awsEndpointServiceId</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.EndpointAwsVpcEndpointInfoOutputReference.property.awsVpcEndpointIdInput">awsVpcEndpointIdInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.EndpointAwsVpcEndpointInfoOutputReference.property.awsVpcEndpointId">awsVpcEndpointId</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.EndpointAwsVpcEndpointInfoOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#rhizo-co-terraform-provider-databricks.endpoint.EndpointAwsVpcEndpointInfo">EndpointAwsVpcEndpointInfo</a></code> | *No description.* |
+
+---
+
+##### `creationStack`<sup>Required</sup> <a name="creationStack" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointAwsVpcEndpointInfoOutputReference.property.creationStack"></a>
+
+```typescript
+public readonly creationStack: string[];
+```
+
+- *Type:* string[]
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `fqn`<sup>Required</sup> <a name="fqn" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointAwsVpcEndpointInfoOutputReference.property.fqn"></a>
+
+```typescript
+public readonly fqn: string;
+```
+
+- *Type:* string
+
+---
+
+##### `awsAccountId`<sup>Required</sup> <a name="awsAccountId" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointAwsVpcEndpointInfoOutputReference.property.awsAccountId"></a>
+
+```typescript
+public readonly awsAccountId: string;
+```
+
+- *Type:* string
+
+---
+
+##### `awsEndpointServiceId`<sup>Required</sup> <a name="awsEndpointServiceId" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointAwsVpcEndpointInfoOutputReference.property.awsEndpointServiceId"></a>
+
+```typescript
+public readonly awsEndpointServiceId: string;
+```
+
+- *Type:* string
+
+---
+
+##### `awsVpcEndpointIdInput`<sup>Optional</sup> <a name="awsVpcEndpointIdInput" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointAwsVpcEndpointInfoOutputReference.property.awsVpcEndpointIdInput"></a>
+
+```typescript
+public readonly awsVpcEndpointIdInput: string;
+```
+
+- *Type:* string
+
+---
+
+##### `awsVpcEndpointId`<sup>Required</sup> <a name="awsVpcEndpointId" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointAwsVpcEndpointInfoOutputReference.property.awsVpcEndpointId"></a>
+
+```typescript
+public readonly awsVpcEndpointId: string;
+```
+
+- *Type:* string
+
+---
+
+##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointAwsVpcEndpointInfoOutputReference.property.internalValue"></a>
+
+```typescript
+public readonly internalValue: IResolvable | EndpointAwsVpcEndpointInfo;
+```
+
+- *Type:* cdktf.IResolvable | <a href="#rhizo-co-terraform-provider-databricks.endpoint.EndpointAwsVpcEndpointInfo">EndpointAwsVpcEndpointInfo</a>
+
+---
+
+
+### EndpointAzurePrivateEndpointInfoOutputReference <a name="EndpointAzurePrivateEndpointInfoOutputReference" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointAzurePrivateEndpointInfoOutputReference"></a>
+
+#### Initializers <a name="Initializers" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointAzurePrivateEndpointInfoOutputReference.Initializer"></a>
+
+```typescript
+import { endpoint } from 'rhizo-co-terraform-provider-databricks'
+
+new endpoint.EndpointAzurePrivateEndpointInfoOutputReference(terraformResource: IInterpolatingParent, terraformAttribute: string)
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.EndpointAzurePrivateEndpointInfoOutputReference.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.EndpointAzurePrivateEndpointInfoOutputReference.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>string</code> | The attribute on the parent resource this class is referencing. |
+
+---
+
+##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointAzurePrivateEndpointInfoOutputReference.Initializer.parameter.terraformResource"></a>
+
+- *Type:* cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointAzurePrivateEndpointInfoOutputReference.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.EndpointAzurePrivateEndpointInfoOutputReference.computeFqn">computeFqn</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.EndpointAzurePrivateEndpointInfoOutputReference.getAnyMapAttribute">getAnyMapAttribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.EndpointAzurePrivateEndpointInfoOutputReference.getBooleanAttribute">getBooleanAttribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.EndpointAzurePrivateEndpointInfoOutputReference.getBooleanMapAttribute">getBooleanMapAttribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.EndpointAzurePrivateEndpointInfoOutputReference.getListAttribute">getListAttribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.EndpointAzurePrivateEndpointInfoOutputReference.getNumberAttribute">getNumberAttribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.EndpointAzurePrivateEndpointInfoOutputReference.getNumberListAttribute">getNumberListAttribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.EndpointAzurePrivateEndpointInfoOutputReference.getNumberMapAttribute">getNumberMapAttribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.EndpointAzurePrivateEndpointInfoOutputReference.getStringAttribute">getStringAttribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.EndpointAzurePrivateEndpointInfoOutputReference.getStringMapAttribute">getStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.EndpointAzurePrivateEndpointInfoOutputReference.interpolationForAttribute">interpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.EndpointAzurePrivateEndpointInfoOutputReference.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.EndpointAzurePrivateEndpointInfoOutputReference.toString">toString</a></code> | Return a string representation of this resolvable object. |
+
+---
+
+##### `computeFqn` <a name="computeFqn" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointAzurePrivateEndpointInfoOutputReference.computeFqn"></a>
+
+```typescript
+public computeFqn(): string
+```
+
+##### `getAnyMapAttribute` <a name="getAnyMapAttribute" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointAzurePrivateEndpointInfoOutputReference.getAnyMapAttribute"></a>
+
+```typescript
+public getAnyMapAttribute(terraformAttribute: string): {[ key: string ]: any}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointAzurePrivateEndpointInfoOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getBooleanAttribute` <a name="getBooleanAttribute" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointAzurePrivateEndpointInfoOutputReference.getBooleanAttribute"></a>
+
+```typescript
+public getBooleanAttribute(terraformAttribute: string): IResolvable
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointAzurePrivateEndpointInfoOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getBooleanMapAttribute` <a name="getBooleanMapAttribute" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointAzurePrivateEndpointInfoOutputReference.getBooleanMapAttribute"></a>
+
+```typescript
+public getBooleanMapAttribute(terraformAttribute: string): {[ key: string ]: boolean}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointAzurePrivateEndpointInfoOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getListAttribute` <a name="getListAttribute" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointAzurePrivateEndpointInfoOutputReference.getListAttribute"></a>
+
+```typescript
+public getListAttribute(terraformAttribute: string): string[]
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointAzurePrivateEndpointInfoOutputReference.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getNumberAttribute` <a name="getNumberAttribute" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointAzurePrivateEndpointInfoOutputReference.getNumberAttribute"></a>
+
+```typescript
+public getNumberAttribute(terraformAttribute: string): number
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointAzurePrivateEndpointInfoOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getNumberListAttribute` <a name="getNumberListAttribute" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointAzurePrivateEndpointInfoOutputReference.getNumberListAttribute"></a>
+
+```typescript
+public getNumberListAttribute(terraformAttribute: string): number[]
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointAzurePrivateEndpointInfoOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getNumberMapAttribute` <a name="getNumberMapAttribute" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointAzurePrivateEndpointInfoOutputReference.getNumberMapAttribute"></a>
+
+```typescript
+public getNumberMapAttribute(terraformAttribute: string): {[ key: string ]: number}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointAzurePrivateEndpointInfoOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getStringAttribute` <a name="getStringAttribute" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointAzurePrivateEndpointInfoOutputReference.getStringAttribute"></a>
+
+```typescript
+public getStringAttribute(terraformAttribute: string): string
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointAzurePrivateEndpointInfoOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getStringMapAttribute` <a name="getStringMapAttribute" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointAzurePrivateEndpointInfoOutputReference.getStringMapAttribute"></a>
+
+```typescript
+public getStringMapAttribute(terraformAttribute: string): {[ key: string ]: string}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointAzurePrivateEndpointInfoOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `interpolationForAttribute` <a name="interpolationForAttribute" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointAzurePrivateEndpointInfoOutputReference.interpolationForAttribute"></a>
+
+```typescript
+public interpolationForAttribute(property: string): IResolvable
+```
+
+###### `property`<sup>Required</sup> <a name="property" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointAzurePrivateEndpointInfoOutputReference.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* string
+
+---
+
+##### `resolve` <a name="resolve" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointAzurePrivateEndpointInfoOutputReference.resolve"></a>
+
+```typescript
+public resolve(_context: IResolveContext): any
+```
+
+Produce the Token's value at resolution time.
+
+###### `_context`<sup>Required</sup> <a name="_context" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointAzurePrivateEndpointInfoOutputReference.resolve.parameter._context"></a>
+
+- *Type:* cdktf.IResolveContext
+
+---
+
+##### `toString` <a name="toString" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointAzurePrivateEndpointInfoOutputReference.toString"></a>
+
+```typescript
+public toString(): string
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.EndpointAzurePrivateEndpointInfoOutputReference.property.creationStack">creationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.EndpointAzurePrivateEndpointInfoOutputReference.property.fqn">fqn</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.EndpointAzurePrivateEndpointInfoOutputReference.property.privateEndpointResourceId">privateEndpointResourceId</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.EndpointAzurePrivateEndpointInfoOutputReference.property.privateLinkServiceId">privateLinkServiceId</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.EndpointAzurePrivateEndpointInfoOutputReference.property.privateEndpointNameInput">privateEndpointNameInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.EndpointAzurePrivateEndpointInfoOutputReference.property.privateEndpointResourceGuidInput">privateEndpointResourceGuidInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.EndpointAzurePrivateEndpointInfoOutputReference.property.privateEndpointName">privateEndpointName</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.EndpointAzurePrivateEndpointInfoOutputReference.property.privateEndpointResourceGuid">privateEndpointResourceGuid</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.EndpointAzurePrivateEndpointInfoOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#rhizo-co-terraform-provider-databricks.endpoint.EndpointAzurePrivateEndpointInfo">EndpointAzurePrivateEndpointInfo</a></code> | *No description.* |
+
+---
+
+##### `creationStack`<sup>Required</sup> <a name="creationStack" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointAzurePrivateEndpointInfoOutputReference.property.creationStack"></a>
+
+```typescript
+public readonly creationStack: string[];
+```
+
+- *Type:* string[]
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `fqn`<sup>Required</sup> <a name="fqn" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointAzurePrivateEndpointInfoOutputReference.property.fqn"></a>
+
+```typescript
+public readonly fqn: string;
+```
+
+- *Type:* string
+
+---
+
+##### `privateEndpointResourceId`<sup>Required</sup> <a name="privateEndpointResourceId" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointAzurePrivateEndpointInfoOutputReference.property.privateEndpointResourceId"></a>
+
+```typescript
+public readonly privateEndpointResourceId: string;
+```
+
+- *Type:* string
+
+---
+
+##### `privateLinkServiceId`<sup>Required</sup> <a name="privateLinkServiceId" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointAzurePrivateEndpointInfoOutputReference.property.privateLinkServiceId"></a>
+
+```typescript
+public readonly privateLinkServiceId: string;
+```
+
+- *Type:* string
+
+---
+
+##### `privateEndpointNameInput`<sup>Optional</sup> <a name="privateEndpointNameInput" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointAzurePrivateEndpointInfoOutputReference.property.privateEndpointNameInput"></a>
+
+```typescript
+public readonly privateEndpointNameInput: string;
+```
+
+- *Type:* string
+
+---
+
+##### `privateEndpointResourceGuidInput`<sup>Optional</sup> <a name="privateEndpointResourceGuidInput" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointAzurePrivateEndpointInfoOutputReference.property.privateEndpointResourceGuidInput"></a>
+
+```typescript
+public readonly privateEndpointResourceGuidInput: string;
+```
+
+- *Type:* string
+
+---
+
+##### `privateEndpointName`<sup>Required</sup> <a name="privateEndpointName" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointAzurePrivateEndpointInfoOutputReference.property.privateEndpointName"></a>
+
+```typescript
+public readonly privateEndpointName: string;
+```
+
+- *Type:* string
+
+---
+
+##### `privateEndpointResourceGuid`<sup>Required</sup> <a name="privateEndpointResourceGuid" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointAzurePrivateEndpointInfoOutputReference.property.privateEndpointResourceGuid"></a>
+
+```typescript
+public readonly privateEndpointResourceGuid: string;
+```
+
+- *Type:* string
+
+---
+
+##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointAzurePrivateEndpointInfoOutputReference.property.internalValue"></a>
+
+```typescript
+public readonly internalValue: IResolvable | EndpointAzurePrivateEndpointInfo;
+```
+
+- *Type:* cdktf.IResolvable | <a href="#rhizo-co-terraform-provider-databricks.endpoint.EndpointAzurePrivateEndpointInfo">EndpointAzurePrivateEndpointInfo</a>
+
+---
+
+
+### EndpointGcpPscEndpointInfoOutputReference <a name="EndpointGcpPscEndpointInfoOutputReference" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointGcpPscEndpointInfoOutputReference"></a>
+
+#### Initializers <a name="Initializers" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointGcpPscEndpointInfoOutputReference.Initializer"></a>
+
+```typescript
+import { endpoint } from 'rhizo-co-terraform-provider-databricks'
+
+new endpoint.EndpointGcpPscEndpointInfoOutputReference(terraformResource: IInterpolatingParent, terraformAttribute: string)
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.EndpointGcpPscEndpointInfoOutputReference.Initializer.parameter.terraformResource">terraformResource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.EndpointGcpPscEndpointInfoOutputReference.Initializer.parameter.terraformAttribute">terraformAttribute</a></code> | <code>string</code> | The attribute on the parent resource this class is referencing. |
+
+---
+
+##### `terraformResource`<sup>Required</sup> <a name="terraformResource" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointGcpPscEndpointInfoOutputReference.Initializer.parameter.terraformResource"></a>
+
+- *Type:* cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointGcpPscEndpointInfoOutputReference.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.EndpointGcpPscEndpointInfoOutputReference.computeFqn">computeFqn</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.EndpointGcpPscEndpointInfoOutputReference.getAnyMapAttribute">getAnyMapAttribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.EndpointGcpPscEndpointInfoOutputReference.getBooleanAttribute">getBooleanAttribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.EndpointGcpPscEndpointInfoOutputReference.getBooleanMapAttribute">getBooleanMapAttribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.EndpointGcpPscEndpointInfoOutputReference.getListAttribute">getListAttribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.EndpointGcpPscEndpointInfoOutputReference.getNumberAttribute">getNumberAttribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.EndpointGcpPscEndpointInfoOutputReference.getNumberListAttribute">getNumberListAttribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.EndpointGcpPscEndpointInfoOutputReference.getNumberMapAttribute">getNumberMapAttribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.EndpointGcpPscEndpointInfoOutputReference.getStringAttribute">getStringAttribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.EndpointGcpPscEndpointInfoOutputReference.getStringMapAttribute">getStringMapAttribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.EndpointGcpPscEndpointInfoOutputReference.interpolationForAttribute">interpolationForAttribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.EndpointGcpPscEndpointInfoOutputReference.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.EndpointGcpPscEndpointInfoOutputReference.toString">toString</a></code> | Return a string representation of this resolvable object. |
+
+---
+
+##### `computeFqn` <a name="computeFqn" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointGcpPscEndpointInfoOutputReference.computeFqn"></a>
+
+```typescript
+public computeFqn(): string
+```
+
+##### `getAnyMapAttribute` <a name="getAnyMapAttribute" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointGcpPscEndpointInfoOutputReference.getAnyMapAttribute"></a>
+
+```typescript
+public getAnyMapAttribute(terraformAttribute: string): {[ key: string ]: any}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointGcpPscEndpointInfoOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getBooleanAttribute` <a name="getBooleanAttribute" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointGcpPscEndpointInfoOutputReference.getBooleanAttribute"></a>
+
+```typescript
+public getBooleanAttribute(terraformAttribute: string): IResolvable
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointGcpPscEndpointInfoOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getBooleanMapAttribute` <a name="getBooleanMapAttribute" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointGcpPscEndpointInfoOutputReference.getBooleanMapAttribute"></a>
+
+```typescript
+public getBooleanMapAttribute(terraformAttribute: string): {[ key: string ]: boolean}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointGcpPscEndpointInfoOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getListAttribute` <a name="getListAttribute" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointGcpPscEndpointInfoOutputReference.getListAttribute"></a>
+
+```typescript
+public getListAttribute(terraformAttribute: string): string[]
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointGcpPscEndpointInfoOutputReference.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getNumberAttribute` <a name="getNumberAttribute" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointGcpPscEndpointInfoOutputReference.getNumberAttribute"></a>
+
+```typescript
+public getNumberAttribute(terraformAttribute: string): number
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointGcpPscEndpointInfoOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getNumberListAttribute` <a name="getNumberListAttribute" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointGcpPscEndpointInfoOutputReference.getNumberListAttribute"></a>
+
+```typescript
+public getNumberListAttribute(terraformAttribute: string): number[]
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointGcpPscEndpointInfoOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getNumberMapAttribute` <a name="getNumberMapAttribute" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointGcpPscEndpointInfoOutputReference.getNumberMapAttribute"></a>
+
+```typescript
+public getNumberMapAttribute(terraformAttribute: string): {[ key: string ]: number}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointGcpPscEndpointInfoOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getStringAttribute` <a name="getStringAttribute" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointGcpPscEndpointInfoOutputReference.getStringAttribute"></a>
+
+```typescript
+public getStringAttribute(terraformAttribute: string): string
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointGcpPscEndpointInfoOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `getStringMapAttribute` <a name="getStringMapAttribute" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointGcpPscEndpointInfoOutputReference.getStringMapAttribute"></a>
+
+```typescript
+public getStringMapAttribute(terraformAttribute: string): {[ key: string ]: string}
+```
+
+###### `terraformAttribute`<sup>Required</sup> <a name="terraformAttribute" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointGcpPscEndpointInfoOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* string
+
+---
+
+##### `interpolationForAttribute` <a name="interpolationForAttribute" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointGcpPscEndpointInfoOutputReference.interpolationForAttribute"></a>
+
+```typescript
+public interpolationForAttribute(property: string): IResolvable
+```
+
+###### `property`<sup>Required</sup> <a name="property" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointGcpPscEndpointInfoOutputReference.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* string
+
+---
+
+##### `resolve` <a name="resolve" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointGcpPscEndpointInfoOutputReference.resolve"></a>
+
+```typescript
+public resolve(_context: IResolveContext): any
+```
+
+Produce the Token's value at resolution time.
+
+###### `_context`<sup>Required</sup> <a name="_context" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointGcpPscEndpointInfoOutputReference.resolve.parameter._context"></a>
+
+- *Type:* cdktf.IResolveContext
+
+---
+
+##### `toString` <a name="toString" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointGcpPscEndpointInfoOutputReference.toString"></a>
+
+```typescript
+public toString(): string
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.EndpointGcpPscEndpointInfoOutputReference.property.creationStack">creationStack</a></code> | <code>string[]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.EndpointGcpPscEndpointInfoOutputReference.property.fqn">fqn</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.EndpointGcpPscEndpointInfoOutputReference.property.pscConnectionId">pscConnectionId</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.EndpointGcpPscEndpointInfoOutputReference.property.serviceAttachmentId">serviceAttachmentId</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.EndpointGcpPscEndpointInfoOutputReference.property.endpointRegionInput">endpointRegionInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.EndpointGcpPscEndpointInfoOutputReference.property.projectIdInput">projectIdInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.EndpointGcpPscEndpointInfoOutputReference.property.pscEndpointInput">pscEndpointInput</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.EndpointGcpPscEndpointInfoOutputReference.property.endpointRegion">endpointRegion</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.EndpointGcpPscEndpointInfoOutputReference.property.projectId">projectId</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.EndpointGcpPscEndpointInfoOutputReference.property.pscEndpoint">pscEndpoint</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.endpoint.EndpointGcpPscEndpointInfoOutputReference.property.internalValue">internalValue</a></code> | <code>cdktf.IResolvable \| <a href="#rhizo-co-terraform-provider-databricks.endpoint.EndpointGcpPscEndpointInfo">EndpointGcpPscEndpointInfo</a></code> | *No description.* |
+
+---
+
+##### `creationStack`<sup>Required</sup> <a name="creationStack" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointGcpPscEndpointInfoOutputReference.property.creationStack"></a>
+
+```typescript
+public readonly creationStack: string[];
+```
+
+- *Type:* string[]
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `fqn`<sup>Required</sup> <a name="fqn" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointGcpPscEndpointInfoOutputReference.property.fqn"></a>
+
+```typescript
+public readonly fqn: string;
+```
+
+- *Type:* string
+
+---
+
+##### `pscConnectionId`<sup>Required</sup> <a name="pscConnectionId" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointGcpPscEndpointInfoOutputReference.property.pscConnectionId"></a>
+
+```typescript
+public readonly pscConnectionId: string;
+```
+
+- *Type:* string
+
+---
+
+##### `serviceAttachmentId`<sup>Required</sup> <a name="serviceAttachmentId" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointGcpPscEndpointInfoOutputReference.property.serviceAttachmentId"></a>
+
+```typescript
+public readonly serviceAttachmentId: string;
+```
+
+- *Type:* string
+
+---
+
+##### `endpointRegionInput`<sup>Optional</sup> <a name="endpointRegionInput" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointGcpPscEndpointInfoOutputReference.property.endpointRegionInput"></a>
+
+```typescript
+public readonly endpointRegionInput: string;
+```
+
+- *Type:* string
+
+---
+
+##### `projectIdInput`<sup>Optional</sup> <a name="projectIdInput" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointGcpPscEndpointInfoOutputReference.property.projectIdInput"></a>
+
+```typescript
+public readonly projectIdInput: string;
+```
+
+- *Type:* string
+
+---
+
+##### `pscEndpointInput`<sup>Optional</sup> <a name="pscEndpointInput" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointGcpPscEndpointInfoOutputReference.property.pscEndpointInput"></a>
+
+```typescript
+public readonly pscEndpointInput: string;
+```
+
+- *Type:* string
+
+---
+
+##### `endpointRegion`<sup>Required</sup> <a name="endpointRegion" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointGcpPscEndpointInfoOutputReference.property.endpointRegion"></a>
+
+```typescript
+public readonly endpointRegion: string;
+```
+
+- *Type:* string
+
+---
+
+##### `projectId`<sup>Required</sup> <a name="projectId" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointGcpPscEndpointInfoOutputReference.property.projectId"></a>
+
+```typescript
+public readonly projectId: string;
+```
+
+- *Type:* string
+
+---
+
+##### `pscEndpoint`<sup>Required</sup> <a name="pscEndpoint" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointGcpPscEndpointInfoOutputReference.property.pscEndpoint"></a>
+
+```typescript
+public readonly pscEndpoint: string;
+```
+
+- *Type:* string
+
+---
+
+##### `internalValue`<sup>Optional</sup> <a name="internalValue" id="rhizo-co-terraform-provider-databricks.endpoint.EndpointGcpPscEndpointInfoOutputReference.property.internalValue"></a>
+
+```typescript
+public readonly internalValue: IResolvable | EndpointGcpPscEndpointInfo;
+```
+
+- *Type:* cdktf.IResolvable | <a href="#rhizo-co-terraform-provider-databricks.endpoint.EndpointGcpPscEndpointInfo">EndpointGcpPscEndpointInfo</a>
+
+---
+
+
+

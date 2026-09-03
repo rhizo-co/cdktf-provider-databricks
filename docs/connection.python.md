@@ -1,0 +1,2789 @@
+# `connection` Submodule <a name="`connection` Submodule" id="rhizo-co-terraform-provider-databricks.connection"></a>
+
+## Constructs <a name="Constructs" id="Constructs"></a>
+
+### Connection <a name="Connection" id="rhizo-co-terraform-provider-databricks.connection.Connection"></a>
+
+Represents a {@link https://registry.terraform.io/providers/databricks/databricks/1.130.0/docs/resources/connection databricks_connection}.
+
+#### Initializers <a name="Initializers" id="rhizo-co-terraform-provider-databricks.connection.Connection.Initializer"></a>
+
+```python
+from rhizo_co_cdktf_provider_databricks import connection
+
+connection.Connection(
+  scope: Construct,
+  id: str,
+  connection: SSHProvisionerConnection | WinrmProvisionerConnection = None,
+  count: typing.Union[int, float] | TerraformCount = None,
+  depends_on: typing.List[ITerraformDependable] = None,
+  for_each: ITerraformIterator = None,
+  lifecycle: TerraformResourceLifecycle = None,
+  provider: TerraformProvider = None,
+  provisioners: typing.List[FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner] = None,
+  comment: str = None,
+  connection_type: str = None,
+  environment_settings: ConnectionEnvironmentSettings = None,
+  id: str = None,
+  name: str = None,
+  options: typing.Mapping[str] = None,
+  owner: str = None,
+  properties: typing.Mapping[str] = None,
+  provider_config: ConnectionProviderConfig = None,
+  read_only: bool | IResolvable = None
+)
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.Connection.Initializer.parameter.scope">scope</a></code> | <code>constructs.Construct</code> | The scope in which to define this construct. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.Connection.Initializer.parameter.id">id</a></code> | <code>str</code> | The scoped construct ID. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.Connection.Initializer.parameter.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.Connection.Initializer.parameter.count">count</a></code> | <code>typing.Union[int, float] \| cdktf.TerraformCount</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.Connection.Initializer.parameter.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.Connection.Initializer.parameter.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.Connection.Initializer.parameter.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.Connection.Initializer.parameter.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.Connection.Initializer.parameter.provisioners">provisioners</a></code> | <code>typing.List[cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner]</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.Connection.Initializer.parameter.comment">comment</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.130.0/docs/resources/connection#comment Connection#comment}. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.Connection.Initializer.parameter.connectionType">connection_type</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.130.0/docs/resources/connection#connection_type Connection#connection_type}. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.Connection.Initializer.parameter.environmentSettings">environment_settings</a></code> | <code><a href="#rhizo-co-terraform-provider-databricks.connection.ConnectionEnvironmentSettings">ConnectionEnvironmentSettings</a></code> | environment_settings block. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.Connection.Initializer.parameter.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.130.0/docs/resources/connection#id Connection#id}. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.Connection.Initializer.parameter.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.130.0/docs/resources/connection#name Connection#name}. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.Connection.Initializer.parameter.options">options</a></code> | <code>typing.Mapping[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.130.0/docs/resources/connection#options Connection#options}. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.Connection.Initializer.parameter.owner">owner</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.130.0/docs/resources/connection#owner Connection#owner}. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.Connection.Initializer.parameter.properties">properties</a></code> | <code>typing.Mapping[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.130.0/docs/resources/connection#properties Connection#properties}. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.Connection.Initializer.parameter.providerConfig">provider_config</a></code> | <code><a href="#rhizo-co-terraform-provider-databricks.connection.ConnectionProviderConfig">ConnectionProviderConfig</a></code> | provider_config block. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.Connection.Initializer.parameter.readOnly">read_only</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.130.0/docs/resources/connection#read_only Connection#read_only}. |
+
+---
+
+##### `scope`<sup>Required</sup> <a name="scope" id="rhizo-co-terraform-provider-databricks.connection.Connection.Initializer.parameter.scope"></a>
+
+- *Type:* constructs.Construct
+
+The scope in which to define this construct.
+
+---
+
+##### `id`<sup>Required</sup> <a name="id" id="rhizo-co-terraform-provider-databricks.connection.Connection.Initializer.parameter.id"></a>
+
+- *Type:* str
+
+The scoped construct ID.
+
+Must be unique amongst siblings in the same scope
+
+---
+
+##### `connection`<sup>Optional</sup> <a name="connection" id="rhizo-co-terraform-provider-databricks.connection.Connection.Initializer.parameter.connection"></a>
+
+- *Type:* cdktf.SSHProvisionerConnection | cdktf.WinrmProvisionerConnection
+
+---
+
+##### `count`<sup>Optional</sup> <a name="count" id="rhizo-co-terraform-provider-databricks.connection.Connection.Initializer.parameter.count"></a>
+
+- *Type:* typing.Union[int, float] | cdktf.TerraformCount
+
+---
+
+##### `depends_on`<sup>Optional</sup> <a name="depends_on" id="rhizo-co-terraform-provider-databricks.connection.Connection.Initializer.parameter.dependsOn"></a>
+
+- *Type:* typing.List[cdktf.ITerraformDependable]
+
+---
+
+##### `for_each`<sup>Optional</sup> <a name="for_each" id="rhizo-co-terraform-provider-databricks.connection.Connection.Initializer.parameter.forEach"></a>
+
+- *Type:* cdktf.ITerraformIterator
+
+---
+
+##### `lifecycle`<sup>Optional</sup> <a name="lifecycle" id="rhizo-co-terraform-provider-databricks.connection.Connection.Initializer.parameter.lifecycle"></a>
+
+- *Type:* cdktf.TerraformResourceLifecycle
+
+---
+
+##### `provider`<sup>Optional</sup> <a name="provider" id="rhizo-co-terraform-provider-databricks.connection.Connection.Initializer.parameter.provider"></a>
+
+- *Type:* cdktf.TerraformProvider
+
+---
+
+##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="rhizo-co-terraform-provider-databricks.connection.Connection.Initializer.parameter.provisioners"></a>
+
+- *Type:* typing.List[cdktf.FileProvisioner | cdktf.LocalExecProvisioner | cdktf.RemoteExecProvisioner]
+
+---
+
+##### `comment`<sup>Optional</sup> <a name="comment" id="rhizo-co-terraform-provider-databricks.connection.Connection.Initializer.parameter.comment"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.130.0/docs/resources/connection#comment Connection#comment}.
+
+---
+
+##### `connection_type`<sup>Optional</sup> <a name="connection_type" id="rhizo-co-terraform-provider-databricks.connection.Connection.Initializer.parameter.connectionType"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.130.0/docs/resources/connection#connection_type Connection#connection_type}.
+
+---
+
+##### `environment_settings`<sup>Optional</sup> <a name="environment_settings" id="rhizo-co-terraform-provider-databricks.connection.Connection.Initializer.parameter.environmentSettings"></a>
+
+- *Type:* <a href="#rhizo-co-terraform-provider-databricks.connection.ConnectionEnvironmentSettings">ConnectionEnvironmentSettings</a>
+
+environment_settings block.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.130.0/docs/resources/connection#environment_settings Connection#environment_settings}
+
+---
+
+##### `id`<sup>Optional</sup> <a name="id" id="rhizo-co-terraform-provider-databricks.connection.Connection.Initializer.parameter.id"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.130.0/docs/resources/connection#id Connection#id}.
+
+Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+
+---
+
+##### `name`<sup>Optional</sup> <a name="name" id="rhizo-co-terraform-provider-databricks.connection.Connection.Initializer.parameter.name"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.130.0/docs/resources/connection#name Connection#name}.
+
+---
+
+##### `options`<sup>Optional</sup> <a name="options" id="rhizo-co-terraform-provider-databricks.connection.Connection.Initializer.parameter.options"></a>
+
+- *Type:* typing.Mapping[str]
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.130.0/docs/resources/connection#options Connection#options}.
+
+---
+
+##### `owner`<sup>Optional</sup> <a name="owner" id="rhizo-co-terraform-provider-databricks.connection.Connection.Initializer.parameter.owner"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.130.0/docs/resources/connection#owner Connection#owner}.
+
+---
+
+##### `properties`<sup>Optional</sup> <a name="properties" id="rhizo-co-terraform-provider-databricks.connection.Connection.Initializer.parameter.properties"></a>
+
+- *Type:* typing.Mapping[str]
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.130.0/docs/resources/connection#properties Connection#properties}.
+
+---
+
+##### `provider_config`<sup>Optional</sup> <a name="provider_config" id="rhizo-co-terraform-provider-databricks.connection.Connection.Initializer.parameter.providerConfig"></a>
+
+- *Type:* <a href="#rhizo-co-terraform-provider-databricks.connection.ConnectionProviderConfig">ConnectionProviderConfig</a>
+
+provider_config block.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.130.0/docs/resources/connection#provider_config Connection#provider_config}
+
+---
+
+##### `read_only`<sup>Optional</sup> <a name="read_only" id="rhizo-co-terraform-provider-databricks.connection.Connection.Initializer.parameter.readOnly"></a>
+
+- *Type:* bool | cdktf.IResolvable
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.130.0/docs/resources/connection#read_only Connection#read_only}.
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.Connection.toString">to_string</a></code> | Returns a string representation of this construct. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.Connection.with">with</a></code> | Applies one or more mixins to this construct. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.Connection.addOverride">add_override</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.Connection.overrideLogicalId">override_logical_id</a></code> | Overrides the auto-generated logical ID with a specific ID. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.Connection.resetOverrideLogicalId">reset_override_logical_id</a></code> | Resets a previously passed logical Id to use the auto-generated logical id again. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.Connection.toHclTerraform">to_hcl_terraform</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.Connection.toMetadata">to_metadata</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.Connection.toTerraform">to_terraform</a></code> | Adds this resource to the terraform JSON output. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.Connection.addMoveTarget">add_move_target</a></code> | Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.Connection.getAnyMapAttribute">get_any_map_attribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.Connection.getBooleanAttribute">get_boolean_attribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.Connection.getBooleanMapAttribute">get_boolean_map_attribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.Connection.getListAttribute">get_list_attribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.Connection.getNumberAttribute">get_number_attribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.Connection.getNumberListAttribute">get_number_list_attribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.Connection.getNumberMapAttribute">get_number_map_attribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.Connection.getStringAttribute">get_string_attribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.Connection.getStringMapAttribute">get_string_map_attribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.Connection.hasResourceMove">has_resource_move</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.Connection.importFrom">import_from</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.Connection.interpolationForAttribute">interpolation_for_attribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.Connection.moveFromId">move_from_id</a></code> | Move the resource corresponding to "id" to this resource. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.Connection.moveTo">move_to</a></code> | Moves this resource to the target resource given by moveTarget. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.Connection.moveToId">move_to_id</a></code> | Moves this resource to the resource corresponding to "id". |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.Connection.putEnvironmentSettings">put_environment_settings</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.Connection.putProviderConfig">put_provider_config</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.Connection.resetComment">reset_comment</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.Connection.resetConnectionType">reset_connection_type</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.Connection.resetEnvironmentSettings">reset_environment_settings</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.Connection.resetId">reset_id</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.Connection.resetName">reset_name</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.Connection.resetOptions">reset_options</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.Connection.resetOwner">reset_owner</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.Connection.resetProperties">reset_properties</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.Connection.resetProviderConfig">reset_provider_config</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.Connection.resetReadOnly">reset_read_only</a></code> | *No description.* |
+
+---
+
+##### `to_string` <a name="to_string" id="rhizo-co-terraform-provider-databricks.connection.Connection.toString"></a>
+
+```python
+def to_string() -> str
+```
+
+Returns a string representation of this construct.
+
+##### `with` <a name="with" id="rhizo-co-terraform-provider-databricks.connection.Connection.with"></a>
+
+```python
+def with(
+  mixins: *IMixin
+) -> IConstruct
+```
+
+Applies one or more mixins to this construct.
+
+Mixins are applied in order. The list of constructs is captured at the
+start of the call, so constructs added by a mixin will not be visited.
+Use multiple `with()` calls if subsequent mixins should apply to added
+constructs.
+
+###### `mixins`<sup>Required</sup> <a name="mixins" id="rhizo-co-terraform-provider-databricks.connection.Connection.with.parameter.mixins"></a>
+
+- *Type:* *constructs.IMixin
+
+The mixins to apply.
+
+---
+
+##### `add_override` <a name="add_override" id="rhizo-co-terraform-provider-databricks.connection.Connection.addOverride"></a>
+
+```python
+def add_override(
+  path: str,
+  value: typing.Any
+) -> None
+```
+
+###### `path`<sup>Required</sup> <a name="path" id="rhizo-co-terraform-provider-databricks.connection.Connection.addOverride.parameter.path"></a>
+
+- *Type:* str
+
+---
+
+###### `value`<sup>Required</sup> <a name="value" id="rhizo-co-terraform-provider-databricks.connection.Connection.addOverride.parameter.value"></a>
+
+- *Type:* typing.Any
+
+---
+
+##### `override_logical_id` <a name="override_logical_id" id="rhizo-co-terraform-provider-databricks.connection.Connection.overrideLogicalId"></a>
+
+```python
+def override_logical_id(
+  new_logical_id: str
+) -> None
+```
+
+Overrides the auto-generated logical ID with a specific ID.
+
+###### `new_logical_id`<sup>Required</sup> <a name="new_logical_id" id="rhizo-co-terraform-provider-databricks.connection.Connection.overrideLogicalId.parameter.newLogicalId"></a>
+
+- *Type:* str
+
+The new logical ID to use for this stack element.
+
+---
+
+##### `reset_override_logical_id` <a name="reset_override_logical_id" id="rhizo-co-terraform-provider-databricks.connection.Connection.resetOverrideLogicalId"></a>
+
+```python
+def reset_override_logical_id() -> None
+```
+
+Resets a previously passed logical Id to use the auto-generated logical id again.
+
+##### `to_hcl_terraform` <a name="to_hcl_terraform" id="rhizo-co-terraform-provider-databricks.connection.Connection.toHclTerraform"></a>
+
+```python
+def to_hcl_terraform() -> typing.Any
+```
+
+##### `to_metadata` <a name="to_metadata" id="rhizo-co-terraform-provider-databricks.connection.Connection.toMetadata"></a>
+
+```python
+def to_metadata() -> typing.Any
+```
+
+##### `to_terraform` <a name="to_terraform" id="rhizo-co-terraform-provider-databricks.connection.Connection.toTerraform"></a>
+
+```python
+def to_terraform() -> typing.Any
+```
+
+Adds this resource to the terraform JSON output.
+
+##### `add_move_target` <a name="add_move_target" id="rhizo-co-terraform-provider-databricks.connection.Connection.addMoveTarget"></a>
+
+```python
+def add_move_target(
+  move_target: str
+) -> None
+```
+
+Adds a user defined moveTarget string to this resource to be later used in .moveTo(moveTarget) to resolve the location of the move.
+
+###### `move_target`<sup>Required</sup> <a name="move_target" id="rhizo-co-terraform-provider-databricks.connection.Connection.addMoveTarget.parameter.moveTarget"></a>
+
+- *Type:* str
+
+The string move target that will correspond to this resource.
+
+---
+
+##### `get_any_map_attribute` <a name="get_any_map_attribute" id="rhizo-co-terraform-provider-databricks.connection.Connection.getAnyMapAttribute"></a>
+
+```python
+def get_any_map_attribute(
+  terraform_attribute: str
+) -> typing.Mapping[typing.Any]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="rhizo-co-terraform-provider-databricks.connection.Connection.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_boolean_attribute` <a name="get_boolean_attribute" id="rhizo-co-terraform-provider-databricks.connection.Connection.getBooleanAttribute"></a>
+
+```python
+def get_boolean_attribute(
+  terraform_attribute: str
+) -> IResolvable
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="rhizo-co-terraform-provider-databricks.connection.Connection.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_boolean_map_attribute` <a name="get_boolean_map_attribute" id="rhizo-co-terraform-provider-databricks.connection.Connection.getBooleanMapAttribute"></a>
+
+```python
+def get_boolean_map_attribute(
+  terraform_attribute: str
+) -> typing.Mapping[bool]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="rhizo-co-terraform-provider-databricks.connection.Connection.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_list_attribute` <a name="get_list_attribute" id="rhizo-co-terraform-provider-databricks.connection.Connection.getListAttribute"></a>
+
+```python
+def get_list_attribute(
+  terraform_attribute: str
+) -> typing.List[str]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="rhizo-co-terraform-provider-databricks.connection.Connection.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_number_attribute` <a name="get_number_attribute" id="rhizo-co-terraform-provider-databricks.connection.Connection.getNumberAttribute"></a>
+
+```python
+def get_number_attribute(
+  terraform_attribute: str
+) -> typing.Union[int, float]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="rhizo-co-terraform-provider-databricks.connection.Connection.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_number_list_attribute` <a name="get_number_list_attribute" id="rhizo-co-terraform-provider-databricks.connection.Connection.getNumberListAttribute"></a>
+
+```python
+def get_number_list_attribute(
+  terraform_attribute: str
+) -> typing.List[typing.Union[int, float]]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="rhizo-co-terraform-provider-databricks.connection.Connection.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_number_map_attribute` <a name="get_number_map_attribute" id="rhizo-co-terraform-provider-databricks.connection.Connection.getNumberMapAttribute"></a>
+
+```python
+def get_number_map_attribute(
+  terraform_attribute: str
+) -> typing.Mapping[typing.Union[int, float]]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="rhizo-co-terraform-provider-databricks.connection.Connection.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_string_attribute` <a name="get_string_attribute" id="rhizo-co-terraform-provider-databricks.connection.Connection.getStringAttribute"></a>
+
+```python
+def get_string_attribute(
+  terraform_attribute: str
+) -> str
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="rhizo-co-terraform-provider-databricks.connection.Connection.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_string_map_attribute` <a name="get_string_map_attribute" id="rhizo-co-terraform-provider-databricks.connection.Connection.getStringMapAttribute"></a>
+
+```python
+def get_string_map_attribute(
+  terraform_attribute: str
+) -> typing.Mapping[str]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="rhizo-co-terraform-provider-databricks.connection.Connection.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `has_resource_move` <a name="has_resource_move" id="rhizo-co-terraform-provider-databricks.connection.Connection.hasResourceMove"></a>
+
+```python
+def has_resource_move() -> TerraformResourceMoveByTarget | TerraformResourceMoveById
+```
+
+##### `import_from` <a name="import_from" id="rhizo-co-terraform-provider-databricks.connection.Connection.importFrom"></a>
+
+```python
+def import_from(
+  id: str,
+  provider: TerraformProvider = None
+) -> None
+```
+
+###### `id`<sup>Required</sup> <a name="id" id="rhizo-co-terraform-provider-databricks.connection.Connection.importFrom.parameter.id"></a>
+
+- *Type:* str
+
+---
+
+###### `provider`<sup>Optional</sup> <a name="provider" id="rhizo-co-terraform-provider-databricks.connection.Connection.importFrom.parameter.provider"></a>
+
+- *Type:* cdktf.TerraformProvider
+
+---
+
+##### `interpolation_for_attribute` <a name="interpolation_for_attribute" id="rhizo-co-terraform-provider-databricks.connection.Connection.interpolationForAttribute"></a>
+
+```python
+def interpolation_for_attribute(
+  terraform_attribute: str
+) -> IResolvable
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="rhizo-co-terraform-provider-databricks.connection.Connection.interpolationForAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `move_from_id` <a name="move_from_id" id="rhizo-co-terraform-provider-databricks.connection.Connection.moveFromId"></a>
+
+```python
+def move_from_id(
+  id: str
+) -> None
+```
+
+Move the resource corresponding to "id" to this resource.
+
+Note that the resource being moved from must be marked as moved using it's instance function.
+
+###### `id`<sup>Required</sup> <a name="id" id="rhizo-co-terraform-provider-databricks.connection.Connection.moveFromId.parameter.id"></a>
+
+- *Type:* str
+
+Full id of resource being moved from, e.g. "aws_s3_bucket.example".
+
+---
+
+##### `move_to` <a name="move_to" id="rhizo-co-terraform-provider-databricks.connection.Connection.moveTo"></a>
+
+```python
+def move_to(
+  move_target: str,
+  index: str | typing.Union[int, float] = None
+) -> None
+```
+
+Moves this resource to the target resource given by moveTarget.
+
+###### `move_target`<sup>Required</sup> <a name="move_target" id="rhizo-co-terraform-provider-databricks.connection.Connection.moveTo.parameter.moveTarget"></a>
+
+- *Type:* str
+
+The previously set user defined string set by .addMoveTarget() corresponding to the resource to move to.
+
+---
+
+###### `index`<sup>Optional</sup> <a name="index" id="rhizo-co-terraform-provider-databricks.connection.Connection.moveTo.parameter.index"></a>
+
+- *Type:* str | typing.Union[int, float]
+
+Optional The index corresponding to the key the resource is to appear in the foreach of a resource to move to.
+
+---
+
+##### `move_to_id` <a name="move_to_id" id="rhizo-co-terraform-provider-databricks.connection.Connection.moveToId"></a>
+
+```python
+def move_to_id(
+  id: str
+) -> None
+```
+
+Moves this resource to the resource corresponding to "id".
+
+###### `id`<sup>Required</sup> <a name="id" id="rhizo-co-terraform-provider-databricks.connection.Connection.moveToId.parameter.id"></a>
+
+- *Type:* str
+
+Full id of resource to move to, e.g. "aws_s3_bucket.example".
+
+---
+
+##### `put_environment_settings` <a name="put_environment_settings" id="rhizo-co-terraform-provider-databricks.connection.Connection.putEnvironmentSettings"></a>
+
+```python
+def put_environment_settings(
+  environment_version: str = None,
+  java_dependencies: typing.List[str] = None
+) -> None
+```
+
+###### `environment_version`<sup>Optional</sup> <a name="environment_version" id="rhizo-co-terraform-provider-databricks.connection.Connection.putEnvironmentSettings.parameter.environmentVersion"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.130.0/docs/resources/connection#environment_version Connection#environment_version}.
+
+---
+
+###### `java_dependencies`<sup>Optional</sup> <a name="java_dependencies" id="rhizo-co-terraform-provider-databricks.connection.Connection.putEnvironmentSettings.parameter.javaDependencies"></a>
+
+- *Type:* typing.List[str]
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.130.0/docs/resources/connection#java_dependencies Connection#java_dependencies}.
+
+---
+
+##### `put_provider_config` <a name="put_provider_config" id="rhizo-co-terraform-provider-databricks.connection.Connection.putProviderConfig"></a>
+
+```python
+def put_provider_config(
+  workspace_id: str = None
+) -> None
+```
+
+###### `workspace_id`<sup>Optional</sup> <a name="workspace_id" id="rhizo-co-terraform-provider-databricks.connection.Connection.putProviderConfig.parameter.workspaceId"></a>
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.130.0/docs/resources/connection#workspace_id Connection#workspace_id}.
+
+---
+
+##### `reset_comment` <a name="reset_comment" id="rhizo-co-terraform-provider-databricks.connection.Connection.resetComment"></a>
+
+```python
+def reset_comment() -> None
+```
+
+##### `reset_connection_type` <a name="reset_connection_type" id="rhizo-co-terraform-provider-databricks.connection.Connection.resetConnectionType"></a>
+
+```python
+def reset_connection_type() -> None
+```
+
+##### `reset_environment_settings` <a name="reset_environment_settings" id="rhizo-co-terraform-provider-databricks.connection.Connection.resetEnvironmentSettings"></a>
+
+```python
+def reset_environment_settings() -> None
+```
+
+##### `reset_id` <a name="reset_id" id="rhizo-co-terraform-provider-databricks.connection.Connection.resetId"></a>
+
+```python
+def reset_id() -> None
+```
+
+##### `reset_name` <a name="reset_name" id="rhizo-co-terraform-provider-databricks.connection.Connection.resetName"></a>
+
+```python
+def reset_name() -> None
+```
+
+##### `reset_options` <a name="reset_options" id="rhizo-co-terraform-provider-databricks.connection.Connection.resetOptions"></a>
+
+```python
+def reset_options() -> None
+```
+
+##### `reset_owner` <a name="reset_owner" id="rhizo-co-terraform-provider-databricks.connection.Connection.resetOwner"></a>
+
+```python
+def reset_owner() -> None
+```
+
+##### `reset_properties` <a name="reset_properties" id="rhizo-co-terraform-provider-databricks.connection.Connection.resetProperties"></a>
+
+```python
+def reset_properties() -> None
+```
+
+##### `reset_provider_config` <a name="reset_provider_config" id="rhizo-co-terraform-provider-databricks.connection.Connection.resetProviderConfig"></a>
+
+```python
+def reset_provider_config() -> None
+```
+
+##### `reset_read_only` <a name="reset_read_only" id="rhizo-co-terraform-provider-databricks.connection.Connection.resetReadOnly"></a>
+
+```python
+def reset_read_only() -> None
+```
+
+#### Static Functions <a name="Static Functions" id="Static Functions"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.Connection.isConstruct">is_construct</a></code> | Checks if `x` is a construct. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.Connection.isTerraformElement">is_terraform_element</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.Connection.isTerraformResource">is_terraform_resource</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.Connection.generateConfigForImport">generate_config_for_import</a></code> | Generates CDKTF code for importing a Connection resource upon running "cdktf plan <stack-name>". |
+
+---
+
+##### `is_construct` <a name="is_construct" id="rhizo-co-terraform-provider-databricks.connection.Connection.isConstruct"></a>
+
+```python
+from rhizo_co_cdktf_provider_databricks import connection
+
+connection.Connection.is_construct(
+  x: typing.Any
+)
+```
+
+Checks if `x` is a construct.
+
+Use this method instead of `instanceof` to properly detect `Construct`
+instances, even when the construct library is symlinked.
+
+Explanation: in JavaScript, multiple copies of the `constructs` library on
+disk are seen as independent, completely different libraries. As a
+consequence, the class `Construct` in each copy of the `constructs` library
+is seen as a different class, and an instance of one class will not test as
+`instanceof` the other class. `npm install` will not create installations
+like this, but users may manually symlink construct libraries together or
+use a monorepo tool: in those cases, multiple copies of the `constructs`
+library can be accidentally installed, and `instanceof` will behave
+unpredictably. It is safest to avoid using `instanceof`, and using
+this type-testing method instead.
+
+###### `x`<sup>Required</sup> <a name="x" id="rhizo-co-terraform-provider-databricks.connection.Connection.isConstruct.parameter.x"></a>
+
+- *Type:* typing.Any
+
+Any object.
+
+---
+
+##### `is_terraform_element` <a name="is_terraform_element" id="rhizo-co-terraform-provider-databricks.connection.Connection.isTerraformElement"></a>
+
+```python
+from rhizo_co_cdktf_provider_databricks import connection
+
+connection.Connection.is_terraform_element(
+  x: typing.Any
+)
+```
+
+###### `x`<sup>Required</sup> <a name="x" id="rhizo-co-terraform-provider-databricks.connection.Connection.isTerraformElement.parameter.x"></a>
+
+- *Type:* typing.Any
+
+---
+
+##### `is_terraform_resource` <a name="is_terraform_resource" id="rhizo-co-terraform-provider-databricks.connection.Connection.isTerraformResource"></a>
+
+```python
+from rhizo_co_cdktf_provider_databricks import connection
+
+connection.Connection.is_terraform_resource(
+  x: typing.Any
+)
+```
+
+###### `x`<sup>Required</sup> <a name="x" id="rhizo-co-terraform-provider-databricks.connection.Connection.isTerraformResource.parameter.x"></a>
+
+- *Type:* typing.Any
+
+---
+
+##### `generate_config_for_import` <a name="generate_config_for_import" id="rhizo-co-terraform-provider-databricks.connection.Connection.generateConfigForImport"></a>
+
+```python
+from rhizo_co_cdktf_provider_databricks import connection
+
+connection.Connection.generate_config_for_import(
+  scope: Construct,
+  import_to_id: str,
+  import_from_id: str,
+  provider: TerraformProvider = None
+)
+```
+
+Generates CDKTF code for importing a Connection resource upon running "cdktf plan <stack-name>".
+
+###### `scope`<sup>Required</sup> <a name="scope" id="rhizo-co-terraform-provider-databricks.connection.Connection.generateConfigForImport.parameter.scope"></a>
+
+- *Type:* constructs.Construct
+
+The scope in which to define this construct.
+
+---
+
+###### `import_to_id`<sup>Required</sup> <a name="import_to_id" id="rhizo-co-terraform-provider-databricks.connection.Connection.generateConfigForImport.parameter.importToId"></a>
+
+- *Type:* str
+
+The construct id used in the generated config for the Connection to import.
+
+---
+
+###### `import_from_id`<sup>Required</sup> <a name="import_from_id" id="rhizo-co-terraform-provider-databricks.connection.Connection.generateConfigForImport.parameter.importFromId"></a>
+
+- *Type:* str
+
+The id of the existing Connection that should be imported.
+
+Refer to the {@link https://registry.terraform.io/providers/databricks/databricks/1.130.0/docs/resources/connection#import import section} in the documentation of this resource for the id to use
+
+---
+
+###### `provider`<sup>Optional</sup> <a name="provider" id="rhizo-co-terraform-provider-databricks.connection.Connection.generateConfigForImport.parameter.provider"></a>
+
+- *Type:* cdktf.TerraformProvider
+
+? Optional instance of the provider where the Connection to import is found.
+
+---
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.Connection.property.node">node</a></code> | <code>constructs.Node</code> | The tree node. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.Connection.property.cdktfStack">cdktf_stack</a></code> | <code>cdktf.TerraformStack</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.Connection.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.Connection.property.friendlyUniqueId">friendly_unique_id</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.Connection.property.terraformMetaArguments">terraform_meta_arguments</a></code> | <code>typing.Mapping[typing.Any]</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.Connection.property.terraformResourceType">terraform_resource_type</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.Connection.property.terraformGeneratorMetadata">terraform_generator_metadata</a></code> | <code>cdktf.TerraformProviderGeneratorMetadata</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.Connection.property.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.Connection.property.count">count</a></code> | <code>typing.Union[int, float] \| cdktf.TerraformCount</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.Connection.property.dependsOn">depends_on</a></code> | <code>typing.List[str]</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.Connection.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.Connection.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.Connection.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.Connection.property.provisioners">provisioners</a></code> | <code>typing.List[cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner]</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.Connection.property.connectionId">connection_id</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.Connection.property.createdAt">created_at</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.Connection.property.createdBy">created_by</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.Connection.property.credentialType">credential_type</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.Connection.property.environmentSettings">environment_settings</a></code> | <code><a href="#rhizo-co-terraform-provider-databricks.connection.ConnectionEnvironmentSettingsOutputReference">ConnectionEnvironmentSettingsOutputReference</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.Connection.property.fullName">full_name</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.Connection.property.metastoreId">metastore_id</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.Connection.property.providerConfig">provider_config</a></code> | <code><a href="#rhizo-co-terraform-provider-databricks.connection.ConnectionProviderConfigOutputReference">ConnectionProviderConfigOutputReference</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.Connection.property.provisioningInfo">provisioning_info</a></code> | <code><a href="#rhizo-co-terraform-provider-databricks.connection.ConnectionProvisioningInfoList">ConnectionProvisioningInfoList</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.Connection.property.securableType">securable_type</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.Connection.property.updatedAt">updated_at</a></code> | <code>typing.Union[int, float]</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.Connection.property.updatedBy">updated_by</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.Connection.property.url">url</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.Connection.property.commentInput">comment_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.Connection.property.connectionTypeInput">connection_type_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.Connection.property.environmentSettingsInput">environment_settings_input</a></code> | <code><a href="#rhizo-co-terraform-provider-databricks.connection.ConnectionEnvironmentSettings">ConnectionEnvironmentSettings</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.Connection.property.idInput">id_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.Connection.property.nameInput">name_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.Connection.property.optionsInput">options_input</a></code> | <code>typing.Mapping[str]</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.Connection.property.ownerInput">owner_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.Connection.property.propertiesInput">properties_input</a></code> | <code>typing.Mapping[str]</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.Connection.property.providerConfigInput">provider_config_input</a></code> | <code><a href="#rhizo-co-terraform-provider-databricks.connection.ConnectionProviderConfig">ConnectionProviderConfig</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.Connection.property.readOnlyInput">read_only_input</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.Connection.property.comment">comment</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.Connection.property.connectionType">connection_type</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.Connection.property.id">id</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.Connection.property.name">name</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.Connection.property.options">options</a></code> | <code>typing.Mapping[str]</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.Connection.property.owner">owner</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.Connection.property.properties">properties</a></code> | <code>typing.Mapping[str]</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.Connection.property.readOnly">read_only</a></code> | <code>bool \| cdktf.IResolvable</code> | *No description.* |
+
+---
+
+##### `node`<sup>Required</sup> <a name="node" id="rhizo-co-terraform-provider-databricks.connection.Connection.property.node"></a>
+
+```python
+node: Node
+```
+
+- *Type:* constructs.Node
+
+The tree node.
+
+---
+
+##### `cdktf_stack`<sup>Required</sup> <a name="cdktf_stack" id="rhizo-co-terraform-provider-databricks.connection.Connection.property.cdktfStack"></a>
+
+```python
+cdktf_stack: TerraformStack
+```
+
+- *Type:* cdktf.TerraformStack
+
+---
+
+##### `fqn`<sup>Required</sup> <a name="fqn" id="rhizo-co-terraform-provider-databricks.connection.Connection.property.fqn"></a>
+
+```python
+fqn: str
+```
+
+- *Type:* str
+
+---
+
+##### `friendly_unique_id`<sup>Required</sup> <a name="friendly_unique_id" id="rhizo-co-terraform-provider-databricks.connection.Connection.property.friendlyUniqueId"></a>
+
+```python
+friendly_unique_id: str
+```
+
+- *Type:* str
+
+---
+
+##### `terraform_meta_arguments`<sup>Required</sup> <a name="terraform_meta_arguments" id="rhizo-co-terraform-provider-databricks.connection.Connection.property.terraformMetaArguments"></a>
+
+```python
+terraform_meta_arguments: typing.Mapping[typing.Any]
+```
+
+- *Type:* typing.Mapping[typing.Any]
+
+---
+
+##### `terraform_resource_type`<sup>Required</sup> <a name="terraform_resource_type" id="rhizo-co-terraform-provider-databricks.connection.Connection.property.terraformResourceType"></a>
+
+```python
+terraform_resource_type: str
+```
+
+- *Type:* str
+
+---
+
+##### `terraform_generator_metadata`<sup>Optional</sup> <a name="terraform_generator_metadata" id="rhizo-co-terraform-provider-databricks.connection.Connection.property.terraformGeneratorMetadata"></a>
+
+```python
+terraform_generator_metadata: TerraformProviderGeneratorMetadata
+```
+
+- *Type:* cdktf.TerraformProviderGeneratorMetadata
+
+---
+
+##### `connection`<sup>Optional</sup> <a name="connection" id="rhizo-co-terraform-provider-databricks.connection.Connection.property.connection"></a>
+
+```python
+connection: SSHProvisionerConnection | WinrmProvisionerConnection
+```
+
+- *Type:* cdktf.SSHProvisionerConnection | cdktf.WinrmProvisionerConnection
+
+---
+
+##### `count`<sup>Optional</sup> <a name="count" id="rhizo-co-terraform-provider-databricks.connection.Connection.property.count"></a>
+
+```python
+count: typing.Union[int, float] | TerraformCount
+```
+
+- *Type:* typing.Union[int, float] | cdktf.TerraformCount
+
+---
+
+##### `depends_on`<sup>Optional</sup> <a name="depends_on" id="rhizo-co-terraform-provider-databricks.connection.Connection.property.dependsOn"></a>
+
+```python
+depends_on: typing.List[str]
+```
+
+- *Type:* typing.List[str]
+
+---
+
+##### `for_each`<sup>Optional</sup> <a name="for_each" id="rhizo-co-terraform-provider-databricks.connection.Connection.property.forEach"></a>
+
+```python
+for_each: ITerraformIterator
+```
+
+- *Type:* cdktf.ITerraformIterator
+
+---
+
+##### `lifecycle`<sup>Optional</sup> <a name="lifecycle" id="rhizo-co-terraform-provider-databricks.connection.Connection.property.lifecycle"></a>
+
+```python
+lifecycle: TerraformResourceLifecycle
+```
+
+- *Type:* cdktf.TerraformResourceLifecycle
+
+---
+
+##### `provider`<sup>Optional</sup> <a name="provider" id="rhizo-co-terraform-provider-databricks.connection.Connection.property.provider"></a>
+
+```python
+provider: TerraformProvider
+```
+
+- *Type:* cdktf.TerraformProvider
+
+---
+
+##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="rhizo-co-terraform-provider-databricks.connection.Connection.property.provisioners"></a>
+
+```python
+provisioners: typing.List[FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner]
+```
+
+- *Type:* typing.List[cdktf.FileProvisioner | cdktf.LocalExecProvisioner | cdktf.RemoteExecProvisioner]
+
+---
+
+##### `connection_id`<sup>Required</sup> <a name="connection_id" id="rhizo-co-terraform-provider-databricks.connection.Connection.property.connectionId"></a>
+
+```python
+connection_id: str
+```
+
+- *Type:* str
+
+---
+
+##### `created_at`<sup>Required</sup> <a name="created_at" id="rhizo-co-terraform-provider-databricks.connection.Connection.property.createdAt"></a>
+
+```python
+created_at: typing.Union[int, float]
+```
+
+- *Type:* typing.Union[int, float]
+
+---
+
+##### `created_by`<sup>Required</sup> <a name="created_by" id="rhizo-co-terraform-provider-databricks.connection.Connection.property.createdBy"></a>
+
+```python
+created_by: str
+```
+
+- *Type:* str
+
+---
+
+##### `credential_type`<sup>Required</sup> <a name="credential_type" id="rhizo-co-terraform-provider-databricks.connection.Connection.property.credentialType"></a>
+
+```python
+credential_type: str
+```
+
+- *Type:* str
+
+---
+
+##### `environment_settings`<sup>Required</sup> <a name="environment_settings" id="rhizo-co-terraform-provider-databricks.connection.Connection.property.environmentSettings"></a>
+
+```python
+environment_settings: ConnectionEnvironmentSettingsOutputReference
+```
+
+- *Type:* <a href="#rhizo-co-terraform-provider-databricks.connection.ConnectionEnvironmentSettingsOutputReference">ConnectionEnvironmentSettingsOutputReference</a>
+
+---
+
+##### `full_name`<sup>Required</sup> <a name="full_name" id="rhizo-co-terraform-provider-databricks.connection.Connection.property.fullName"></a>
+
+```python
+full_name: str
+```
+
+- *Type:* str
+
+---
+
+##### `metastore_id`<sup>Required</sup> <a name="metastore_id" id="rhizo-co-terraform-provider-databricks.connection.Connection.property.metastoreId"></a>
+
+```python
+metastore_id: str
+```
+
+- *Type:* str
+
+---
+
+##### `provider_config`<sup>Required</sup> <a name="provider_config" id="rhizo-co-terraform-provider-databricks.connection.Connection.property.providerConfig"></a>
+
+```python
+provider_config: ConnectionProviderConfigOutputReference
+```
+
+- *Type:* <a href="#rhizo-co-terraform-provider-databricks.connection.ConnectionProviderConfigOutputReference">ConnectionProviderConfigOutputReference</a>
+
+---
+
+##### `provisioning_info`<sup>Required</sup> <a name="provisioning_info" id="rhizo-co-terraform-provider-databricks.connection.Connection.property.provisioningInfo"></a>
+
+```python
+provisioning_info: ConnectionProvisioningInfoList
+```
+
+- *Type:* <a href="#rhizo-co-terraform-provider-databricks.connection.ConnectionProvisioningInfoList">ConnectionProvisioningInfoList</a>
+
+---
+
+##### `securable_type`<sup>Required</sup> <a name="securable_type" id="rhizo-co-terraform-provider-databricks.connection.Connection.property.securableType"></a>
+
+```python
+securable_type: str
+```
+
+- *Type:* str
+
+---
+
+##### `updated_at`<sup>Required</sup> <a name="updated_at" id="rhizo-co-terraform-provider-databricks.connection.Connection.property.updatedAt"></a>
+
+```python
+updated_at: typing.Union[int, float]
+```
+
+- *Type:* typing.Union[int, float]
+
+---
+
+##### `updated_by`<sup>Required</sup> <a name="updated_by" id="rhizo-co-terraform-provider-databricks.connection.Connection.property.updatedBy"></a>
+
+```python
+updated_by: str
+```
+
+- *Type:* str
+
+---
+
+##### `url`<sup>Required</sup> <a name="url" id="rhizo-co-terraform-provider-databricks.connection.Connection.property.url"></a>
+
+```python
+url: str
+```
+
+- *Type:* str
+
+---
+
+##### `comment_input`<sup>Optional</sup> <a name="comment_input" id="rhizo-co-terraform-provider-databricks.connection.Connection.property.commentInput"></a>
+
+```python
+comment_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `connection_type_input`<sup>Optional</sup> <a name="connection_type_input" id="rhizo-co-terraform-provider-databricks.connection.Connection.property.connectionTypeInput"></a>
+
+```python
+connection_type_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `environment_settings_input`<sup>Optional</sup> <a name="environment_settings_input" id="rhizo-co-terraform-provider-databricks.connection.Connection.property.environmentSettingsInput"></a>
+
+```python
+environment_settings_input: ConnectionEnvironmentSettings
+```
+
+- *Type:* <a href="#rhizo-co-terraform-provider-databricks.connection.ConnectionEnvironmentSettings">ConnectionEnvironmentSettings</a>
+
+---
+
+##### `id_input`<sup>Optional</sup> <a name="id_input" id="rhizo-co-terraform-provider-databricks.connection.Connection.property.idInput"></a>
+
+```python
+id_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `name_input`<sup>Optional</sup> <a name="name_input" id="rhizo-co-terraform-provider-databricks.connection.Connection.property.nameInput"></a>
+
+```python
+name_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `options_input`<sup>Optional</sup> <a name="options_input" id="rhizo-co-terraform-provider-databricks.connection.Connection.property.optionsInput"></a>
+
+```python
+options_input: typing.Mapping[str]
+```
+
+- *Type:* typing.Mapping[str]
+
+---
+
+##### `owner_input`<sup>Optional</sup> <a name="owner_input" id="rhizo-co-terraform-provider-databricks.connection.Connection.property.ownerInput"></a>
+
+```python
+owner_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `properties_input`<sup>Optional</sup> <a name="properties_input" id="rhizo-co-terraform-provider-databricks.connection.Connection.property.propertiesInput"></a>
+
+```python
+properties_input: typing.Mapping[str]
+```
+
+- *Type:* typing.Mapping[str]
+
+---
+
+##### `provider_config_input`<sup>Optional</sup> <a name="provider_config_input" id="rhizo-co-terraform-provider-databricks.connection.Connection.property.providerConfigInput"></a>
+
+```python
+provider_config_input: ConnectionProviderConfig
+```
+
+- *Type:* <a href="#rhizo-co-terraform-provider-databricks.connection.ConnectionProviderConfig">ConnectionProviderConfig</a>
+
+---
+
+##### `read_only_input`<sup>Optional</sup> <a name="read_only_input" id="rhizo-co-terraform-provider-databricks.connection.Connection.property.readOnlyInput"></a>
+
+```python
+read_only_input: bool | IResolvable
+```
+
+- *Type:* bool | cdktf.IResolvable
+
+---
+
+##### `comment`<sup>Required</sup> <a name="comment" id="rhizo-co-terraform-provider-databricks.connection.Connection.property.comment"></a>
+
+```python
+comment: str
+```
+
+- *Type:* str
+
+---
+
+##### `connection_type`<sup>Required</sup> <a name="connection_type" id="rhizo-co-terraform-provider-databricks.connection.Connection.property.connectionType"></a>
+
+```python
+connection_type: str
+```
+
+- *Type:* str
+
+---
+
+##### `id`<sup>Required</sup> <a name="id" id="rhizo-co-terraform-provider-databricks.connection.Connection.property.id"></a>
+
+```python
+id: str
+```
+
+- *Type:* str
+
+---
+
+##### `name`<sup>Required</sup> <a name="name" id="rhizo-co-terraform-provider-databricks.connection.Connection.property.name"></a>
+
+```python
+name: str
+```
+
+- *Type:* str
+
+---
+
+##### `options`<sup>Required</sup> <a name="options" id="rhizo-co-terraform-provider-databricks.connection.Connection.property.options"></a>
+
+```python
+options: typing.Mapping[str]
+```
+
+- *Type:* typing.Mapping[str]
+
+---
+
+##### `owner`<sup>Required</sup> <a name="owner" id="rhizo-co-terraform-provider-databricks.connection.Connection.property.owner"></a>
+
+```python
+owner: str
+```
+
+- *Type:* str
+
+---
+
+##### `properties`<sup>Required</sup> <a name="properties" id="rhizo-co-terraform-provider-databricks.connection.Connection.property.properties"></a>
+
+```python
+properties: typing.Mapping[str]
+```
+
+- *Type:* typing.Mapping[str]
+
+---
+
+##### `read_only`<sup>Required</sup> <a name="read_only" id="rhizo-co-terraform-provider-databricks.connection.Connection.property.readOnly"></a>
+
+```python
+read_only: bool | IResolvable
+```
+
+- *Type:* bool | cdktf.IResolvable
+
+---
+
+#### Constants <a name="Constants" id="Constants"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.Connection.property.tfResourceType">tfResourceType</a></code> | <code>str</code> | *No description.* |
+
+---
+
+##### `tfResourceType`<sup>Required</sup> <a name="tfResourceType" id="rhizo-co-terraform-provider-databricks.connection.Connection.property.tfResourceType"></a>
+
+```python
+tfResourceType: str
+```
+
+- *Type:* str
+
+---
+
+## Structs <a name="Structs" id="Structs"></a>
+
+### ConnectionConfig <a name="ConnectionConfig" id="rhizo-co-terraform-provider-databricks.connection.ConnectionConfig"></a>
+
+#### Initializer <a name="Initializer" id="rhizo-co-terraform-provider-databricks.connection.ConnectionConfig.Initializer"></a>
+
+```python
+from rhizo_co_cdktf_provider_databricks import connection
+
+connection.ConnectionConfig(
+  connection: SSHProvisionerConnection | WinrmProvisionerConnection = None,
+  count: typing.Union[int, float] | TerraformCount = None,
+  depends_on: typing.List[ITerraformDependable] = None,
+  for_each: ITerraformIterator = None,
+  lifecycle: TerraformResourceLifecycle = None,
+  provider: TerraformProvider = None,
+  provisioners: typing.List[FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner] = None,
+  comment: str = None,
+  connection_type: str = None,
+  environment_settings: ConnectionEnvironmentSettings = None,
+  id: str = None,
+  name: str = None,
+  options: typing.Mapping[str] = None,
+  owner: str = None,
+  properties: typing.Mapping[str] = None,
+  provider_config: ConnectionProviderConfig = None,
+  read_only: bool | IResolvable = None
+)
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.ConnectionConfig.property.connection">connection</a></code> | <code>cdktf.SSHProvisionerConnection \| cdktf.WinrmProvisionerConnection</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.ConnectionConfig.property.count">count</a></code> | <code>typing.Union[int, float] \| cdktf.TerraformCount</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.ConnectionConfig.property.dependsOn">depends_on</a></code> | <code>typing.List[cdktf.ITerraformDependable]</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.ConnectionConfig.property.forEach">for_each</a></code> | <code>cdktf.ITerraformIterator</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.ConnectionConfig.property.lifecycle">lifecycle</a></code> | <code>cdktf.TerraformResourceLifecycle</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.ConnectionConfig.property.provider">provider</a></code> | <code>cdktf.TerraformProvider</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.ConnectionConfig.property.provisioners">provisioners</a></code> | <code>typing.List[cdktf.FileProvisioner \| cdktf.LocalExecProvisioner \| cdktf.RemoteExecProvisioner]</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.ConnectionConfig.property.comment">comment</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.130.0/docs/resources/connection#comment Connection#comment}. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.ConnectionConfig.property.connectionType">connection_type</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.130.0/docs/resources/connection#connection_type Connection#connection_type}. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.ConnectionConfig.property.environmentSettings">environment_settings</a></code> | <code><a href="#rhizo-co-terraform-provider-databricks.connection.ConnectionEnvironmentSettings">ConnectionEnvironmentSettings</a></code> | environment_settings block. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.ConnectionConfig.property.id">id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.130.0/docs/resources/connection#id Connection#id}. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.ConnectionConfig.property.name">name</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.130.0/docs/resources/connection#name Connection#name}. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.ConnectionConfig.property.options">options</a></code> | <code>typing.Mapping[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.130.0/docs/resources/connection#options Connection#options}. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.ConnectionConfig.property.owner">owner</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.130.0/docs/resources/connection#owner Connection#owner}. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.ConnectionConfig.property.properties">properties</a></code> | <code>typing.Mapping[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.130.0/docs/resources/connection#properties Connection#properties}. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.ConnectionConfig.property.providerConfig">provider_config</a></code> | <code><a href="#rhizo-co-terraform-provider-databricks.connection.ConnectionProviderConfig">ConnectionProviderConfig</a></code> | provider_config block. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.ConnectionConfig.property.readOnly">read_only</a></code> | <code>bool \| cdktf.IResolvable</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.130.0/docs/resources/connection#read_only Connection#read_only}. |
+
+---
+
+##### `connection`<sup>Optional</sup> <a name="connection" id="rhizo-co-terraform-provider-databricks.connection.ConnectionConfig.property.connection"></a>
+
+```python
+connection: SSHProvisionerConnection | WinrmProvisionerConnection
+```
+
+- *Type:* cdktf.SSHProvisionerConnection | cdktf.WinrmProvisionerConnection
+
+---
+
+##### `count`<sup>Optional</sup> <a name="count" id="rhizo-co-terraform-provider-databricks.connection.ConnectionConfig.property.count"></a>
+
+```python
+count: typing.Union[int, float] | TerraformCount
+```
+
+- *Type:* typing.Union[int, float] | cdktf.TerraformCount
+
+---
+
+##### `depends_on`<sup>Optional</sup> <a name="depends_on" id="rhizo-co-terraform-provider-databricks.connection.ConnectionConfig.property.dependsOn"></a>
+
+```python
+depends_on: typing.List[ITerraformDependable]
+```
+
+- *Type:* typing.List[cdktf.ITerraformDependable]
+
+---
+
+##### `for_each`<sup>Optional</sup> <a name="for_each" id="rhizo-co-terraform-provider-databricks.connection.ConnectionConfig.property.forEach"></a>
+
+```python
+for_each: ITerraformIterator
+```
+
+- *Type:* cdktf.ITerraformIterator
+
+---
+
+##### `lifecycle`<sup>Optional</sup> <a name="lifecycle" id="rhizo-co-terraform-provider-databricks.connection.ConnectionConfig.property.lifecycle"></a>
+
+```python
+lifecycle: TerraformResourceLifecycle
+```
+
+- *Type:* cdktf.TerraformResourceLifecycle
+
+---
+
+##### `provider`<sup>Optional</sup> <a name="provider" id="rhizo-co-terraform-provider-databricks.connection.ConnectionConfig.property.provider"></a>
+
+```python
+provider: TerraformProvider
+```
+
+- *Type:* cdktf.TerraformProvider
+
+---
+
+##### `provisioners`<sup>Optional</sup> <a name="provisioners" id="rhizo-co-terraform-provider-databricks.connection.ConnectionConfig.property.provisioners"></a>
+
+```python
+provisioners: typing.List[FileProvisioner | LocalExecProvisioner | RemoteExecProvisioner]
+```
+
+- *Type:* typing.List[cdktf.FileProvisioner | cdktf.LocalExecProvisioner | cdktf.RemoteExecProvisioner]
+
+---
+
+##### `comment`<sup>Optional</sup> <a name="comment" id="rhizo-co-terraform-provider-databricks.connection.ConnectionConfig.property.comment"></a>
+
+```python
+comment: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.130.0/docs/resources/connection#comment Connection#comment}.
+
+---
+
+##### `connection_type`<sup>Optional</sup> <a name="connection_type" id="rhizo-co-terraform-provider-databricks.connection.ConnectionConfig.property.connectionType"></a>
+
+```python
+connection_type: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.130.0/docs/resources/connection#connection_type Connection#connection_type}.
+
+---
+
+##### `environment_settings`<sup>Optional</sup> <a name="environment_settings" id="rhizo-co-terraform-provider-databricks.connection.ConnectionConfig.property.environmentSettings"></a>
+
+```python
+environment_settings: ConnectionEnvironmentSettings
+```
+
+- *Type:* <a href="#rhizo-co-terraform-provider-databricks.connection.ConnectionEnvironmentSettings">ConnectionEnvironmentSettings</a>
+
+environment_settings block.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.130.0/docs/resources/connection#environment_settings Connection#environment_settings}
+
+---
+
+##### `id`<sup>Optional</sup> <a name="id" id="rhizo-co-terraform-provider-databricks.connection.ConnectionConfig.property.id"></a>
+
+```python
+id: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.130.0/docs/resources/connection#id Connection#id}.
+
+Please be aware that the id field is automatically added to all resources in Terraform providers using a Terraform provider SDK version below 2.
+If you experience problems setting this value it might not be settable. Please take a look at the provider documentation to ensure it should be settable.
+
+---
+
+##### `name`<sup>Optional</sup> <a name="name" id="rhizo-co-terraform-provider-databricks.connection.ConnectionConfig.property.name"></a>
+
+```python
+name: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.130.0/docs/resources/connection#name Connection#name}.
+
+---
+
+##### `options`<sup>Optional</sup> <a name="options" id="rhizo-co-terraform-provider-databricks.connection.ConnectionConfig.property.options"></a>
+
+```python
+options: typing.Mapping[str]
+```
+
+- *Type:* typing.Mapping[str]
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.130.0/docs/resources/connection#options Connection#options}.
+
+---
+
+##### `owner`<sup>Optional</sup> <a name="owner" id="rhizo-co-terraform-provider-databricks.connection.ConnectionConfig.property.owner"></a>
+
+```python
+owner: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.130.0/docs/resources/connection#owner Connection#owner}.
+
+---
+
+##### `properties`<sup>Optional</sup> <a name="properties" id="rhizo-co-terraform-provider-databricks.connection.ConnectionConfig.property.properties"></a>
+
+```python
+properties: typing.Mapping[str]
+```
+
+- *Type:* typing.Mapping[str]
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.130.0/docs/resources/connection#properties Connection#properties}.
+
+---
+
+##### `provider_config`<sup>Optional</sup> <a name="provider_config" id="rhizo-co-terraform-provider-databricks.connection.ConnectionConfig.property.providerConfig"></a>
+
+```python
+provider_config: ConnectionProviderConfig
+```
+
+- *Type:* <a href="#rhizo-co-terraform-provider-databricks.connection.ConnectionProviderConfig">ConnectionProviderConfig</a>
+
+provider_config block.
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.130.0/docs/resources/connection#provider_config Connection#provider_config}
+
+---
+
+##### `read_only`<sup>Optional</sup> <a name="read_only" id="rhizo-co-terraform-provider-databricks.connection.ConnectionConfig.property.readOnly"></a>
+
+```python
+read_only: bool | IResolvable
+```
+
+- *Type:* bool | cdktf.IResolvable
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.130.0/docs/resources/connection#read_only Connection#read_only}.
+
+---
+
+### ConnectionEnvironmentSettings <a name="ConnectionEnvironmentSettings" id="rhizo-co-terraform-provider-databricks.connection.ConnectionEnvironmentSettings"></a>
+
+#### Initializer <a name="Initializer" id="rhizo-co-terraform-provider-databricks.connection.ConnectionEnvironmentSettings.Initializer"></a>
+
+```python
+from rhizo_co_cdktf_provider_databricks import connection
+
+connection.ConnectionEnvironmentSettings(
+  environment_version: str = None,
+  java_dependencies: typing.List[str] = None
+)
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.ConnectionEnvironmentSettings.property.environmentVersion">environment_version</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.130.0/docs/resources/connection#environment_version Connection#environment_version}. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.ConnectionEnvironmentSettings.property.javaDependencies">java_dependencies</a></code> | <code>typing.List[str]</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.130.0/docs/resources/connection#java_dependencies Connection#java_dependencies}. |
+
+---
+
+##### `environment_version`<sup>Optional</sup> <a name="environment_version" id="rhizo-co-terraform-provider-databricks.connection.ConnectionEnvironmentSettings.property.environmentVersion"></a>
+
+```python
+environment_version: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.130.0/docs/resources/connection#environment_version Connection#environment_version}.
+
+---
+
+##### `java_dependencies`<sup>Optional</sup> <a name="java_dependencies" id="rhizo-co-terraform-provider-databricks.connection.ConnectionEnvironmentSettings.property.javaDependencies"></a>
+
+```python
+java_dependencies: typing.List[str]
+```
+
+- *Type:* typing.List[str]
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.130.0/docs/resources/connection#java_dependencies Connection#java_dependencies}.
+
+---
+
+### ConnectionProviderConfig <a name="ConnectionProviderConfig" id="rhizo-co-terraform-provider-databricks.connection.ConnectionProviderConfig"></a>
+
+#### Initializer <a name="Initializer" id="rhizo-co-terraform-provider-databricks.connection.ConnectionProviderConfig.Initializer"></a>
+
+```python
+from rhizo_co_cdktf_provider_databricks import connection
+
+connection.ConnectionProviderConfig(
+  workspace_id: str = None
+)
+```
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.ConnectionProviderConfig.property.workspaceId">workspace_id</a></code> | <code>str</code> | Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.130.0/docs/resources/connection#workspace_id Connection#workspace_id}. |
+
+---
+
+##### `workspace_id`<sup>Optional</sup> <a name="workspace_id" id="rhizo-co-terraform-provider-databricks.connection.ConnectionProviderConfig.property.workspaceId"></a>
+
+```python
+workspace_id: str
+```
+
+- *Type:* str
+
+Docs at Terraform Registry: {@link https://registry.terraform.io/providers/databricks/databricks/1.130.0/docs/resources/connection#workspace_id Connection#workspace_id}.
+
+---
+
+### ConnectionProvisioningInfo <a name="ConnectionProvisioningInfo" id="rhizo-co-terraform-provider-databricks.connection.ConnectionProvisioningInfo"></a>
+
+#### Initializer <a name="Initializer" id="rhizo-co-terraform-provider-databricks.connection.ConnectionProvisioningInfo.Initializer"></a>
+
+```python
+from rhizo_co_cdktf_provider_databricks import connection
+
+connection.ConnectionProvisioningInfo()
+```
+
+
+## Classes <a name="Classes" id="Classes"></a>
+
+### ConnectionEnvironmentSettingsOutputReference <a name="ConnectionEnvironmentSettingsOutputReference" id="rhizo-co-terraform-provider-databricks.connection.ConnectionEnvironmentSettingsOutputReference"></a>
+
+#### Initializers <a name="Initializers" id="rhizo-co-terraform-provider-databricks.connection.ConnectionEnvironmentSettingsOutputReference.Initializer"></a>
+
+```python
+from rhizo_co_cdktf_provider_databricks import connection
+
+connection.ConnectionEnvironmentSettingsOutputReference(
+  terraform_resource: IInterpolatingParent,
+  terraform_attribute: str
+)
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.ConnectionEnvironmentSettingsOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.ConnectionEnvironmentSettingsOutputReference.Initializer.parameter.terraformAttribute">terraform_attribute</a></code> | <code>str</code> | The attribute on the parent resource this class is referencing. |
+
+---
+
+##### `terraform_resource`<sup>Required</sup> <a name="terraform_resource" id="rhizo-co-terraform-provider-databricks.connection.ConnectionEnvironmentSettingsOutputReference.Initializer.parameter.terraformResource"></a>
+
+- *Type:* cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="rhizo-co-terraform-provider-databricks.connection.ConnectionEnvironmentSettingsOutputReference.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.ConnectionEnvironmentSettingsOutputReference.computeFqn">compute_fqn</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.ConnectionEnvironmentSettingsOutputReference.getAnyMapAttribute">get_any_map_attribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.ConnectionEnvironmentSettingsOutputReference.getBooleanAttribute">get_boolean_attribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.ConnectionEnvironmentSettingsOutputReference.getBooleanMapAttribute">get_boolean_map_attribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.ConnectionEnvironmentSettingsOutputReference.getListAttribute">get_list_attribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.ConnectionEnvironmentSettingsOutputReference.getNumberAttribute">get_number_attribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.ConnectionEnvironmentSettingsOutputReference.getNumberListAttribute">get_number_list_attribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.ConnectionEnvironmentSettingsOutputReference.getNumberMapAttribute">get_number_map_attribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.ConnectionEnvironmentSettingsOutputReference.getStringAttribute">get_string_attribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.ConnectionEnvironmentSettingsOutputReference.getStringMapAttribute">get_string_map_attribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.ConnectionEnvironmentSettingsOutputReference.interpolationForAttribute">interpolation_for_attribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.ConnectionEnvironmentSettingsOutputReference.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.ConnectionEnvironmentSettingsOutputReference.toString">to_string</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.ConnectionEnvironmentSettingsOutputReference.resetEnvironmentVersion">reset_environment_version</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.ConnectionEnvironmentSettingsOutputReference.resetJavaDependencies">reset_java_dependencies</a></code> | *No description.* |
+
+---
+
+##### `compute_fqn` <a name="compute_fqn" id="rhizo-co-terraform-provider-databricks.connection.ConnectionEnvironmentSettingsOutputReference.computeFqn"></a>
+
+```python
+def compute_fqn() -> str
+```
+
+##### `get_any_map_attribute` <a name="get_any_map_attribute" id="rhizo-co-terraform-provider-databricks.connection.ConnectionEnvironmentSettingsOutputReference.getAnyMapAttribute"></a>
+
+```python
+def get_any_map_attribute(
+  terraform_attribute: str
+) -> typing.Mapping[typing.Any]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="rhizo-co-terraform-provider-databricks.connection.ConnectionEnvironmentSettingsOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_boolean_attribute` <a name="get_boolean_attribute" id="rhizo-co-terraform-provider-databricks.connection.ConnectionEnvironmentSettingsOutputReference.getBooleanAttribute"></a>
+
+```python
+def get_boolean_attribute(
+  terraform_attribute: str
+) -> IResolvable
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="rhizo-co-terraform-provider-databricks.connection.ConnectionEnvironmentSettingsOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_boolean_map_attribute` <a name="get_boolean_map_attribute" id="rhizo-co-terraform-provider-databricks.connection.ConnectionEnvironmentSettingsOutputReference.getBooleanMapAttribute"></a>
+
+```python
+def get_boolean_map_attribute(
+  terraform_attribute: str
+) -> typing.Mapping[bool]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="rhizo-co-terraform-provider-databricks.connection.ConnectionEnvironmentSettingsOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_list_attribute` <a name="get_list_attribute" id="rhizo-co-terraform-provider-databricks.connection.ConnectionEnvironmentSettingsOutputReference.getListAttribute"></a>
+
+```python
+def get_list_attribute(
+  terraform_attribute: str
+) -> typing.List[str]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="rhizo-co-terraform-provider-databricks.connection.ConnectionEnvironmentSettingsOutputReference.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_number_attribute` <a name="get_number_attribute" id="rhizo-co-terraform-provider-databricks.connection.ConnectionEnvironmentSettingsOutputReference.getNumberAttribute"></a>
+
+```python
+def get_number_attribute(
+  terraform_attribute: str
+) -> typing.Union[int, float]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="rhizo-co-terraform-provider-databricks.connection.ConnectionEnvironmentSettingsOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_number_list_attribute` <a name="get_number_list_attribute" id="rhizo-co-terraform-provider-databricks.connection.ConnectionEnvironmentSettingsOutputReference.getNumberListAttribute"></a>
+
+```python
+def get_number_list_attribute(
+  terraform_attribute: str
+) -> typing.List[typing.Union[int, float]]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="rhizo-co-terraform-provider-databricks.connection.ConnectionEnvironmentSettingsOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_number_map_attribute` <a name="get_number_map_attribute" id="rhizo-co-terraform-provider-databricks.connection.ConnectionEnvironmentSettingsOutputReference.getNumberMapAttribute"></a>
+
+```python
+def get_number_map_attribute(
+  terraform_attribute: str
+) -> typing.Mapping[typing.Union[int, float]]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="rhizo-co-terraform-provider-databricks.connection.ConnectionEnvironmentSettingsOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_string_attribute` <a name="get_string_attribute" id="rhizo-co-terraform-provider-databricks.connection.ConnectionEnvironmentSettingsOutputReference.getStringAttribute"></a>
+
+```python
+def get_string_attribute(
+  terraform_attribute: str
+) -> str
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="rhizo-co-terraform-provider-databricks.connection.ConnectionEnvironmentSettingsOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_string_map_attribute` <a name="get_string_map_attribute" id="rhizo-co-terraform-provider-databricks.connection.ConnectionEnvironmentSettingsOutputReference.getStringMapAttribute"></a>
+
+```python
+def get_string_map_attribute(
+  terraform_attribute: str
+) -> typing.Mapping[str]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="rhizo-co-terraform-provider-databricks.connection.ConnectionEnvironmentSettingsOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `interpolation_for_attribute` <a name="interpolation_for_attribute" id="rhizo-co-terraform-provider-databricks.connection.ConnectionEnvironmentSettingsOutputReference.interpolationForAttribute"></a>
+
+```python
+def interpolation_for_attribute(
+  property: str
+) -> IResolvable
+```
+
+###### `property`<sup>Required</sup> <a name="property" id="rhizo-co-terraform-provider-databricks.connection.ConnectionEnvironmentSettingsOutputReference.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* str
+
+---
+
+##### `resolve` <a name="resolve" id="rhizo-co-terraform-provider-databricks.connection.ConnectionEnvironmentSettingsOutputReference.resolve"></a>
+
+```python
+def resolve(
+  _context: IResolveContext
+) -> typing.Any
+```
+
+Produce the Token's value at resolution time.
+
+###### `_context`<sup>Required</sup> <a name="_context" id="rhizo-co-terraform-provider-databricks.connection.ConnectionEnvironmentSettingsOutputReference.resolve.parameter._context"></a>
+
+- *Type:* cdktf.IResolveContext
+
+---
+
+##### `to_string` <a name="to_string" id="rhizo-co-terraform-provider-databricks.connection.ConnectionEnvironmentSettingsOutputReference.toString"></a>
+
+```python
+def to_string() -> str
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+##### `reset_environment_version` <a name="reset_environment_version" id="rhizo-co-terraform-provider-databricks.connection.ConnectionEnvironmentSettingsOutputReference.resetEnvironmentVersion"></a>
+
+```python
+def reset_environment_version() -> None
+```
+
+##### `reset_java_dependencies` <a name="reset_java_dependencies" id="rhizo-co-terraform-provider-databricks.connection.ConnectionEnvironmentSettingsOutputReference.resetJavaDependencies"></a>
+
+```python
+def reset_java_dependencies() -> None
+```
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.ConnectionEnvironmentSettingsOutputReference.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.ConnectionEnvironmentSettingsOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.ConnectionEnvironmentSettingsOutputReference.property.environmentVersionInput">environment_version_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.ConnectionEnvironmentSettingsOutputReference.property.javaDependenciesInput">java_dependencies_input</a></code> | <code>typing.List[str]</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.ConnectionEnvironmentSettingsOutputReference.property.environmentVersion">environment_version</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.ConnectionEnvironmentSettingsOutputReference.property.javaDependencies">java_dependencies</a></code> | <code>typing.List[str]</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.ConnectionEnvironmentSettingsOutputReference.property.internalValue">internal_value</a></code> | <code><a href="#rhizo-co-terraform-provider-databricks.connection.ConnectionEnvironmentSettings">ConnectionEnvironmentSettings</a></code> | *No description.* |
+
+---
+
+##### `creation_stack`<sup>Required</sup> <a name="creation_stack" id="rhizo-co-terraform-provider-databricks.connection.ConnectionEnvironmentSettingsOutputReference.property.creationStack"></a>
+
+```python
+creation_stack: typing.List[str]
+```
+
+- *Type:* typing.List[str]
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `fqn`<sup>Required</sup> <a name="fqn" id="rhizo-co-terraform-provider-databricks.connection.ConnectionEnvironmentSettingsOutputReference.property.fqn"></a>
+
+```python
+fqn: str
+```
+
+- *Type:* str
+
+---
+
+##### `environment_version_input`<sup>Optional</sup> <a name="environment_version_input" id="rhizo-co-terraform-provider-databricks.connection.ConnectionEnvironmentSettingsOutputReference.property.environmentVersionInput"></a>
+
+```python
+environment_version_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `java_dependencies_input`<sup>Optional</sup> <a name="java_dependencies_input" id="rhizo-co-terraform-provider-databricks.connection.ConnectionEnvironmentSettingsOutputReference.property.javaDependenciesInput"></a>
+
+```python
+java_dependencies_input: typing.List[str]
+```
+
+- *Type:* typing.List[str]
+
+---
+
+##### `environment_version`<sup>Required</sup> <a name="environment_version" id="rhizo-co-terraform-provider-databricks.connection.ConnectionEnvironmentSettingsOutputReference.property.environmentVersion"></a>
+
+```python
+environment_version: str
+```
+
+- *Type:* str
+
+---
+
+##### `java_dependencies`<sup>Required</sup> <a name="java_dependencies" id="rhizo-co-terraform-provider-databricks.connection.ConnectionEnvironmentSettingsOutputReference.property.javaDependencies"></a>
+
+```python
+java_dependencies: typing.List[str]
+```
+
+- *Type:* typing.List[str]
+
+---
+
+##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="rhizo-co-terraform-provider-databricks.connection.ConnectionEnvironmentSettingsOutputReference.property.internalValue"></a>
+
+```python
+internal_value: ConnectionEnvironmentSettings
+```
+
+- *Type:* <a href="#rhizo-co-terraform-provider-databricks.connection.ConnectionEnvironmentSettings">ConnectionEnvironmentSettings</a>
+
+---
+
+
+### ConnectionProviderConfigOutputReference <a name="ConnectionProviderConfigOutputReference" id="rhizo-co-terraform-provider-databricks.connection.ConnectionProviderConfigOutputReference"></a>
+
+#### Initializers <a name="Initializers" id="rhizo-co-terraform-provider-databricks.connection.ConnectionProviderConfigOutputReference.Initializer"></a>
+
+```python
+from rhizo_co_cdktf_provider_databricks import connection
+
+connection.ConnectionProviderConfigOutputReference(
+  terraform_resource: IInterpolatingParent,
+  terraform_attribute: str
+)
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.ConnectionProviderConfigOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.ConnectionProviderConfigOutputReference.Initializer.parameter.terraformAttribute">terraform_attribute</a></code> | <code>str</code> | The attribute on the parent resource this class is referencing. |
+
+---
+
+##### `terraform_resource`<sup>Required</sup> <a name="terraform_resource" id="rhizo-co-terraform-provider-databricks.connection.ConnectionProviderConfigOutputReference.Initializer.parameter.terraformResource"></a>
+
+- *Type:* cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="rhizo-co-terraform-provider-databricks.connection.ConnectionProviderConfigOutputReference.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.ConnectionProviderConfigOutputReference.computeFqn">compute_fqn</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.ConnectionProviderConfigOutputReference.getAnyMapAttribute">get_any_map_attribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.ConnectionProviderConfigOutputReference.getBooleanAttribute">get_boolean_attribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.ConnectionProviderConfigOutputReference.getBooleanMapAttribute">get_boolean_map_attribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.ConnectionProviderConfigOutputReference.getListAttribute">get_list_attribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.ConnectionProviderConfigOutputReference.getNumberAttribute">get_number_attribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.ConnectionProviderConfigOutputReference.getNumberListAttribute">get_number_list_attribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.ConnectionProviderConfigOutputReference.getNumberMapAttribute">get_number_map_attribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.ConnectionProviderConfigOutputReference.getStringAttribute">get_string_attribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.ConnectionProviderConfigOutputReference.getStringMapAttribute">get_string_map_attribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.ConnectionProviderConfigOutputReference.interpolationForAttribute">interpolation_for_attribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.ConnectionProviderConfigOutputReference.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.ConnectionProviderConfigOutputReference.toString">to_string</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.ConnectionProviderConfigOutputReference.resetWorkspaceId">reset_workspace_id</a></code> | *No description.* |
+
+---
+
+##### `compute_fqn` <a name="compute_fqn" id="rhizo-co-terraform-provider-databricks.connection.ConnectionProviderConfigOutputReference.computeFqn"></a>
+
+```python
+def compute_fqn() -> str
+```
+
+##### `get_any_map_attribute` <a name="get_any_map_attribute" id="rhizo-co-terraform-provider-databricks.connection.ConnectionProviderConfigOutputReference.getAnyMapAttribute"></a>
+
+```python
+def get_any_map_attribute(
+  terraform_attribute: str
+) -> typing.Mapping[typing.Any]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="rhizo-co-terraform-provider-databricks.connection.ConnectionProviderConfigOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_boolean_attribute` <a name="get_boolean_attribute" id="rhizo-co-terraform-provider-databricks.connection.ConnectionProviderConfigOutputReference.getBooleanAttribute"></a>
+
+```python
+def get_boolean_attribute(
+  terraform_attribute: str
+) -> IResolvable
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="rhizo-co-terraform-provider-databricks.connection.ConnectionProviderConfigOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_boolean_map_attribute` <a name="get_boolean_map_attribute" id="rhizo-co-terraform-provider-databricks.connection.ConnectionProviderConfigOutputReference.getBooleanMapAttribute"></a>
+
+```python
+def get_boolean_map_attribute(
+  terraform_attribute: str
+) -> typing.Mapping[bool]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="rhizo-co-terraform-provider-databricks.connection.ConnectionProviderConfigOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_list_attribute` <a name="get_list_attribute" id="rhizo-co-terraform-provider-databricks.connection.ConnectionProviderConfigOutputReference.getListAttribute"></a>
+
+```python
+def get_list_attribute(
+  terraform_attribute: str
+) -> typing.List[str]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="rhizo-co-terraform-provider-databricks.connection.ConnectionProviderConfigOutputReference.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_number_attribute` <a name="get_number_attribute" id="rhizo-co-terraform-provider-databricks.connection.ConnectionProviderConfigOutputReference.getNumberAttribute"></a>
+
+```python
+def get_number_attribute(
+  terraform_attribute: str
+) -> typing.Union[int, float]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="rhizo-co-terraform-provider-databricks.connection.ConnectionProviderConfigOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_number_list_attribute` <a name="get_number_list_attribute" id="rhizo-co-terraform-provider-databricks.connection.ConnectionProviderConfigOutputReference.getNumberListAttribute"></a>
+
+```python
+def get_number_list_attribute(
+  terraform_attribute: str
+) -> typing.List[typing.Union[int, float]]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="rhizo-co-terraform-provider-databricks.connection.ConnectionProviderConfigOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_number_map_attribute` <a name="get_number_map_attribute" id="rhizo-co-terraform-provider-databricks.connection.ConnectionProviderConfigOutputReference.getNumberMapAttribute"></a>
+
+```python
+def get_number_map_attribute(
+  terraform_attribute: str
+) -> typing.Mapping[typing.Union[int, float]]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="rhizo-co-terraform-provider-databricks.connection.ConnectionProviderConfigOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_string_attribute` <a name="get_string_attribute" id="rhizo-co-terraform-provider-databricks.connection.ConnectionProviderConfigOutputReference.getStringAttribute"></a>
+
+```python
+def get_string_attribute(
+  terraform_attribute: str
+) -> str
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="rhizo-co-terraform-provider-databricks.connection.ConnectionProviderConfigOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_string_map_attribute` <a name="get_string_map_attribute" id="rhizo-co-terraform-provider-databricks.connection.ConnectionProviderConfigOutputReference.getStringMapAttribute"></a>
+
+```python
+def get_string_map_attribute(
+  terraform_attribute: str
+) -> typing.Mapping[str]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="rhizo-co-terraform-provider-databricks.connection.ConnectionProviderConfigOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `interpolation_for_attribute` <a name="interpolation_for_attribute" id="rhizo-co-terraform-provider-databricks.connection.ConnectionProviderConfigOutputReference.interpolationForAttribute"></a>
+
+```python
+def interpolation_for_attribute(
+  property: str
+) -> IResolvable
+```
+
+###### `property`<sup>Required</sup> <a name="property" id="rhizo-co-terraform-provider-databricks.connection.ConnectionProviderConfigOutputReference.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* str
+
+---
+
+##### `resolve` <a name="resolve" id="rhizo-co-terraform-provider-databricks.connection.ConnectionProviderConfigOutputReference.resolve"></a>
+
+```python
+def resolve(
+  _context: IResolveContext
+) -> typing.Any
+```
+
+Produce the Token's value at resolution time.
+
+###### `_context`<sup>Required</sup> <a name="_context" id="rhizo-co-terraform-provider-databricks.connection.ConnectionProviderConfigOutputReference.resolve.parameter._context"></a>
+
+- *Type:* cdktf.IResolveContext
+
+---
+
+##### `to_string` <a name="to_string" id="rhizo-co-terraform-provider-databricks.connection.ConnectionProviderConfigOutputReference.toString"></a>
+
+```python
+def to_string() -> str
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+##### `reset_workspace_id` <a name="reset_workspace_id" id="rhizo-co-terraform-provider-databricks.connection.ConnectionProviderConfigOutputReference.resetWorkspaceId"></a>
+
+```python
+def reset_workspace_id() -> None
+```
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.ConnectionProviderConfigOutputReference.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.ConnectionProviderConfigOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.ConnectionProviderConfigOutputReference.property.workspaceIdInput">workspace_id_input</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.ConnectionProviderConfigOutputReference.property.workspaceId">workspace_id</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.ConnectionProviderConfigOutputReference.property.internalValue">internal_value</a></code> | <code><a href="#rhizo-co-terraform-provider-databricks.connection.ConnectionProviderConfig">ConnectionProviderConfig</a></code> | *No description.* |
+
+---
+
+##### `creation_stack`<sup>Required</sup> <a name="creation_stack" id="rhizo-co-terraform-provider-databricks.connection.ConnectionProviderConfigOutputReference.property.creationStack"></a>
+
+```python
+creation_stack: typing.List[str]
+```
+
+- *Type:* typing.List[str]
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `fqn`<sup>Required</sup> <a name="fqn" id="rhizo-co-terraform-provider-databricks.connection.ConnectionProviderConfigOutputReference.property.fqn"></a>
+
+```python
+fqn: str
+```
+
+- *Type:* str
+
+---
+
+##### `workspace_id_input`<sup>Optional</sup> <a name="workspace_id_input" id="rhizo-co-terraform-provider-databricks.connection.ConnectionProviderConfigOutputReference.property.workspaceIdInput"></a>
+
+```python
+workspace_id_input: str
+```
+
+- *Type:* str
+
+---
+
+##### `workspace_id`<sup>Required</sup> <a name="workspace_id" id="rhizo-co-terraform-provider-databricks.connection.ConnectionProviderConfigOutputReference.property.workspaceId"></a>
+
+```python
+workspace_id: str
+```
+
+- *Type:* str
+
+---
+
+##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="rhizo-co-terraform-provider-databricks.connection.ConnectionProviderConfigOutputReference.property.internalValue"></a>
+
+```python
+internal_value: ConnectionProviderConfig
+```
+
+- *Type:* <a href="#rhizo-co-terraform-provider-databricks.connection.ConnectionProviderConfig">ConnectionProviderConfig</a>
+
+---
+
+
+### ConnectionProvisioningInfoList <a name="ConnectionProvisioningInfoList" id="rhizo-co-terraform-provider-databricks.connection.ConnectionProvisioningInfoList"></a>
+
+#### Initializers <a name="Initializers" id="rhizo-co-terraform-provider-databricks.connection.ConnectionProvisioningInfoList.Initializer"></a>
+
+```python
+from rhizo_co_cdktf_provider_databricks import connection
+
+connection.ConnectionProvisioningInfoList(
+  terraform_resource: IInterpolatingParent,
+  terraform_attribute: str,
+  wraps_set: bool
+)
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.ConnectionProvisioningInfoList.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.ConnectionProvisioningInfoList.Initializer.parameter.terraformAttribute">terraform_attribute</a></code> | <code>str</code> | The attribute on the parent resource this class is referencing. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.ConnectionProvisioningInfoList.Initializer.parameter.wrapsSet">wraps_set</a></code> | <code>bool</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
+
+---
+
+##### `terraform_resource`<sup>Required</sup> <a name="terraform_resource" id="rhizo-co-terraform-provider-databricks.connection.ConnectionProvisioningInfoList.Initializer.parameter.terraformResource"></a>
+
+- *Type:* cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="rhizo-co-terraform-provider-databricks.connection.ConnectionProvisioningInfoList.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+##### `wraps_set`<sup>Required</sup> <a name="wraps_set" id="rhizo-co-terraform-provider-databricks.connection.ConnectionProvisioningInfoList.Initializer.parameter.wrapsSet"></a>
+
+- *Type:* bool
+
+whether the list is wrapping a set (will add tolist() to be able to access an item via an index).
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.ConnectionProvisioningInfoList.allWithMapKey">all_with_map_key</a></code> | Creating an iterator for this complex list. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.ConnectionProvisioningInfoList.computeFqn">compute_fqn</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.ConnectionProvisioningInfoList.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.ConnectionProvisioningInfoList.toString">to_string</a></code> | Return a string representation of this resolvable object. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.ConnectionProvisioningInfoList.get">get</a></code> | *No description.* |
+
+---
+
+##### `all_with_map_key` <a name="all_with_map_key" id="rhizo-co-terraform-provider-databricks.connection.ConnectionProvisioningInfoList.allWithMapKey"></a>
+
+```python
+def all_with_map_key(
+  map_key_attribute_name: str
+) -> DynamicListTerraformIterator
+```
+
+Creating an iterator for this complex list.
+
+The list will be converted into a map with the mapKeyAttributeName as the key.
+
+###### `map_key_attribute_name`<sup>Required</sup> <a name="map_key_attribute_name" id="rhizo-co-terraform-provider-databricks.connection.ConnectionProvisioningInfoList.allWithMapKey.parameter.mapKeyAttributeName"></a>
+
+- *Type:* str
+
+---
+
+##### `compute_fqn` <a name="compute_fqn" id="rhizo-co-terraform-provider-databricks.connection.ConnectionProvisioningInfoList.computeFqn"></a>
+
+```python
+def compute_fqn() -> str
+```
+
+##### `resolve` <a name="resolve" id="rhizo-co-terraform-provider-databricks.connection.ConnectionProvisioningInfoList.resolve"></a>
+
+```python
+def resolve(
+  _context: IResolveContext
+) -> typing.Any
+```
+
+Produce the Token's value at resolution time.
+
+###### `_context`<sup>Required</sup> <a name="_context" id="rhizo-co-terraform-provider-databricks.connection.ConnectionProvisioningInfoList.resolve.parameter._context"></a>
+
+- *Type:* cdktf.IResolveContext
+
+---
+
+##### `to_string` <a name="to_string" id="rhizo-co-terraform-provider-databricks.connection.ConnectionProvisioningInfoList.toString"></a>
+
+```python
+def to_string() -> str
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+##### `get` <a name="get" id="rhizo-co-terraform-provider-databricks.connection.ConnectionProvisioningInfoList.get"></a>
+
+```python
+def get(
+  index: typing.Union[int, float]
+) -> ConnectionProvisioningInfoOutputReference
+```
+
+###### `index`<sup>Required</sup> <a name="index" id="rhizo-co-terraform-provider-databricks.connection.ConnectionProvisioningInfoList.get.parameter.index"></a>
+
+- *Type:* typing.Union[int, float]
+
+the index of the item to return.
+
+---
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.ConnectionProvisioningInfoList.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.ConnectionProvisioningInfoList.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
+
+---
+
+##### `creation_stack`<sup>Required</sup> <a name="creation_stack" id="rhizo-co-terraform-provider-databricks.connection.ConnectionProvisioningInfoList.property.creationStack"></a>
+
+```python
+creation_stack: typing.List[str]
+```
+
+- *Type:* typing.List[str]
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `fqn`<sup>Required</sup> <a name="fqn" id="rhizo-co-terraform-provider-databricks.connection.ConnectionProvisioningInfoList.property.fqn"></a>
+
+```python
+fqn: str
+```
+
+- *Type:* str
+
+---
+
+
+### ConnectionProvisioningInfoOutputReference <a name="ConnectionProvisioningInfoOutputReference" id="rhizo-co-terraform-provider-databricks.connection.ConnectionProvisioningInfoOutputReference"></a>
+
+#### Initializers <a name="Initializers" id="rhizo-co-terraform-provider-databricks.connection.ConnectionProvisioningInfoOutputReference.Initializer"></a>
+
+```python
+from rhizo_co_cdktf_provider_databricks import connection
+
+connection.ConnectionProvisioningInfoOutputReference(
+  terraform_resource: IInterpolatingParent,
+  terraform_attribute: str,
+  complex_object_index: typing.Union[int, float],
+  complex_object_is_from_set: bool
+)
+```
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.ConnectionProvisioningInfoOutputReference.Initializer.parameter.terraformResource">terraform_resource</a></code> | <code>cdktf.IInterpolatingParent</code> | The parent resource. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.ConnectionProvisioningInfoOutputReference.Initializer.parameter.terraformAttribute">terraform_attribute</a></code> | <code>str</code> | The attribute on the parent resource this class is referencing. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.ConnectionProvisioningInfoOutputReference.Initializer.parameter.complexObjectIndex">complex_object_index</a></code> | <code>typing.Union[int, float]</code> | the index of this item in the list. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.ConnectionProvisioningInfoOutputReference.Initializer.parameter.complexObjectIsFromSet">complex_object_is_from_set</a></code> | <code>bool</code> | whether the list is wrapping a set (will add tolist() to be able to access an item via an index). |
+
+---
+
+##### `terraform_resource`<sup>Required</sup> <a name="terraform_resource" id="rhizo-co-terraform-provider-databricks.connection.ConnectionProvisioningInfoOutputReference.Initializer.parameter.terraformResource"></a>
+
+- *Type:* cdktf.IInterpolatingParent
+
+The parent resource.
+
+---
+
+##### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="rhizo-co-terraform-provider-databricks.connection.ConnectionProvisioningInfoOutputReference.Initializer.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+The attribute on the parent resource this class is referencing.
+
+---
+
+##### `complex_object_index`<sup>Required</sup> <a name="complex_object_index" id="rhizo-co-terraform-provider-databricks.connection.ConnectionProvisioningInfoOutputReference.Initializer.parameter.complexObjectIndex"></a>
+
+- *Type:* typing.Union[int, float]
+
+the index of this item in the list.
+
+---
+
+##### `complex_object_is_from_set`<sup>Required</sup> <a name="complex_object_is_from_set" id="rhizo-co-terraform-provider-databricks.connection.ConnectionProvisioningInfoOutputReference.Initializer.parameter.complexObjectIsFromSet"></a>
+
+- *Type:* bool
+
+whether the list is wrapping a set (will add tolist() to be able to access an item via an index).
+
+---
+
+#### Methods <a name="Methods" id="Methods"></a>
+
+| **Name** | **Description** |
+| --- | --- |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.ConnectionProvisioningInfoOutputReference.computeFqn">compute_fqn</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.ConnectionProvisioningInfoOutputReference.getAnyMapAttribute">get_any_map_attribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.ConnectionProvisioningInfoOutputReference.getBooleanAttribute">get_boolean_attribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.ConnectionProvisioningInfoOutputReference.getBooleanMapAttribute">get_boolean_map_attribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.ConnectionProvisioningInfoOutputReference.getListAttribute">get_list_attribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.ConnectionProvisioningInfoOutputReference.getNumberAttribute">get_number_attribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.ConnectionProvisioningInfoOutputReference.getNumberListAttribute">get_number_list_attribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.ConnectionProvisioningInfoOutputReference.getNumberMapAttribute">get_number_map_attribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.ConnectionProvisioningInfoOutputReference.getStringAttribute">get_string_attribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.ConnectionProvisioningInfoOutputReference.getStringMapAttribute">get_string_map_attribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.ConnectionProvisioningInfoOutputReference.interpolationForAttribute">interpolation_for_attribute</a></code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.ConnectionProvisioningInfoOutputReference.resolve">resolve</a></code> | Produce the Token's value at resolution time. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.ConnectionProvisioningInfoOutputReference.toString">to_string</a></code> | Return a string representation of this resolvable object. |
+
+---
+
+##### `compute_fqn` <a name="compute_fqn" id="rhizo-co-terraform-provider-databricks.connection.ConnectionProvisioningInfoOutputReference.computeFqn"></a>
+
+```python
+def compute_fqn() -> str
+```
+
+##### `get_any_map_attribute` <a name="get_any_map_attribute" id="rhizo-co-terraform-provider-databricks.connection.ConnectionProvisioningInfoOutputReference.getAnyMapAttribute"></a>
+
+```python
+def get_any_map_attribute(
+  terraform_attribute: str
+) -> typing.Mapping[typing.Any]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="rhizo-co-terraform-provider-databricks.connection.ConnectionProvisioningInfoOutputReference.getAnyMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_boolean_attribute` <a name="get_boolean_attribute" id="rhizo-co-terraform-provider-databricks.connection.ConnectionProvisioningInfoOutputReference.getBooleanAttribute"></a>
+
+```python
+def get_boolean_attribute(
+  terraform_attribute: str
+) -> IResolvable
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="rhizo-co-terraform-provider-databricks.connection.ConnectionProvisioningInfoOutputReference.getBooleanAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_boolean_map_attribute` <a name="get_boolean_map_attribute" id="rhizo-co-terraform-provider-databricks.connection.ConnectionProvisioningInfoOutputReference.getBooleanMapAttribute"></a>
+
+```python
+def get_boolean_map_attribute(
+  terraform_attribute: str
+) -> typing.Mapping[bool]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="rhizo-co-terraform-provider-databricks.connection.ConnectionProvisioningInfoOutputReference.getBooleanMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_list_attribute` <a name="get_list_attribute" id="rhizo-co-terraform-provider-databricks.connection.ConnectionProvisioningInfoOutputReference.getListAttribute"></a>
+
+```python
+def get_list_attribute(
+  terraform_attribute: str
+) -> typing.List[str]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="rhizo-co-terraform-provider-databricks.connection.ConnectionProvisioningInfoOutputReference.getListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_number_attribute` <a name="get_number_attribute" id="rhizo-co-terraform-provider-databricks.connection.ConnectionProvisioningInfoOutputReference.getNumberAttribute"></a>
+
+```python
+def get_number_attribute(
+  terraform_attribute: str
+) -> typing.Union[int, float]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="rhizo-co-terraform-provider-databricks.connection.ConnectionProvisioningInfoOutputReference.getNumberAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_number_list_attribute` <a name="get_number_list_attribute" id="rhizo-co-terraform-provider-databricks.connection.ConnectionProvisioningInfoOutputReference.getNumberListAttribute"></a>
+
+```python
+def get_number_list_attribute(
+  terraform_attribute: str
+) -> typing.List[typing.Union[int, float]]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="rhizo-co-terraform-provider-databricks.connection.ConnectionProvisioningInfoOutputReference.getNumberListAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_number_map_attribute` <a name="get_number_map_attribute" id="rhizo-co-terraform-provider-databricks.connection.ConnectionProvisioningInfoOutputReference.getNumberMapAttribute"></a>
+
+```python
+def get_number_map_attribute(
+  terraform_attribute: str
+) -> typing.Mapping[typing.Union[int, float]]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="rhizo-co-terraform-provider-databricks.connection.ConnectionProvisioningInfoOutputReference.getNumberMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_string_attribute` <a name="get_string_attribute" id="rhizo-co-terraform-provider-databricks.connection.ConnectionProvisioningInfoOutputReference.getStringAttribute"></a>
+
+```python
+def get_string_attribute(
+  terraform_attribute: str
+) -> str
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="rhizo-co-terraform-provider-databricks.connection.ConnectionProvisioningInfoOutputReference.getStringAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `get_string_map_attribute` <a name="get_string_map_attribute" id="rhizo-co-terraform-provider-databricks.connection.ConnectionProvisioningInfoOutputReference.getStringMapAttribute"></a>
+
+```python
+def get_string_map_attribute(
+  terraform_attribute: str
+) -> typing.Mapping[str]
+```
+
+###### `terraform_attribute`<sup>Required</sup> <a name="terraform_attribute" id="rhizo-co-terraform-provider-databricks.connection.ConnectionProvisioningInfoOutputReference.getStringMapAttribute.parameter.terraformAttribute"></a>
+
+- *Type:* str
+
+---
+
+##### `interpolation_for_attribute` <a name="interpolation_for_attribute" id="rhizo-co-terraform-provider-databricks.connection.ConnectionProvisioningInfoOutputReference.interpolationForAttribute"></a>
+
+```python
+def interpolation_for_attribute(
+  property: str
+) -> IResolvable
+```
+
+###### `property`<sup>Required</sup> <a name="property" id="rhizo-co-terraform-provider-databricks.connection.ConnectionProvisioningInfoOutputReference.interpolationForAttribute.parameter.property"></a>
+
+- *Type:* str
+
+---
+
+##### `resolve` <a name="resolve" id="rhizo-co-terraform-provider-databricks.connection.ConnectionProvisioningInfoOutputReference.resolve"></a>
+
+```python
+def resolve(
+  _context: IResolveContext
+) -> typing.Any
+```
+
+Produce the Token's value at resolution time.
+
+###### `_context`<sup>Required</sup> <a name="_context" id="rhizo-co-terraform-provider-databricks.connection.ConnectionProvisioningInfoOutputReference.resolve.parameter._context"></a>
+
+- *Type:* cdktf.IResolveContext
+
+---
+
+##### `to_string` <a name="to_string" id="rhizo-co-terraform-provider-databricks.connection.ConnectionProvisioningInfoOutputReference.toString"></a>
+
+```python
+def to_string() -> str
+```
+
+Return a string representation of this resolvable object.
+
+Returns a reversible string representation.
+
+
+#### Properties <a name="Properties" id="Properties"></a>
+
+| **Name** | **Type** | **Description** |
+| --- | --- | --- |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.ConnectionProvisioningInfoOutputReference.property.creationStack">creation_stack</a></code> | <code>typing.List[str]</code> | The creation stack of this resolvable which will be appended to errors thrown during resolution. |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.ConnectionProvisioningInfoOutputReference.property.fqn">fqn</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.ConnectionProvisioningInfoOutputReference.property.state">state</a></code> | <code>str</code> | *No description.* |
+| <code><a href="#rhizo-co-terraform-provider-databricks.connection.ConnectionProvisioningInfoOutputReference.property.internalValue">internal_value</a></code> | <code><a href="#rhizo-co-terraform-provider-databricks.connection.ConnectionProvisioningInfo">ConnectionProvisioningInfo</a></code> | *No description.* |
+
+---
+
+##### `creation_stack`<sup>Required</sup> <a name="creation_stack" id="rhizo-co-terraform-provider-databricks.connection.ConnectionProvisioningInfoOutputReference.property.creationStack"></a>
+
+```python
+creation_stack: typing.List[str]
+```
+
+- *Type:* typing.List[str]
+
+The creation stack of this resolvable which will be appended to errors thrown during resolution.
+
+If this returns an empty array the stack will not be attached.
+
+---
+
+##### `fqn`<sup>Required</sup> <a name="fqn" id="rhizo-co-terraform-provider-databricks.connection.ConnectionProvisioningInfoOutputReference.property.fqn"></a>
+
+```python
+fqn: str
+```
+
+- *Type:* str
+
+---
+
+##### `state`<sup>Required</sup> <a name="state" id="rhizo-co-terraform-provider-databricks.connection.ConnectionProvisioningInfoOutputReference.property.state"></a>
+
+```python
+state: str
+```
+
+- *Type:* str
+
+---
+
+##### `internal_value`<sup>Optional</sup> <a name="internal_value" id="rhizo-co-terraform-provider-databricks.connection.ConnectionProvisioningInfoOutputReference.property.internalValue"></a>
+
+```python
+internal_value: ConnectionProvisioningInfo
+```
+
+- *Type:* <a href="#rhizo-co-terraform-provider-databricks.connection.ConnectionProvisioningInfo">ConnectionProvisioningInfo</a>
+
+---
+
+
+
