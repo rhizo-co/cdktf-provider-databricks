@@ -1,3 +1,8 @@
+/**
+ * Copyright IBM Corp. 2021, 2026
+ * SPDX-License-Identifier: MPL-2.0
+ */
+
 // https://registry.terraform.io/providers/databricks/databricks/1.130.0/docs/resources/environments_default_workspace_base_environment
 // generated from terraform resource schema
 

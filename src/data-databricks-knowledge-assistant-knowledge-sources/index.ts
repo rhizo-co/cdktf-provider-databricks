@@ -1,3 +1,8 @@
+/**
+ * Copyright IBM Corp. 2021, 2026
+ * SPDX-License-Identifier: MPL-2.0
+ */
+
 // https://registry.terraform.io/providers/databricks/databricks/1.130.0/docs/data-sources/knowledge_assistant_knowledge_sources
 // generated from terraform resource schema
 
